@@ -530,7 +530,7 @@
 
 <p>这段程序中，原来free和delete只是把指针所指的内存给释放掉，<strong>但并没有把指针本身干掉</strong>。指针point被free以后其地址仍然不变（非NULL），只是该地址对应的内存是垃圾，point成了“野指针”。如果此时不把point设置为NULL，会让人误以为point是个合法的指针。如果程序比较长，我们有时记不住 point 所指的内存是否已经被释放，在继续使用point 之前，通常会用语句if (p != NULL)进行防错处理。很遗憾，此时if语句起不到防错作用，因为即便point不是NULL指针，它也不指向合法的内存块。<strong>为了避免失误，最好在free之后或者之前，将指针指向NULL</strong></p>
 <h4 id="new-delete-与-malloc-free-区别"><a href="#new-delete-与-malloc-free-区别" class="headerlink" title="new()/delete()与 malloc()/free() 区别"></a>new()/delete()与 malloc()/free() 区别</h4><p>1.malloc()/free() 是标准库函数， 使用前需调用库头文件 &lt;stdlib.h&gt; 方可使用；而 new/delete 是运算       符，执行效率更高。</p>
-<p>2.malloc() 需要手工计算字节数;；而 new 能够自动计算需要分配的内存空间。</p>
+<p>2.malloc() 需要手工计算字节数；而 new 能够自动计算需要分配的内存空间。</p>
 <p>3.malloc() 返回的指针是 void 类型；而 new*返回的指针是它分配空间的类型。</p>
 <p>4.new 时调用构造函数，而 malloc() 不能；delete 时调用析构函数，而 free() 不能。</p>
 <p>5.new 在申请单个类型变量时可以赋初值，而 malloc() 不具备。</p>
@@ -561,9 +561,9 @@
         <div class='donate'>
           <div class='imgs'>
             
-              <img src='https://i.loli.net/2020/09/21/MW18SvbpDwFLBHf.jpg'>
+              <img src='https://i.loli.net/2020/09/22/jfZtx53q6owkhLJ.png'>
             
-              <img src='https://i.loli.net/2020/09/21/mtw64ha87gGoqSc.png'>
+              <img src='https://i.loli.net/2020/09/22/YzwLcrTsFlfG42v.jpg'>
             
           </div>
         </div>
@@ -578,10 +578,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-17T10:37:42+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-22T17:35:47+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年9月17日</p>
+    <p>更新于：2020年9月22日</p>
   </a>
 </div>
 
