@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>五、JAVA测试题 - kelecn</title>
+  <title>编程过程中遇到的一些问题总结（C++&amp;Java） - kelecn</title>
   
-    <meta name="keywords" content="面向对象,代码,编程,JAVA">
+    <meta name="keywords" content="面向对象,C++,编程,Java">
   
 
   
-    <meta name="description" content="简介：JAVA基础测试题。
+    <meta name="description" content="简介：（C++&amp;Java）问题总结。
 ">
   
 
@@ -429,7 +429,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">五、JAVA测试题</div> 
+  <div id="pjax-pageTitle">编程过程中遇到的一些问题总结（C++&amp;Java）</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -469,7 +469,7 @@
     
     
       <h1 class="title">
-        五、JAVA测试题
+        编程过程中遇到的一些问题总结（C++&Java）
       </h1>
       <div class='new-meta-box'>
         
@@ -489,7 +489,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
+      <a class="category-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a>
     </a>
   </div>
 
@@ -500,7 +500,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月7日</p>
+    <p>发布于：2020年5月9日</p>
   </a>
 </div>
 
@@ -511,7 +511,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="五、JAVA测试题" data-path="/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/">
+      <div id="lc-pv" data-title="编程过程中遇到的一些问题总结（C++&Java）" data-path="/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -528,40 +528,19 @@
 
 
   
-  <p>简介：JAVA基础测试题。</p>
-<p><img src="https://w.wallhaven.cc/full/d5/wallhaven-d5kj6o.png"></p>
+  <p>简介：（C++&amp;Java）问题总结。</p>
+<p><img src="https://w.wallhaven.cc/full/wy/wallhaven-wyw8wr.jpg"></p>
 <a id="more"></a>
 
-<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p>输出9*9口诀表。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exam;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	    </span>&#123;</span><br><span class="line">		 	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i ++)</span><br><span class="line">		 	&#123;</span><br><span class="line">		 		<span class="keyword">for</span>( <span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++)</span><br><span class="line">		 		&#123;</span><br><span class="line">		 			System.out.print(i +<span class="string">&quot; * &quot;</span>+j+<span class="string">&quot; = &quot;</span>+i*j + <span class="string">&quot;  &quot;</span>);</span><br><span class="line">	            &#125;</span><br><span class="line">		 	System.out.println();<span class="comment">//换行</span></span><br><span class="line">	    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1.Java中的boolean类型变量，只有两个值true ,false；C++也是，不过也可以用 1 0 代替。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Java boolean 类型</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;I Love YOU!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>运行截图：</strong></p>
-<p><img src="https://i.loli.net/2020/05/07/HJNRoVQylpuhk7U.png" alt="2020-05-07_102624.png"></p>
-<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>求1+2!+3!+…+20!的和。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exam;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	    </span>&#123;</span><br><span class="line">			<span class="keyword">float</span> s=<span class="number">0</span>,t=<span class="number">1</span>;</span><br><span class="line">		    <span class="keyword">int</span> n;</span><br><span class="line">		    <span class="keyword">for</span> (n=<span class="number">1</span>;n&lt;=<span class="number">20</span>;n++)</span><br><span class="line">		  &#123;</span><br><span class="line">		    	t=t*n;      <span class="comment">// 求n!</span></span><br><span class="line">		    	s=s+t;      <span class="comment">// 将各项累加</span></span><br><span class="line">		  &#125;</span><br><span class="line">		 	System.out.println(<span class="string">&quot;1+2!+3!+...+20!=&quot;</span>+s);</span><br><span class="line">	    	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C++ boolean 类型</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	 <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I Love YOU!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><strong>运行截图：</strong></p>
-<p><img src="https://i.loli.net/2020/05/07/gqL64Yl3JrIUsxk.png" alt="2020-05-07_104101.png"></p>
-<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><p>一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exam;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	    </span>&#123;</span><br><span class="line">		    <span class="keyword">int</span> ge,shi,qian,wan,x;</span><br><span class="line">			System.out.println(<span class="string">&quot;请输入您想判断的五位数字：&quot;</span>);</span><br><span class="line">	        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	        x=in.nextInt();</span><br><span class="line">	        wan=x/<span class="number">10000</span>;<span class="comment">//万位</span></span><br><span class="line">	        qian=x%<span class="number">10000</span>/<span class="number">1000</span>;<span class="comment">//千位</span></span><br><span class="line">	        shi=x%<span class="number">100</span>/<span class="number">10</span>;<span class="comment">//十位</span></span><br><span class="line">	        ge=x%<span class="number">10</span>;<span class="comment">//个位</span></span><br><span class="line">	        <span class="keyword">if</span> (ge==wan&amp;&amp;shi==qian)<span class="comment">//个位等于万位并且十位等于千位</span></span><br><span class="line">	        &#123; </span><br><span class="line">	        	System.out.println(<span class="string">&quot;这是回文数\n&quot;</span>);</span><br><span class="line">	        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	        		System.out.println(<span class="string">&quot;这是不是回文数\n&quot;</span>);</span><br><span class="line">	        		&#125;</span><br><span class="line">	    	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>2.Java一个类中的boolean类型变量，一般用isXxx()类型获取私有变量Xxx；</p>
+<p>注：get开头的方法，一般都表示返回某一个属性值；is开头的方法，一般都是用来表示判断某某内容。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>运行截图：</strong></p>
-<p><img src="https://i.loli.net/2020/05/07/K7ENjJldHtnqZLs.png" alt="2020-05-07_104434.png"></p>
-<h2 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h2><p>一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exam;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	    </span>&#123;</span><br><span class="line">			<span class="keyword">double</span> sum = <span class="number">0</span>, high = <span class="number">100</span>;<span class="comment">//sum为路径总和，high表示当前高度</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) </span><br><span class="line">&#123;</span><br><span class="line">			sum = high + high / <span class="number">2</span> + sum;<span class="comment">//一次落地距离+弹起距离+已经过路程</span></span><br><span class="line">			high /= <span class="number">2</span>;<span class="comment">//弹起高度为一半</span></span><br><span class="line">		&#125;</span><br><span class="line">			sum -= high;<span class="comment">//求第10次落地经过路程需减去第10次弹起距离</span></span><br><span class="line">			System.out.println(<span class="string">&quot;共经过：&quot;</span>+sum+ <span class="string">&quot;米\n&quot;</span>+<span class="string">&quot;第10次反弹高度为：&quot;</span>+high+<span class="string">&quot;米&quot;</span>);</span><br><span class="line">			</span><br><span class="line">	    	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行截图：</strong></p>
-<p><img src="https://i.loli.net/2020/05/07/Cw3UmlFiRcNvjYE.png" alt="2020-05-07_104730.png"></p>
-<h2 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h2><p>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个; 第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第10天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exam;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	    </span>&#123;</span><br><span class="line">			<span class="keyword">int</span> x = <span class="number">1</span>;<span class="comment">//第十天剩余桃子数</span></span><br><span class="line">			<span class="keyword">int</span> y;<span class="comment">//天数</span></span><br><span class="line">			<span class="keyword">for</span>(y=<span class="number">1</span>;y&lt;=<span class="number">9</span>;y++)</span><br><span class="line">			&#123;</span><br><span class="line">					x=(x+<span class="number">1</span>)*<span class="number">2</span>;<span class="comment">//前一天的剩余桃子数都是今天剩余桃子数加1后的两倍</span></span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(<span class="string">&quot;猴子第一天一共摘了&quot;</span>+x+<span class="string">&quot;个桃子。&quot;</span>);</span><br><span class="line">	    	&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行截图：</strong></p>
-<p><img src="https://i.loli.net/2020/05/07/XZBYoMhuvJW7ikd.png" alt="2020-05-07_105048.png"></p>
 
   
   
@@ -579,7 +558,7 @@
               
             
               
-                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/>https://kelecn.github.io/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/</a></p>
+                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/>https://kelecn.github.io/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/</a></p>
               
             
           </blockquote>
@@ -606,10 +585,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-23T15:46:53+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T15:50:01+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年9月23日</p>
+    <p>更新于：2020年10月3日</p>
   </a>
 </div>
 
@@ -618,7 +597,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BB%A3%E7%A0%81/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>代码</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JAVA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JAVA</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
 
 
         
@@ -631,7 +610,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/&title=五、JAVA测试题 - kelecn&summary=简介：JAVA基础测试题。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&title=编程过程中遇到的一些问题总结（C++&Java） - kelecn&summary=简介：（C++&amp;Java）问题总结。
 "
           
           >
@@ -644,7 +623,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/&title=五、JAVA测试题 - kelecn&summary=简介：JAVA基础测试题。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&title=编程过程中遇到的一些问题总结（C++&Java） - kelecn&summary=简介：（C++&amp;Java）问题总结。
 "
           
           >
@@ -657,7 +636,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/&title=五、JAVA测试题 - kelecn&summary=简介：JAVA基础测试题。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&title=编程过程中遇到的一些问题总结（C++&Java） - kelecn&summary=简介：（C++&amp;Java）问题总结。
 "
           
           >
@@ -672,7 +651,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEcUlEQVR42u3aQXLDMAgF0Nz/0u0BOhnrA8Zp+7Rrx7bQUxbA8PqyblkvBGDBWmDBgrXArsC+iuvHB296/+q59P/T5/ixH1iwYMGCBQsWLNhV2OME+E3gV8+nECn41nku3wcLFixYsGDBggX7COxlAjz8fBr43ZDt84EFCxYsWLBgwYL9lbBXBz5tNKdQU/uBBQsWLFiwYMGC/R+wXeCpBno6qJHGBRYsWLBgwYIFC/azYbuN5/RgaeN7CvjjJ2HAggULFixYsGDBHsFWAf7q32UPsGDBggULFixYsCuw3ZUm+lOFQbeguWt/sGDBggULFixYsDuw7cZuOKiRJuZT+6cXXv1BgAULFixYsGDBgt2FPR14qMJ1L6qb+FcLk9MLBgsWLFiwYMGCBfsMbPfA6SDEVOHQhUwHMsCCBQsWLFiwYMF+BmwaYDdhrwbcLTyqAxtpgQQWLFiwYMGCBQt2BzZNwLsDEt0CIS1IugVIDA4WLFiwYMGCBQv2Edi0sT11ESnQXYMb6f7HBQJYsGDBggULFizYVdjpQqHbqO42puMBjPSiwYIFCxYsWLBgwa7CTg9idAc07iogpgqW40Y3WLBgwYIFCxYs2Ftgq43taiB3DU5UfwhpYXN5frBgwYIFCxYsWLCPwJYHFYYC7u7fLTROLyAuEMCCBQsWLFiwYMGOwnYT7OogRzXxnyo4Urjj98GCBQsWLFiwYMGuwJ42uqsFQfUgUwMap/Gncb/9LliwYMGCBQsWLNgV2KmDnSbQXYDqc9ULjxvrYMGCBQsWLFiwYFdgu4MX3YGItMFcbbx3L+wYHCxYsGDBggULFuyjsClQ90ApYPW501UuHMCCBQsWLFiwYMGuwKaN7rRgmDrg1gDHV3OBBQsWLFiwYMGC3YHtFgJpgp8m5tUDdwuVtDEPFixYsGDBggUL9hnYauJ/VwKfDoRU4aYvGCxYsGDBggULFuwubDoY0W1MdwuHqefHG/NgwYIFCxYsWLBgV2DHBhWGGt1pXN1GeLfR/7bRDRYsWLBgwYIFC3YFtjqAUW14VwM/LTS6A8nlBjlYsGDBggULFizYVdipxLw68DFdEFT37Q5UgwULFixYsGDBgt2FPd1wKqCphP/ueGMnsGDBggULFixYsKuw3US7G3A6aFG9oO73L98HCxYsWLBgwYIF+yjsVKKeJuzdwZE0sU8HRtoFAliwYMGCBQsWLNgR2O7qNpRPA682slO46gAKWLBgwYIFCxYs2F3YbsKcDmR0G+XVi+n+EI4LF7BgwYIFCxYsWLCrsGlBcAo3NRBxum8a1+n7x+cGCxYsWLBgwYIF+whsmkBX4dJEPN13eoCjPQkDFixYsGDBggUL9lfDdhvJU/t0C4uPKxDAggULFixYsGDBtmDTRvf0fmmhUI3rbRxgwYIFCxYsWLBgH4G9C6z7vWq83e+mAx9gwYIFCxYsWLBgd2GnBhjSQYpqIp5e6FShcflDAQsWLFiwYMGCBbsCa80usGDBWmDBgrXA3rq+ASHxkFQxdV7qAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -680,7 +659,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/&text=五、JAVA测试题 - kelecn"
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/05/09/6%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&text=编程过程中遇到的一些问题总结（C++&Java） - kelecn"
           
           >
           
@@ -706,25 +685,27 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>六、编程过程中遇到的一些问题总结（C++&Java）</p>
-          <p class='content'>简介：（C++&amp;Java）问题总结。
+        <a class='prev' href='/2020/05/11/7%E3%80%81%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88%E4%B8%8E%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>常量指针与指针常量</p>
+          <p class='content'>简介：常量指针与指针常量的区别。
 
 
 
-1.Java中的boolean类型变量，只有两个值true ,false；C++也是，不过也可以用 1 0 代替。
-12345678//Jav...</p>
+常量指针(被指向的对象是常量)定义：又叫常指针，可以理解为常量的指针，指向的是个常量
+关键点：
+常量指针指向的对象不能通过这个指针来修改，可是仍然可以通过...</p>
         </a>
       
       
-        <a class='next' href='/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/'>
-          <p class='title'>四、面向对象的程序设计实验（C++）<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介：面向对象程序设计（C++）。
+        <a class='next' href='/2020/05/07/5%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/'>
+          <p class='title'>JAVA测试题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：JAVA基础测试题。
 
- 
 
-还没写呢^_^
-</p>
+
+第一题输出9*9口诀表。
+代码：
+12345678910111213141516package exam;public class Exam &#123;	pu...</p>
         </a>
       
     </div>
@@ -756,20 +737,6 @@
     
 
 
-
-  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98"><span class="toc-text">第一题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="toc-text">第二题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98"><span class="toc-text">第三题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98"><span class="toc-text">第四题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E9%A2%98"><span class="toc-text">第五题</span></a></li></ol>
-    </div>
-  </section>
 
 
   

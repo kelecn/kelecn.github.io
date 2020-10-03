@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>八、关于free和delete的使用 - kelecn</title>
+  <title>嵌入式开发为什么选择C语言？ - kelecn</title>
   
-    <meta name="keywords" content="面向对象,C++,代码,编程">
+    <meta name="keywords" content="编程,嵌入式,硬件,C">
   
 
   
-    <meta name="description" content="简介：关于free和delete的使用
+    <meta name="description" content="简介:嵌入式+C语言=？
 ">
   
 
@@ -429,7 +429,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">八、关于free和delete的使用</div> 
+  <div id="pjax-pageTitle">嵌入式开发为什么选择C语言？</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -469,7 +469,7 @@
     
     
       <h1 class="title">
-        八、关于free和delete的使用
+        嵌入式开发为什么选择C语言？
       </h1>
       <div class='new-meta-box'>
         
@@ -500,7 +500,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月13日</p>
+    <p>发布于：2020年3月25日</p>
   </a>
 </div>
 
@@ -511,7 +511,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="八、关于free和delete的使用" data-path="/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/">
+      <div id="lc-pv" data-title="嵌入式开发为什么选择C语言？" data-path="/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -528,19 +528,20 @@
 
 
   
-  <p>简介：关于free和delete的使用</p>
-<p><img src="https://w.wallhaven.cc/full/dg/wallhaven-dgy8gg.jpg"></p>
-<a id="more"></a>
+  <p>简介:嵌入式+C语言=？</p>
+<p><img src="https://w.wallhaven.cc/full/j5/wallhaven-j5qgk5.jpg"></p>
+ <a id="more"></a>
 
-<p>两个同时存在是有它的原因的，free是函数，它只释放内存，但不会调用析构函数，如果用free去释放new申请的空间，会因为无法调用析构函数而出现不必要的错误。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *point = (<span class="keyword">char</span> *) <span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="built_in">strcpy</span>(point, “hello”);  </span><br><span class="line"><span class="built_in">free</span>(point); <span class="comment">// Be careful here，point 所指的内存被释放，but point 所指的地址仍然不变  </span></span><br><span class="line">…  </span><br><span class="line"><span class="keyword">if</span>(point != <span class="literal">NULL</span>) <span class="comment">// 没有起到防错作用  </span></span><br><span class="line">&#123;  </span><br><span class="line"><span class="built_in">strcpy</span>(point, “jackery”); <span class="comment">// error  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这段程序中，原来free和delete只是把指针所指的内存给释放掉，<strong>但并没有把指针本身干掉</strong>。指针point被free以后其地址仍然不变（非NULL），只是该地址对应的内存是垃圾，point成了“野指针”。如果此时不把point设置为NULL，会让人误以为point是个合法的指针。如果程序比较长，我们有时记不住 point 所指的内存是否已经被释放，在继续使用point 之前，通常会用语句if (p != NULL)进行防错处理。很遗憾，此时if语句起不到防错作用，因为即便point不是NULL指针，它也不指向合法的内存块。<strong>为了避免失误，最好在free之后或者之前，将指针指向NULL</strong></p>
-<h4 id="new-delete-与-malloc-free-区别"><a href="#new-delete-与-malloc-free-区别" class="headerlink" title="new()/delete()与 malloc()/free() 区别"></a>new()/delete()与 malloc()/free() 区别</h4><p>1.malloc()/free() 是标准库函数， 使用前需调用库头文件 &lt;stdlib.h&gt; 方可使用；而 new/delete 是运算       符，执行效率更高。</p>
-<p>2.malloc() 需要手工计算字节数；而 new 能够自动计算需要分配的内存空间。</p>
-<p>3.malloc() 返回的指针是 void 类型；而 new*返回的指针是它分配空间的类型。</p>
-<p>4.new 时调用构造函数，而 malloc() 不能；delete 时调用析构函数，而 free() 不能。</p>
-<p>5.new 在申请单个类型变量时可以赋初值，而 malloc() 不具备。</p>
+<h3 id="1-从语言特点来说"><a href="#1-从语言特点来说" class="headerlink" title="1.从语言特点来说"></a>1.从语言特点来说</h3><p>①C语言有出色的可移植性，能在多种不同体系结构的软/硬平台上运行。</p>
+<p>②简洁紧凑，使用灵活的语法机制，并能直接访问硬件能够直接访问硬件的语言有：汇编和C语言汇编属于低级语言，难以完成一些复杂的功能，但是汇编比C语言访问硬件的效率更高。所以，一般将硬件初始化的工作交给汇编，比较复杂的操作交给C语言。</p>
+<p>③C语言具有很高的运行效率。</p>
+<h3 id="2-嵌入式开发中的地位——开发工具"><a href="#2-嵌入式开发中的地位——开发工具" class="headerlink" title="2.嵌入式开发中的地位——开发工具"></a>2.嵌入式开发中的地位——开发工具</h3><h3 id="3-高级语言中的低级语言：面向过程VS面向对象"><a href="#3-高级语言中的低级语言：面向过程VS面向对象" class="headerlink" title="3.高级语言中的低级语言：面向过程VS面向对象"></a>3.高级语言中的低级语言：面向过程VS面向对象</h3><h5 id="面向过程："><a href="#面向过程：" class="headerlink" title="面向过程："></a>面向过程：</h5><p>“面向过程”(Procedure Orien<a target="_blank" rel="noopener" href="http://www.elecfans.com/tags/te/">te</a>d)是一种以过程为中心的编程思想。“面向过程”也可称之为“面向记录”编程思想，他们不支持丰富的“面向对象”特性(比如继承、多态)，并且它们不允许混合持久化状态和域逻辑。</p>
+<p>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。面向过程其实是最为实际的一种思考方式,就算是面向对象的方法也是含有面向过程的思想。</p>
+<p>可以说面向过程是一种基础的方法，它考虑的是实际地实现。一般的面向过程是从上往下步步求精，所以面向过程最重要的是模块化的思想方法。</p>
+<h5 id="面向对象："><a href="#面向对象：" class="headerlink" title="面向对象："></a>面向对象：</h5><p>面向对象的分析根据抽象关键的问题域来分解系统。面向对象的设计是一种提供符号设计系统的面向对象的实现过程，它用非常接近实际领域术语的方法把系统构造成“现实世界”的对象。</p>
+<p>面向对象程序设计可以看作一种在程序中包含各种独立而又互相调用的对象的思想，这与传统的思想刚好相反：传统的程序设计主张将程序看作一系列函数的集合，或者直接就是一系列对电脑下达的指令。面向对象程序设计中的每一个对象都应该能够接受数据、处理数据并将数据传达给其它对象，因此它们都可以被看作一个小型的“机器”，即对象。</p>
+<h5 id="面向过程和面向对象的区别："><a href="#面向过程和面向对象的区别：" class="headerlink" title="面向过程和面向对象的区别："></a>面向过程和面向对象的区别：</h5><p>以一个人从A地到B地为例，面向过程就是需要规划路线，了解路况，自己做好一系列的准备;而面向对象就是坐上一辆出租车，告诉司机我要去B地就可以了，不用关心其他的事情。</p>
+<p>最后，C语言也有他自身的缺陷，比如代码的复用性差，代码的维护性差，扩展性(新增代码时不改变原来的代码)很差。</p>
 
   
   
@@ -558,7 +559,7 @@
               
             
               
-                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/>https://kelecn.github.io/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/</a></p>
+                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/>https://kelecn.github.io/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/</a></p>
               
             
           </blockquote>
@@ -585,10 +586,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-23T15:46:17+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T15:51:05+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年9月23日</p>
+    <p>更新于：2020年10月3日</p>
   </a>
 </div>
 
@@ -597,7 +598,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BB%A3%E7%A0%81/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>代码</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>嵌入式</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%A1%AC%E4%BB%B6/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>硬件</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div>
 
 
         
@@ -610,7 +611,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&title=八、关于free和delete的使用 - kelecn&summary=简介：关于free和delete的使用
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/&title=嵌入式开发为什么选择C语言？ - kelecn&summary=简介:嵌入式+C语言=？
 "
           
           >
@@ -623,7 +624,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&title=八、关于free和delete的使用 - kelecn&summary=简介：关于free和delete的使用
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/&title=嵌入式开发为什么选择C语言？ - kelecn&summary=简介:嵌入式+C语言=？
 "
           
           >
@@ -636,7 +637,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&title=八、关于free和delete的使用 - kelecn&summary=简介：关于free和delete的使用
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/&title=嵌入式开发为什么选择C语言？ - kelecn&summary=简介:嵌入式+C语言=？
 "
           
           >
@@ -651,7 +652,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -659,7 +660,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/05/13/%E5%85%AB%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&text=八、关于free和delete的使用 - kelecn"
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/&text=嵌入式开发为什么选择C语言？ - kelecn"
           
           >
           
@@ -685,27 +686,24 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/05/22/%E4%B9%9D%E3%80%81C++%E8%BF%94%E5%9B%9E%E5%AF%B9%E8%B1%A1%E5%92%8C%E8%BF%94%E5%9B%9E%E5%BC%95%E7%94%A8/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>九、C++返回对象和返回引用</p>
-          <p class='content'>简介：C++返回对象和返回引用。
+        <a class='prev' href='/2020/04/29/4%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>面向对象的程序设计实验（C++）</p>
+          <p class='content'>简介：面向对象程序设计（C++）。
 
+ 
 
-
-我们发现，在C++中，有些成员函数返回的是对象，而有些函数返回的又是引用。
-返回对象和返回引用的最主要的区别就是函数原型和函数头。
-123Car run(...</p>
+还没写呢^_^
+</p>
         </a>
       
       
-        <a class='next' href='/2020/05/11/%E4%B8%83%E3%80%81%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88%E4%B8%8E%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F/'>
-          <p class='title'>七、常量指针与指针常量<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介：常量指针与指针常量的区别。
+        <a class='next' href='/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/'>
+          <p class='title'>Matlab Gui关于edit keypressfcn的响应<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>如何在Matlab GUI 中识别键盘输入简介：Matlab GUI键盘输入。
 
 
 
-常量指针(被指向的对象是常量)定义：又叫常指针，可以理解为常量的指针，指向的是个常量
-关键点：
-常量指针指向的对象不能通过这个指针来修改，可是仍然可以通过...</p>
+1234567891011121314 function showmap  fig=figure( &#x2...</p>
         </a>
       
     </div>
@@ -748,7 +746,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#new-delete-%E4%B8%8E-malloc-free-%E5%8C%BA%E5%88%AB"><span class="toc-text">new()&#x2F;delete()与 malloc()&#x2F;free() 区别</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%8E%E8%AF%AD%E8%A8%80%E7%89%B9%E7%82%B9%E6%9D%A5%E8%AF%B4"><span class="toc-text">1.从语言特点来说</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E4%BD%8D%E2%80%94%E2%80%94%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="toc-text">2.嵌入式开发中的地位——开发工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E4%BD%8E%E7%BA%A7%E8%AF%AD%E8%A8%80%EF%BC%9A%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8BVS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">3.高级语言中的低级语言：面向过程VS面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-text">面向过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-text">面向对象：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-text">面向过程和面向对象的区别：</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 

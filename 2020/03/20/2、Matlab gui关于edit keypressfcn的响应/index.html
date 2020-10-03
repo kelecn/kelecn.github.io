@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>十一、C++与Java多态的区别 - kelecn</title>
+  <title>Matlab Gui关于edit keypressfcn的响应 - kelecn</title>
   
-    <meta name="keywords" content="面向对象,C++,代码,编程,JAVA">
+    <meta name="keywords" content="代码,Matlab,Gui">
   
 
   
-    <meta name="description" content="简介：C++与Java多态的区别。
+    <meta name="description" content="如何在Matlab GUI 中识别键盘输入简介：Matlab GUI键盘输入。
 ">
   
 
@@ -429,7 +429,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">十一、C++与Java多态的区别</div> 
+  <div id="pjax-pageTitle">Matlab Gui关于edit keypressfcn的响应</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -466,26 +466,10 @@
   
   <div class="article-meta" id="top">
     
-      
-
-  
-    <meting-js
-      mini='true'
-      volume='0.7'
-      loop='all'
-      order='list'
-      server='netease'
-      type='song'
-      id='1476239407'>
-    </meting-js>
-  
-
-
-    
     
     
       <h1 class="title">
-        十一、C++与Java多态的区别
+        Matlab Gui关于edit keypressfcn的响应
       </h1>
       <div class='new-meta-box'>
         
@@ -516,7 +500,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年6月6日</p>
+    <p>发布于：2020年3月20日</p>
   </a>
 </div>
 
@@ -527,7 +511,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="十一、C++与Java多态的区别" data-path="/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/">
+      <div id="lc-pv" data-title="Matlab Gui关于edit keypressfcn的响应" data-path="/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -544,28 +528,15 @@
 
 
   
-  <p>简介：C++与Java多态的区别。</p>
-<p><img src="https://w.wallhaven.cc/full/6k/wallhaven-6k35rl.jpg"></p>
+  <h2 id="如何在Matlab-GUI-中识别键盘输入"><a href="#如何在Matlab-GUI-中识别键盘输入" class="headerlink" title="如何在Matlab GUI 中识别键盘输入"></a>如何在Matlab GUI 中识别键盘输入</h2><p>简介：Matlab GUI键盘输入。</p>
+<p><img src="https://w.wallhaven.cc/full/zm/wallhaven-zme9dg.png"></p>
 <a id="more"></a>
 
-<h3 id="多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C-和Java都具有多态机制，但是他们的实现不同，使用时的效果也会略有不同。"><a href="#多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C-和Java都具有多态机制，但是他们的实现不同，使用时的效果也会略有不同。" class="headerlink" title="多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C++和Java都具有多态机制，但是他们的实现不同，使用时的效果也会略有不同。"></a>多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C++和Java都具有多态机制，但是他们的实现不同，使用时的效果也会略有不同。</h3><h4 id="在C-中"><a href="#在C-中" class="headerlink" title="在C++中"></a>在C++中</h4><ul>
-<li>普通函数调用：具体调用哪个方法在编译时就可以决定(通过查找编译器的符号表)，同时在使用标准过程调用机制基础上增加一个表示对象身份的指针(this指针)。</li>
-<li>虚函数调用：函数调用依赖于对象的实际类型，一般地说，对象的实际类型只能在运行时间才能确定。实现机制是使用virtual table(vtbls)和virtual table pointers(vptrs)。<ol>
-<li>vtbl 是由函数指针构成的数组或链表，程序中每一个class凡声明(或继承)虚函数者，都有一个自己的vtbl，其中的条目就是该class的各个虚函数实现的指针。因此必须为每一个class消耗一个vtbl空间，其大小视虚函数的个数确定。</li>
-<li>凡声明有虚函数的class，其对象都有一个隐藏的data member，用来指向class的vtbl。</li>
-<li>当多态发生时，编译器首先根据对象vptr找出其vtbl，然后找出vtbl内对应的函数指针，最后调用函数指针指向的函数。从而实现多态。</li>
-</ol>
-</li>
-</ul>
-<h4 id="在Java中"><a href="#在Java中" class="headerlink" title="在Java中"></a>在Java中</h4><p>1.C++中VTable和vptr是在编译阶段由编译器自动生成的，也就是说，在C++程序载入内存以前，在.obj（.o）文件中已经有这些结构的信 息；Java中的方法表是由JVM生成的，因此，使用javac命令编译后生成的.class文件中并没有方法表的信息。只有等JVM把.class文件 载入到内存中时，才会为该.class文件动态生成一个与之关联的方法表，放置在JVM的方法区中。</p>
-<p>2.C++中某个方法在VTable的索引号是在编译阶段已经明确知道的，并不需要在运行过程中动态获知；Java中的方法初始时都只是一个符号，并不是 一个明确的地址，只有等到该方法被第一次调用时，才会被解析成一个方法表中的偏移量，也就是说，只有在这个时候，实例方法才明确知道自己在方发表中的偏移 量了，在这之前必须经历一个解析的过程。</p>
-<p>因此在构造函数是Java会发生多态，即使子类此时还没有构造完全（一个极难发现的bug）。而C++则不会发生多态，待父类构造完全，在构造子类。<br><strong>Java代码如下：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.fun();</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;B&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            fun();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] argv)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            B b = <span class="keyword">new</span> B();</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//B</span></span><br><span class="line"><span class="comment">//B</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">showmap</span></span></span><br><span class="line">  fig=<span class="built_in">figure</span>( <span class="string">&#x27;Name&#x27;</span>,<span class="string">&#x27;Timer&#x27;</span>,<span class="string">&#x27;Position&#x27;</span>,[<span class="number">0</span>,<span class="number">0</span>,<span class="number">500</span>,<span class="number">500</span>] ,<span class="string">&#x27;NumberTitle&#x27;</span>,<span class="string">&#x27;off&#x27;</span>,<span class="string">&#x27;visible&#x27;</span>,<span class="string">&#x27;off&#x27;</span>);</span><br><span class="line">  movegui(fig,<span class="string">&#x27;center&#x27;</span>);</span><br><span class="line">  set(fig,<span class="string">&#x27;visible&#x27;</span>,<span class="string">&#x27;on&#x27;</span>);</span><br><span class="line">  ttext= uicontrol(<span class="string">&#x27;Style&#x27;</span>,<span class="string">&#x27;edit&#x27;</span>,<span class="string">&#x27;Position&#x27;</span>,[<span class="number">150</span>,<span class="number">250</span>,<span class="number">200</span>,<span class="number">30</span>],<span class="string">&#x27;String&#x27;</span>,<span class="string">&#x27;Press  &quot;Start&quot;&#x27;</span>,...</span><br><span class="line">      <span class="string">&#x27;KeyPressFcn&#x27;</span>,@keyPress);</span><br><span class="line"></span><br><span class="line"> ii=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">keyPress</span><span class="params">(x,y)</span></span></span><br><span class="line">        set(ttext,<span class="string">&#x27;string&#x27;</span>,num2str(ii));</span><br><span class="line">        ii = ii+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>C++代码如下：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;A&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        A()</span><br><span class="line">        &#123;</span><br><span class="line">            fun();</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;B&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        B()</span><br><span class="line">    &#123;</span><br><span class="line">        fun();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    B b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//A</span></span><br><span class="line"><span class="comment">//B</span></span><br></pre></td></tr></table></figure>
+<!--more-->
 
-<p>可以发现，C++构造子类时，先构造父类，输出A，然后在构造自身，输出B。而Java在构造子类时，父类并未构造完成，但已经可以发生多态输出B，然后再构造自身，输出B。Java一般为了避免这种情况，会把fun等init()函数声明为private或者finial。</p>
+<p>参考文献：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU5NTAyMTIzOQ==&mid=2247483991&idx=1&sn=0e50c2faa57464846784ef18d54bd608&chksm=fe791e8fc90e9799d139e3860be2fd02afc183d58858959d0d29eb71cc32ed63b68f6a93edfb&scene=21#wechat_redirect">打浦桥程序员</a></p>
 
   
   
@@ -583,7 +554,7 @@
               
             
               
-                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/>https://kelecn.github.io/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/</a></p>
+                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/>https://kelecn.github.io/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/</a></p>
               
             
           </blockquote>
@@ -610,10 +581,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-23T15:45:05+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T15:51:18+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年9月23日</p>
+    <p>更新于：2020年10月3日</p>
   </a>
 </div>
 
@@ -622,7 +593,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BB%A3%E7%A0%81/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>代码</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JAVA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JAVA</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BB%A3%E7%A0%81/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>代码</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Matlab/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Matlab</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Gui/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Gui</p></a></div>
 
 
         
@@ -635,7 +606,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/&title=十一、C++与Java多态的区别 - kelecn&summary=简介：C++与Java多态的区别。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=如何在Matlab GUI 中识别键盘输入简介：Matlab GUI键盘输入。
 "
           
           >
@@ -648,7 +619,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/&title=十一、C++与Java多态的区别 - kelecn&summary=简介：C++与Java多态的区别。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=如何在Matlab GUI 中识别键盘输入简介：Matlab GUI键盘输入。
 "
           
           >
@@ -661,7 +632,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/&title=十一、C++与Java多态的区别 - kelecn&summary=简介：C++与Java多态的区别。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=如何在Matlab GUI 中识别键盘输入简介：Matlab GUI键盘输入。
 "
           
           >
@@ -676,7 +647,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -684,7 +655,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/06/06/%E5%8D%81%E4%B8%80%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/&text=十一、C++与Java多态的区别 - kelecn"
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/03/20/2%E3%80%81Matlab%20gui%E5%85%B3%E4%BA%8Eedit%20keypressfcn%E7%9A%84%E5%93%8D%E5%BA%94/&text=Matlab Gui关于edit keypressfcn的响应 - kelecn"
           
           >
           
@@ -710,14 +681,25 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/2020/03/25/3%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>嵌入式开发为什么选择C语言？</p>
+          <p class='content'>简介:嵌入式+C语言=？
+
+ 
+
+1.从语言特点来说①C语言有出色的可移植性，能在多种不同体系结构的软/硬平台上运行。
+②简洁紧凑，使用灵活的语法机制，并能直接访问硬件能够直接访问硬件的语言有：...</p>
+        </a>
       
-        <a class='next' href='/2020/05/29/%E5%8D%81%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/'>
-          <p class='title'>十、C++重载注意点<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介：C++重载注意点。
+      
+        <a class='next' href='/2020/03/19/1%E3%80%81%E5%8F%AF%E4%B9%90%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%A1%E5%8D%9A%E5%AE%A2/'>
+          <p class='title'>Kelecn的第一条博客！<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：您好！Hexo！
 
 
 
-1.调用函数在前，定义函数在后，进行原型声明2.函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载1234567891011121314151617181...</p>
+友情链接：My Github、Hexo
+</p>
         </a>
       
     </div>
@@ -760,7 +742,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E6%98%AF%E6%8C%87%E7%94%A8%E7%88%B6%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E4%B8%8D%E5%90%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%EF%BC%8C%E8%B0%83%E7%94%A8%E5%85%B6%E5%85%B1%E6%9C%89%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%8C%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E7%B1%BB%E4%BC%9A%E6%9C%89%E4%B8%8D%E5%90%8C%E7%9A%84%E8%A1%8C%E4%B8%BA%E3%80%82%E8%99%BD%E7%84%B6C-%E5%92%8CJava%E9%83%BD%E5%85%B7%E6%9C%89%E5%A4%9A%E6%80%81%E6%9C%BA%E5%88%B6%EF%BC%8C%E4%BD%86%E6%98%AF%E4%BB%96%E4%BB%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%90%8C%EF%BC%8C%E4%BD%BF%E7%94%A8%E6%97%B6%E7%9A%84%E6%95%88%E6%9E%9C%E4%B9%9F%E4%BC%9A%E7%95%A5%E6%9C%89%E4%B8%8D%E5%90%8C%E3%80%82"><span class="toc-text">多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C++和Java都具有多态机制，但是他们的实现不同，使用时的效果也会略有不同。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8C-%E4%B8%AD"><span class="toc-text">在C++中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8Java%E4%B8%AD"><span class="toc-text">在Java中</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8Matlab-GUI-%E4%B8%AD%E8%AF%86%E5%88%AB%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="toc-text">如何在Matlab GUI 中识别键盘输入</span></a></li></ol>
     </div>
   </section>
 

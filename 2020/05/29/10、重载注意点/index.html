@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>四、面向对象的程序设计实验（C++） - kelecn</title>
+  <title>C++重载注意点 - kelecn</title>
   
     <meta name="keywords" content="面向对象,C++,代码,编程">
   
 
   
-    <meta name="description" content="简介：面向对象程序设计（C++）。
+    <meta name="description" content="简介：C++重载注意点。
 ">
   
 
@@ -429,7 +429,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">四、面向对象的程序设计实验（C++）</div> 
+  <div id="pjax-pageTitle">C++重载注意点</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -469,7 +469,7 @@
     
     
       <h1 class="title">
-        四、面向对象的程序设计实验（C++）
+        C++重载注意点
       </h1>
       <div class='new-meta-box'>
         
@@ -500,7 +500,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年4月29日</p>
+    <p>发布于：2020年5月29日</p>
   </a>
 </div>
 
@@ -511,7 +511,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="四、面向对象的程序设计实验（C++）" data-path="/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+      <div id="lc-pv" data-title="C++重载注意点" data-path="/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -528,11 +528,14 @@
 
 
   
-  <p>简介：面向对象程序设计（C++）。</p>
-<p><img src="https://w.wallhaven.cc/full/w8/wallhaven-w86gex.png"></p>
- <a id="more"></a>
+  <p>简介：C++重载注意点。</p>
+<p><img src="https://w.wallhaven.cc/full/g8/wallhaven-g8e98d.png"></p>
+<a id="more"></a>
 
-<p>还没写呢^_^</p>
+<h4 id="1-调用函数在前，定义函数在后，进行原型声明"><a href="#1-调用函数在前，定义函数在后，进行原型声明" class="headerlink" title="1.调用函数在前，定义函数在后，进行原型声明"></a>1.调用函数在前，定义函数在后，进行原型声明</h4><h4 id="2-函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载"><a href="#2-函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载" class="headerlink" title="2.函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载"></a>2.函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">double</span> b)</span></span>;<span class="comment">//调用函数在前，定义函数在后，进行原型声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span> <span class="params">(<span class="keyword">double</span> b,<span class="keyword">int</span> a)</span></span>;<span class="comment">//调用函数在前，定义函数在后，进行原型声明</span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">8</span>;</span><br><span class="line">    <span class="keyword">double</span> y=<span class="number">8</span>;</span><br><span class="line">    print(x,y);</span><br><span class="line">    print(y,x);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">double</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;showpoint&lt;&lt;<span class="string">&quot;1&quot;</span>&lt;&lt;a&lt;&lt;b&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span> <span class="params">(<span class="keyword">double</span> b,<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;showpoint&lt;&lt;<span class="string">&quot;2&quot;</span>&lt;&lt; a&lt;&lt;b &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-C-中cout输出字符型指针地址值的方法"><a href="#3-C-中cout输出字符型指针地址值的方法" class="headerlink" title="3.C++中cout输出字符型指针地址值的方法"></a>3.C++中cout输出字符型指针地址值的方法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C++中cout输出字符型指针地址值的方法</span></span><br><span class="line"><span class="comment">//若要打印地址请用void*，否则 p会被认为是字符串。原因：运算符重载的匹配规则</span></span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="keyword">char</span> a;</span><br><span class="line">     <span class="keyword">char</span> *p=&amp;a;</span><br><span class="line">     <span class="built_in">cout</span>&lt;&lt;(<span class="keyword">void</span>*)p&lt;&lt;<span class="built_in">endl</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
+
 
   
   
@@ -550,7 +553,7 @@
               
             
               
-                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/>https://kelecn.github.io/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</a></p>
+                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/>https://kelecn.github.io/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/</a></p>
               
             
           </blockquote>
@@ -577,10 +580,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-23T15:47:02+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T15:49:10+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年9月23日</p>
+    <p>更新于：2020年10月3日</p>
   </a>
 </div>
 
@@ -602,7 +605,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&title=四、面向对象的程序设计实验（C++） - kelecn&summary=简介：面向对象程序设计（C++）。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。
 "
           
           >
@@ -615,7 +618,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&title=四、面向对象的程序设计实验（C++） - kelecn&summary=简介：面向对象程序设计（C++）。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。
 "
           
           >
@@ -628,7 +631,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&title=四、面向对象的程序设计实验（C++） - kelecn&summary=简介：面向对象程序设计（C++）。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。
 "
           
           >
@@ -643,7 +646,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEcElEQVR42u3aQXbdMAgF0Ox/0+kCenIMDyTnt1ezuJItXf0BUL6+jSPjCwFYsAZYsGANsFdgv8Lx1wub86vrywcqrpue42mfYMGCBQsWLFiwYO/Cdg/w9Ly68e4+phdVhU89wIIFCxYsWLBgwb4D+xgAh39Xv3M60Zju/3E+WLBgwYIFCxYs2I+GrT5vN0QsFajLAT9YsGDBggULFizY/wK2e9C0YePUfLBgwYIFCxYsWLCfCdtuUAgD8nRe2qAx/aFc74QBCxYsWLBgwYIFW4I9tbFP/Tv2AAsWLFiwYMGCBXsFdjqmG5s2alQThu9LAyxYsGDBggULFuwd2K3CdRVg2rDxtC5NDNbODxYsWLBgwYIFC/YV2K3EIA34q4X17neuFe7BggULFixYsGDBXoFNA+1qwD0tXFcThq2Eo/vdx/9BAAsWLFiwYMGCBXsFNg3U04aMt+elicpjoRssWLBgwYIFCxbsK7DdQm86b3yQ8PtpwbvcsAEWLFiwYMGCBQv2CuxWgTgNyLvrywcNC9zVcz42bIAFCxYsWLBgwYI9ApsGzunz7YL4rfeXEx2wYMGCBQsWLFiwV2DTAPlUgN5NWNLvT88fF7rBggULFixYsGDBHoXtNjJUA+o00E8L8ing9YYNsGDBggULFixYsCPYckG3mThMGye6FzD9YcTrwYIFCxYsWLBgwV6F7Qbm6QGOBebDho2tQj1YsGDBggULFizYO7CnA+vq6CYq3UL4VsMIWLBgwYIFCxYs2M+A7RZ+u40R240U3cRgWtAHCxYsWLBgwYIF+w5sGoinAXsagKcXnj7vzgMLFixYsGDBggX7u2C3/j0OuMODThOFtOEDLFiwYMGCBQsW7B3YtKGhC73VsFFunGgmLN1E4Md1YMGCBQsWLFiwYK/AdoFPNWhsJRhbjSXVdeXMCyxYsGDBggULFuxR2CnMNBDfgtr6XrvxAyxYsGDBggULFuwV2LRwnDY0pBc5bbyYnrecUIAFCxYsWLBgwYK9ApsCHNtYGKh3C+dpogAWLFiwYMGCBQv2d8BuFZ5PF5bTAvqpC3ts2AALFixYsGDBggX7Kmz3oPGGmuu2CuLTwnu7YQMsWLBgwYIFCxbsEdgUaqvRI72YaSIwTVDAggULFixYsGDBvgvbPUg3ME8L1ils9+LS74EFCxYsWLBgwYJ9F/b08+2DTS942sgRZ15gwYIFCxYsWLBgR7DTkTZidAP6U4lM2ojymCCABQsWLFiwYMGCPQr7FY70ArYaProX1V0fJ0RgwYIFCxYsWLBgr8JuBdhpA3IKMk0s4gbjn94PFixYsGDBggUL9hXY7YC8Oy8trG9dUPoesGDBggULFixYsP8GbJpobCUI08Qm/qGABQsWLFiwYMGC/SjYKeD0/dMCdjdB+PG9YMGCBQsWLFiwYF+BTQvN6bzqe7oXMS2IVwvrYMGCBQsWLFiwYN+F7Y4p9Fbjxql9riUIYMGCBQsWLFiwYI/AGrsDLFiwBliwYA2wR8cf1nAQ1FAk22oAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -651,7 +654,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/04/29/%E5%9B%9B%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&text=四、面向对象的程序设计实验（C++） - kelecn"
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/05/29/10%E3%80%81%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E7%82%B9/&text=C++重载注意点 - kelecn"
           
           >
           
@@ -677,26 +680,25 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>五、JAVA测试题</p>
-          <p class='content'>简介：JAVA基础测试题。
+        <a class='prev' href='/2020/06/06/11%E3%80%81C++%E4%B8%8EJava%E5%A4%9A%E6%80%81%E7%9A%84%E5%8C%BA%E5%88%AB/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++与Java多态的区别</p>
+          <p class='content'>简介：C++与Java多态的区别。
 
 
 
-第一题输出9*9口诀表。
-代码：
-12345678910111213141516package exam;public class Exam &#123;	pu...</p>
+多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C++和Java都具有多态机制，但是他们的实现不同，使用时的效果也会...</p>
         </a>
       
       
-        <a class='next' href='/2020/03/25/%E4%B8%89%E3%80%81%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9C%E8%AF%AD%E8%A8%80%EF%BC%9F/'>
-          <p class='title'>三、嵌入式开发为什么选择C语言？<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介:嵌入式+C语言=？
+        <a class='next' href='/2020/05/22/9%E3%80%81C++%E8%BF%94%E5%9B%9E%E5%AF%B9%E8%B1%A1%E5%92%8C%E8%BF%94%E5%9B%9E%E5%BC%95%E7%94%A8/'>
+          <p class='title'>C++返回对象和返回引用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：C++返回对象和返回引用。
 
- 
 
-1.从语言特点来说①C语言有出色的可移植性，能在多种不同体系结构的软/硬平台上运行。
-②简洁紧凑，使用灵活的语法机制，并能直接访问硬件能够直接访问硬件的语言有：...</p>
+
+我们发现，在C++中，有些成员函数返回的是对象，而有些函数返回的又是引用。
+返回对象和返回引用的最主要的区别就是函数原型和函数头。
+123Car run(...</p>
         </a>
       
     </div>
@@ -728,6 +730,20 @@
     
 
 
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0%E5%9C%A8%E5%89%8D%EF%BC%8C%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E5%9C%A8%E5%90%8E%EF%BC%8C%E8%BF%9B%E8%A1%8C%E5%8E%9F%E5%9E%8B%E5%A3%B0%E6%98%8E"><span class="toc-text">1.调用函数在前，定义函数在后，进行原型声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%EF%BC%9A%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%AA%E6%95%B0%E7%9B%B8%E5%90%8C%EF%BC%8C%E5%8F%82%E6%95%B0%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E9%87%8D%E8%BD%BD"><span class="toc-text">2.函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-C-%E4%B8%ADcout%E8%BE%93%E5%87%BA%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%8C%87%E9%92%88%E5%9C%B0%E5%9D%80%E5%80%BC%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">3.C++中cout输出字符型指针地址值的方法</span></a></li></ol>
+    </div>
+  </section>
 
 
   

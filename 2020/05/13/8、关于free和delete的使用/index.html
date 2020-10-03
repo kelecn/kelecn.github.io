@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>六、编程过程中遇到的一些问题总结（C++&amp;Java） - kelecn</title>
+  <title>关于free和delete的使用 - kelecn</title>
   
-    <meta name="keywords" content="面向对象,C++,编程,JAVA">
+    <meta name="keywords" content="面向对象,C++,代码,编程">
   
 
   
-    <meta name="description" content="简介：（C++&amp;Java）问题总结。
+    <meta name="description" content="简介：关于free和delete的使用
 ">
   
 
@@ -429,7 +429,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">六、编程过程中遇到的一些问题总结（C++&amp;Java）</div> 
+  <div id="pjax-pageTitle">关于free和delete的使用</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -469,7 +469,7 @@
     
     
       <h1 class="title">
-        六、编程过程中遇到的一些问题总结（C++&Java）
+        关于free和delete的使用
       </h1>
       <div class='new-meta-box'>
         
@@ -489,7 +489,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a>
+      <a class="category-link" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
     </a>
   </div>
 
@@ -500,7 +500,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月9日</p>
+    <p>发布于：2020年5月13日</p>
   </a>
 </div>
 
@@ -511,7 +511,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="六、编程过程中遇到的一些问题总结（C++&Java）" data-path="/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/">
+      <div id="lc-pv" data-title="关于free和delete的使用" data-path="/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -528,19 +528,19 @@
 
 
   
-  <p>简介：（C++&amp;Java）问题总结。</p>
-<p><img src="https://w.wallhaven.cc/full/wy/wallhaven-wyw8wr.jpg"></p>
+  <p>简介：关于free和delete的使用</p>
+<p><img src="https://w.wallhaven.cc/full/dg/wallhaven-dgy8gg.jpg"></p>
 <a id="more"></a>
 
-<p>1.Java中的boolean类型变量，只有两个值true ,false；C++也是，不过也可以用 1 0 代替。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Java boolean 类型</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;I Love YOU!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两个同时存在是有它的原因的，free是函数，它只释放内存，但不会调用析构函数，如果用free去释放new申请的空间，会因为无法调用析构函数而出现不必要的错误。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *point = (<span class="keyword">char</span> *) <span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="built_in">strcpy</span>(point, “hello”);  </span><br><span class="line"><span class="built_in">free</span>(point); <span class="comment">// Be careful here，point 所指的内存被释放，but point 所指的地址仍然不变  </span></span><br><span class="line">…  </span><br><span class="line"><span class="keyword">if</span>(point != <span class="literal">NULL</span>) <span class="comment">// 没有起到防错作用  </span></span><br><span class="line">&#123;  </span><br><span class="line"><span class="built_in">strcpy</span>(point, “jackery”); <span class="comment">// error  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C++ boolean 类型</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	 <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;I Love YOU!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>2.Java一个类中的boolean类型变量，一般用isXxx()类型获取私有变量Xxx；</p>
-<p>注：get开头的方法，一般都表示返回某一个属性值；is开头的方法，一般都是用来表示判断某某内容。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
+<p>这段程序中，原来free和delete只是把指针所指的内存给释放掉，<strong>但并没有把指针本身干掉</strong>。指针point被free以后其地址仍然不变（非NULL），只是该地址对应的内存是垃圾，point成了“野指针”。如果此时不把point设置为NULL，会让人误以为point是个合法的指针。如果程序比较长，我们有时记不住 point 所指的内存是否已经被释放，在继续使用point 之前，通常会用语句if (p != NULL)进行防错处理。很遗憾，此时if语句起不到防错作用，因为即便point不是NULL指针，它也不指向合法的内存块。<strong>为了避免失误，最好在free之后或者之前，将指针指向NULL</strong></p>
+<h4 id="new-delete-与-malloc-free-区别"><a href="#new-delete-与-malloc-free-区别" class="headerlink" title="new()/delete()与 malloc()/free() 区别"></a>new()/delete()与 malloc()/free() 区别</h4><p>1.malloc()/free() 是标准库函数， 使用前需调用库头文件 &lt;stdlib.h&gt; 方可使用；而 new/delete 是运算       符，执行效率更高。</p>
+<p>2.malloc() 需要手工计算字节数；而 new 能够自动计算需要分配的内存空间。</p>
+<p>3.malloc() 返回的指针是 void 类型；而 new*返回的指针是它分配空间的类型。</p>
+<p>4.new 时调用构造函数，而 malloc() 不能；delete 时调用析构函数，而 free() 不能。</p>
+<p>5.new 在申请单个类型变量时可以赋初值，而 malloc() 不具备。</p>
 
   
   
@@ -558,7 +558,7 @@
               
             
               
-                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/>https://kelecn.github.io/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/</a></p>
+                <p>本文永久链接是：<a href=https://kelecn.github.io/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/>https://kelecn.github.io/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/</a></p>
               
             
           </blockquote>
@@ -585,10 +585,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-23T15:46:44+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-03T15:48:54+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年9月23日</p>
+    <p>更新于：2020年10月3日</p>
   </a>
 </div>
 
@@ -597,7 +597,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JAVA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JAVA</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面向对象</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BB%A3%E7%A0%81/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>代码</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BC%96%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>编程</p></a></div>
 
 
         
@@ -610,7 +610,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&title=六、编程过程中遇到的一些问题总结（C++&Java） - kelecn&summary=简介：（C++&amp;Java）问题总结。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.github.io/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&title=关于free和delete的使用 - kelecn&summary=简介：关于free和delete的使用
 "
           
           >
@@ -623,7 +623,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&title=六、编程过程中遇到的一些问题总结（C++&Java） - kelecn&summary=简介：（C++&amp;Java）问题总结。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.github.io/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&title=关于free和delete的使用 - kelecn&summary=简介：关于free和delete的使用
 "
           
           >
@@ -636,7 +636,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&title=六、编程过程中遇到的一些问题总结（C++&Java） - kelecn&summary=简介：（C++&amp;Java）问题总结。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.github.io/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&title=关于free和delete的使用 - kelecn&summary=简介：关于free和delete的使用
 "
           
           >
@@ -651,7 +651,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFMElEQVR42u3bS3JbMQwEQN3/0s4BUvIjBkPFrjR3Skn8NLkZA3l9Gf9kvBCAB2+AB2+AB28U4F/hePr924VL879bZ/v77XyP5wEPHjx48ODBgwcPvgh/HADCjTytl17s6QWMg05pXvDgwYMHDx48ePDgPwE/Pejp520Am84zhUkvdOwFHjx48ODBgwcPHvwPgJ8GjClwGuTSh5LOBx48ePDgwYMHDx78b4K/dUHTQksawNrnBw8ePHjw4MGDBw/+X8BvG322hZQ0kE0LK+3zf7yTDDx48ODBgwcPHjz4RUD5Xz/HXuDBgwcPHjx48ODBF+BbIy2YnAaxWwFqu/7YCTx48ODBgwcPHjz4Anxa2DhtIDpdZxtY0otJH1J68eDBgwcPHjx48ODBN+CngSINHNvCynT+24WeeJ/gwYMHDx48ePDgwRfgWws/BYtpYNsWKl7LcQo93R948ODBgwcPHjx48A349IDjAsBl0NY66bmOHw548ODBgwcPHjx48AX404VrhYBLAWZbCPkKxzhggQcPHjx48ODBgwd/EX4aRE4DzGlhJA0+aUBqBa5HH/DgwYMHDx48ePDgC/DtjacbnO4jhTx9AGlQHFegwIMHDx48ePDgwYO/CL8NOp+a7/SC2vs+frjgwYMHDx48ePDgwRfhp4EmbWSaFhBahY1pwSf9Pnjw4MGDBw8ePHjwn4Qf/0F/uJG0YWi6n9ZDmp7jeH7w4MGDBw8ePHjw4IvwrYadtFFpe/HTi2n/Hjx48ODBgwcPHjz4nwB/ukBa2GiBpA/g1vceP4MHDx48ePDgwYMHX4BPG5ZSmDQY3Rqt4HccLMGDBw8ePHjw4MGDL8C3GpvaQap9UZ8uyLw9D3jw4MGDBw8ePHjwBfjtRra/Oz1QOs+24LIt3IwLIeDBgwcPHjx48ODBDxqaniZMA9Q2KE3XTy8yLXCMHxR48ODBgwcPHjx48AX42w1NrQaoVoNS6yJO1x0nV/DgwYMHDx48ePDgB/DT4HS60DZIpQ9j21C1veC33wMPHjx48ODBgwcPvgh/e0PpOq1AtH0ItYIMePDgwYMHDx48ePAF+G3BYgu6vbhtYaIVHI89wIMHDx48ePDgwYO/CJ/CbYPYNJhcK1gMH97xRYEHDx48ePDgwYMHX4DfNjSd/r7deLTd3+lF1gMjePDgwYMHDx48ePAF+G1QSg+cAqTBqN2IlT4w8ODBgwcPHjx48OAb8C2gVrDaNkK1CjW3CjLgwYMHDx48ePDgwTfhp4FiWjjYNjJNA1CrcLJd/7GhCTx48ODBgwcPHjz44n9MWP/BfwnVbpxqB6n4fODBgwcPHjx48ODBF+GnjUmnQGlAaQeY7cWl+39bCAEPHjx48ODBgwcPvgDfKjRsA0wbcFuY2Qa0dXIFDx48ePDgwYMHD/6bhqY4EJQDze2L3RZw0nXAgwcPHjx48ODBg2/Cb8etoJIWVqYQp8FwGiDXDU3gwYMHDx48ePDgwX8DfysonMKlF7gtZKTw0/2ABw8ePHjw4MGDB38TvtVQlEJMg1W7YJMGrtNzgwcPHjx48ODBgwd/E/7WBreBZXrAdP4p7DQ4ggcPHjx48ODBgwf/m+CnGz1d59a/t4LgX98DDx48ePDgwYMHD/4HwKeFk7Shqd141GqoOv4MHjx48ODBgwcPHvwF+Cnk6b+fXmjrYtOHcytIgQcPHjx48ODBgwd/A346tgFmG7zajUjt8789F3jw4MGDBw8ePHjwBXjjswM8ePAGePAGePDGYvwBZmu6bdBBrSEAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -659,7 +659,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/05/09/%E5%85%AD%E3%80%81%E7%BC%96%E7%A8%8B%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88C++&Java%EF%BC%89/&text=六、编程过程中遇到的一些问题总结（C++&Java） - kelecn"
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.github.io/2020/05/13/8%E3%80%81%E5%85%B3%E4%BA%8Efree%E5%92%8Cdelete%E7%9A%84%E4%BD%BF%E7%94%A8/&text=关于free和delete的使用 - kelecn"
           
           >
           
@@ -685,8 +685,20 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/05/11/%E4%B8%83%E3%80%81%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88%E4%B8%8E%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>七、常量指针与指针常量</p>
+        <a class='prev' href='/2020/05/22/9%E3%80%81C++%E8%BF%94%E5%9B%9E%E5%AF%B9%E8%B1%A1%E5%92%8C%E8%BF%94%E5%9B%9E%E5%BC%95%E7%94%A8/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++返回对象和返回引用</p>
+          <p class='content'>简介：C++返回对象和返回引用。
+
+
+
+我们发现，在C++中，有些成员函数返回的是对象，而有些函数返回的又是引用。
+返回对象和返回引用的最主要的区别就是函数原型和函数头。
+123Car run(...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/05/11/7%E3%80%81%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88%E4%B8%8E%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F/'>
+          <p class='title'>常量指针与指针常量<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>简介：常量指针与指针常量的区别。
 
 
@@ -694,18 +706,6 @@
 常量指针(被指向的对象是常量)定义：又叫常指针，可以理解为常量的指针，指向的是个常量
 关键点：
 常量指针指向的对象不能通过这个指针来修改，可是仍然可以通过...</p>
-        </a>
-      
-      
-        <a class='next' href='/2020/05/07/%E4%BA%94%E3%80%81JAVA%E6%B5%8B%E8%AF%95%E9%A2%98/'>
-          <p class='title'>五、JAVA测试题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介：JAVA基础测试题。
-
-
-
-第一题输出9*9口诀表。
-代码：
-12345678910111213141516package exam;public class Exam &#123;	pu...</p>
         </a>
       
     </div>
@@ -737,6 +737,20 @@
     
 
 
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#new-delete-%E4%B8%8E-malloc-free-%E5%8C%BA%E5%88%AB"><span class="toc-text">new()&#x2F;delete()与 malloc()&#x2F;free() 区别</span></a></li></ol>
+    </div>
+  </section>
 
 
   
