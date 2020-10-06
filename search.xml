@@ -49,13 +49,13 @@
       
         <tags>
             
-            <tag> 嵌入式 </tag>
-            
-            <tag> 硬件 </tag>
-            
             <tag> ARM </tag>
             
+            <tag> 嵌入式 </tag>
+            
             <tag> 处理器 </tag>
+            
+            <tag> 硬件 </tag>
             
         </tags>
       
@@ -334,9 +334,9 @@
             
             <tag> 嵌入式 </tag>
             
-            <tag> C语言 </tag>
-            
             <tag> 硬件 </tag>
+            
+            <tag> C语言 </tag>
             
         </tags>
       
