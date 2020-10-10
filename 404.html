@@ -758,6 +758,22 @@ setInterval("createtime()",250);
         
       
         
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand(”CreateBookmark”,”false”,sAnchorName)"
+        
+        >
+        <i class='fa  fa-star fa-fw'></i> 收藏本站
+      </a>
+    </li>
+  
+        
+      
+        
           <hr>
         
       
@@ -906,7 +922,7 @@ setInterval("createtime()",250);
       }
 
       // 有音乐播放器
-      if ('true' == true && ('home,hr,print,hr,music'||[]).includes('music')) {
+      if ('true' == true && ('home,favorites,hr,print,hr,music'||[]).includes('music')) {
         // 如果有aplayer，初始化一下
       	try {
       		checkAPlayer();
