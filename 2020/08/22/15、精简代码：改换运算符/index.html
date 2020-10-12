@@ -23,8 +23,7 @@
   
 
   
-    <meta name="description" content="简介： 精简代码：改换运算符
-">
+    <meta name="description" content="简介： 精简代码：改换运算符">
   
 
   <!-- feed -->
@@ -560,54 +559,15 @@
 
 
   
-  <p>简介： 精简代码：改换运算符</p>
-<p><img src="https://w.wallhaven.cc/full/48/wallhaven-48o3ky.jpg"></p>
+  <p>简介： 精简代码：改换运算符<br><img src="https://w.wallhaven.cc/full/48/wallhaven-48o3ky.jpg"></p>
 <a id="more"></a>
-
-<h5 id="1、位运算（-amp-）替换取余（-）运算"><a href="#1、位运算（-amp-）替换取余（-）运算" class="headerlink" title="1、位运算（&amp;）替换取余（%）运算"></a>1、位运算（&amp;）替换取余（%）运算</h5><p><strong>即：如果Y =<img src="https://private.codecogs.com/gif.latex?2%5E%7Bn%7D" alt="2^{n}">,则X%Y可以变化为X&amp;(Y-1)</strong></p>
-<p>由于我们知道位运算比较高效，在某些情况下，当b为2的n次方时，有如下替换公式：<br>a % b = a &amp; (b-1)(b=2^n)<br>即：a % 2^n = a &amp; (2^n-1)</p>
-<p>例如：14%8，取余数，相当于取出低位，而余数最大为7，14二进制为1110，8的二进制1000，8-1 = 7的二进制为0111，由于现在低位全为1，让其跟14做&amp;运算，正好取出的是其低位上的余数。1110&amp;0111=110即6=14%8；（此公式只适用b=2^n，是因为可以保证b始终只有最高位为1，其他二进制位全部为0，减去1，之后，可以把高位1消除，其他位都为1，而与1做&amp;运算，会保留原来的数。）</p>
-<h5 id="2、左移运算（-lt-lt-）替换乘法（-）运算"><a href="#2、左移运算（-lt-lt-）替换乘法（-）运算" class="headerlink" title="2、左移运算（&lt;&lt;）替换乘法（*）运算"></a>2、左移运算（&lt;&lt;）替换乘法（*）运算</h5><p>a=a*8;<br>b=b/8;<br><strong>可以改为：</strong><br>a=a&lt;&lt;3;<br>b=b&gt;&gt;3;<br><strong>说明：</strong><br>除2 = 右移1位； 乘2 = 左移1位<br>除4 = 右移2位； 乘4 = 左移2位<br>除8 = 右移3位； 乘8 = 左移3位</p>
-<p><strong>通常如果需要乘以或除以2的n次方，都可以用移位的方法代替，大部分的C编译器,用移位的方法得到代码比调用乘除法子程序生成的代码效率高。</strong></p>
-<p><strong>实际上，只要是乘以或除以一个整数才可以用移位的方法得到结果。</strong></p>
-<p>如：</p>
-<p>a=a*9 =a(8+1)=a8+a1</p>
-<p><strong>可以改为：</strong> </p>
-<p>a=(a&lt;&lt;3)+a</p>
-<p>如：</p>
-<p>a=a*7 =a(8-1)=a8-a1</p>
-<p><strong>可以改为：</strong> </p>
-<p>a=(a&lt;&lt;3)-a</p>
-<p><strong>总结：a=an; n分解成(2^m + s),则a=an可以改为a=(a&lt;&lt;m)+as;as再同理分解替换。</strong></p>
-<p>例：a=a10 =&gt; a=a(8+2) =&gt; a=a8 + a2 =&gt; a=(a&lt;&lt;3)+(a&lt;&lt;1)</p>
-<h5 id="3、右移运算（-gt-gt-）替换除法（-）运算"><a href="#3、右移运算（-gt-gt-）替换除法（-）运算" class="headerlink" title="3、右移运算（&gt;&gt;）替换除法（/）运算"></a>3、右移运算（&gt;&gt;）替换除法（/）运算</h5><p>a=a*8;<br>b=b/8;<br><strong>可以改为：</strong><br>a=a&lt;&lt;3;<br>b=b&gt;&gt;3;<br><strong>说明：</strong><br>除2 = 右移1位； 乘2 = 左移1位<br>除4 = 右移2位； 乘4 = 左移2位<br>除8 = 右移3位； 乘8 = 左移3位</p>
-<p><strong>通常如果需要乘以或除以2的n次方，都可以用移位的方法代替，大部分的C编译器,用移位的方法得到代码比调用乘除法子程序生成的代码效率高。</strong></p>
-<p><strong>实际上，只要是乘以或除以一个整数才可以用移位的方法得到结果。</strong></p>
-<p>如：</p>
-<p>a=a/9 =a/(8+1)=a/8+a/1</p>
-<p><strong>可以改为：</strong> </p>
-<p>a=(a&gt;&gt;3)+a</p>
-<p>如：</p>
-<p>a=a/7 =a/(8-1)=a/8-a/1</p>
-<p><strong>可以改为：</strong> </p>
-<p>a=(a&gt;&gt;3)-a</p>
-<p><strong>总结：a=a/n; n分解成(2^m + s),则a=a/n可以改为a=(a&gt;&gt;m)+a/s;a/s再同理分解替换。</strong></p>
-<p>例：a=a/10 =&gt; a=a/(8+2) =&gt; a=a/8 + a/2 =&gt; a=(a&gt;&gt;3)+(a&gt;&gt;1)</p>
+<h5 id="1、位运算（-amp-）替换取余（-）运算"><a href="#1、位运算（-amp-）替换取余（-）运算" class="headerlink" title="1、位运算（&amp;）替换取余（%）运算"></a>1、位运算（&amp;）替换取余（%）运算</h5><p><strong>即：如果Y =<img src="https://private.codecogs.com/gif.latex?2%5E%7Bn%7D" alt="2^{n}">,则X%Y可以变化为X&amp;(Y-1)</strong><br>由于我们知道位运算比较高效，在某些情况下，当b为2的n次方时，有如下替换公式：<br>a % b = a &amp; (b-1)(b=2^n)<br>即：a % 2^n = a &amp; (2^n-1)<br>例如：14%8，取余数，相当于取出低位，而余数最大为7，14二进制为1110，8的二进制1000，8-1 = 7的二进制为0111，由于现在低位全为1，让其跟14做&amp;运算，正好取出的是其低位上的余数。1110&amp;0111=110即6=14%8；（此公式只适用b=2^n，是因为可以保证b始终只有最高位为1，其他二进制位全部为0，减去1，之后，可以把高位1消除，其他位都为1，而与1做&amp;运算，会保留原来的数。）</p>
+<h5 id="2、左移运算（-lt-lt-）替换乘法（-）运算"><a href="#2、左移运算（-lt-lt-）替换乘法（-）运算" class="headerlink" title="2、左移运算（&lt;&lt;）替换乘法（*）运算"></a>2、左移运算（&lt;&lt;）替换乘法（*）运算</h5><p>a=a<em>8;<br>b=b/8;<br><strong>可以改为：</strong><br>a=a&lt;&lt;3;<br>b=b&gt;&gt;3;<br><strong>说明：</strong><br>除2 = 右移1位； 乘2 = 左移1位<br>除4 = 右移2位； 乘4 = 左移2位<br>除8 = 右移3位； 乘8 = 左移3位<br><strong>通常如果需要乘以或除以2的n次方，都可以用移位的方法代替，大部分的C编译器,用移位的方法得到代码比调用乘除法子程序生成的代码效率高。</strong><br><strong>实际上，只要是乘以或除以一个整数才可以用移位的方法得到结果。</strong><br>如：<br>a=a</em>9 =a(8+1)=a8+a1<br><strong>可以改为：</strong><br>a=(a&lt;&lt;3)+a<br>如：<br>a=a*7 =a(8-1)=a8-a1<br>**可以改为：**<br>a=(a&lt;&lt;3)-a<br>**总结：a=an; n分解成(2^m + s),则a=an可以改为a=(a&lt;&lt;m)+as;as再同理分解替换。**<br>例：a=a10 =&gt; a=a(8+2) =&gt; a=a8 + a2 =&gt; a=(a&lt;&lt;3)+(a&lt;&lt;1)</p>
+<h5 id="3、右移运算（-gt-gt-）替换除法（-）运算"><a href="#3、右移运算（-gt-gt-）替换除法（-）运算" class="headerlink" title="3、右移运算（&gt;&gt;）替换除法（/）运算"></a>3、右移运算（&gt;&gt;）替换除法（/）运算</h5><p>a=a*8;<br>b=b/8;<br><strong>可以改为：</strong><br>a=a&lt;&lt;3;<br>b=b&gt;&gt;3;<br><strong>说明：</strong><br>除2 = 右移1位； 乘2 = 左移1位<br>除4 = 右移2位； 乘4 = 左移2位<br>除8 = 右移3位； 乘8 = 左移3位<br><strong>通常如果需要乘以或除以2的n次方，都可以用移位的方法代替，大部分的C编译器,用移位的方法得到代码比调用乘除法子程序生成的代码效率高。</strong><br><strong>实际上，只要是乘以或除以一个整数才可以用移位的方法得到结果。</strong><br>如：<br>a=a/9 =a/(8+1)=a/8+a/1<br><strong>可以改为：</strong><br>a=(a&gt;&gt;3)+a<br>如：<br>a=a/7 =a/(8-1)=a/8-a/1<br><strong>可以改为：</strong><br>a=(a&gt;&gt;3)-a<br><strong>总结：a=a/n; n分解成(2^m + s),则a=a/n可以改为a=(a&gt;&gt;m)+a/s;a/s再同理分解替换。</strong><br>例：a=a/10 =&gt; a=a/(8+2) =&gt; a=a/8 + a/2 =&gt; a=(a&gt;&gt;3)+(a&gt;&gt;1)</p>
 <h5 id="4、C-C-中的移位操作容易出错的情况："><a href="#4、C-C-中的移位操作容易出错的情况：" class="headerlink" title="4、C/C++中的移位操作容易出错的情况："></a>4、C/C++中的移位操作容易出错的情况：</h5><ul>
-<li><p><strong>什么样的数据类型可以直接移位</strong></p>
-<p> 只有整型数据才能用移位替代乘除法，如：char、short、int、long、unsigned char、unsigned short、unsigned int、unsigned long。（double、float、bool、long double则不可以进行移位操作。）</p>
-</li>
-<li><p><strong>有符号数据类型移位需要注意符号位</strong></p>
-</li>
-</ul>
-<p>对于char、short、int、long这些有符号的数据类型：<br>对负数进行左移：符号位始终为1，其他位左移。<br>对正数进行左移：所有位左移，即 &lt;&lt;，可能会变成负数</p>
-<p>对负数进行右移：取绝对值，然后右移，再取相反数<br>对正数进行右移：所有位右移，即 &gt;&gt;</p>
-<ul>
-<li><strong>无符号数据类型的移位操作</strong></li>
-</ul>
-<p>对于unsigned char、unsigned short、unsigned int、unsigned long这些无符号数据类型：</p>
-<p>没有特殊要说明的，使用&lt;&lt; 和 &gt;&gt; 操作符就OK了。</p>
-<h5 id="5、参考资料："><a href="#5、参考资料：" class="headerlink" title="5、参考资料："></a>5、参考资料：</h5><ul>
+<li><strong>什么样的数据类型可以直接移位</strong><br> 只有整型数据才能用移位替代乘除法，如：char、short、int、long、unsigned char、unsigned short、unsigned int、unsigned long。（double、float、bool、long double则不可以进行移位操作。）</li>
+<li><strong>有符号数据类型移位需要注意符号位</strong><br>对于char、short、int、long这些有符号的数据类型：<br>对负数进行左移：符号位始终为1，其他位左移。<br>对正数进行左移：所有位左移，即 &lt;&lt;，可能会变成负数<br>对负数进行右移：取绝对值，然后右移，再取相反数<br>对正数进行右移：所有位右移，即 &gt;&gt;</li>
+<li><strong>无符号数据类型的移位操作</strong><br>对于unsigned char、unsigned short、unsigned int、unsigned long这些无符号数据类型：<br>没有特殊要说明的，使用&lt;&lt; 和 &gt;&gt; 操作符就OK了。<h5 id="5、参考资料："><a href="#5、参考资料：" class="headerlink" title="5、参考资料："></a>5、参考资料：</h5></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/LZAlgorithm/article/details/101348934">使用位运算替换取余操作</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34473360/article/details/90547684">移位操作与乘除法的关系</a></li>
 </ul>
@@ -655,7 +615,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-12T11:38:20+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-12T12:28:16+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2020年10月12日</p>
@@ -680,8 +640,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符
-"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符"
           
           >
           
@@ -693,8 +652,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符
-"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符"
           
           >
           
@@ -706,8 +664,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符
-"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符"
           
           >
           
@@ -888,7 +845,7 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
       <p>您的收藏对我来说很重要，如果您喜欢本博客，希望能够收藏本博客来支持一下，最好能fallow一下我的Github，在此十分感谢各位了！</p>
 
     
-      <p><a target="_blank" rel="noopener" href="https://github.com/kelecn/"><img src="https://www.easyicon.net/api/resizeApi.php?id=1097109&size=128" height="50px"></a></p>
+      <p><a target="_blank" rel="noopener" href="https://github.com/kelecn/"><img src="https://i.loli.net/2020/10/12/oyErNlBzZcwxO1U.jpg" height="300px"></a></p>
 
     
   </div>
