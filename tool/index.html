@@ -17,7 +17,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>相册 - kelecn</title>
+  <title>实用工具 - kelecn</title>
   
 
   
@@ -501,6 +501,19 @@
   
   <p class='p center logo large green'>实用工具</p>
 <a id="more"></a>
+<ul>
+<li>group: 视频 # 分组标题<br>description: 视频 # 分组描述<br>items:<ul>
+<li>title: 真不卡影院 # 名称<br>avatar: <a target="_blank" rel="noopener" href="https://www.zhenbuka.com/favicon.ico">https://www.zhenbuka.com/favicon.ico</a> # 头像<br>url: <a target="_blank" rel="noopener" href="https://www.zhenbuka.com/">https://www.zhenbuka.com/</a> # 链接<br>screenshot: <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/12/L5ruS7n9pW1y6iA.png">https://i.loli.net/2020/10/12/L5ruS7n9pW1y6iA.png</a> # 截图<br>keywords: 真不卡影院 # 关键词<br>description: 真不卡电影网是一个免费看电影的网站。 # 描述</li>
+<li>title: 片库 # 名称<br>avatar: <a target="_blank" rel="noopener" href="https://www.pianku.tv/favicon.ico#">https://www.pianku.tv/favicon.ico#</a> 头像<br>url: <a target="_blank" rel="noopener" href="https://www.pianku.tv/">https://www.pianku.tv/</a> # 链接<br>screenshot: <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/12/3sa2EcIqGpAnFzt.png">https://i.loli.net/2020/10/12/3sa2EcIqGpAnFzt.png</a> # 截图<br>keywords: 片库 # 关键词<br>description: 每日收集全网最新的电影、电视剧、动漫高清资源。 # 描述</li>
+<li>title: 蓝光影视 # 名称<br>avatar: <a target="_blank" rel="noopener" href="https://www.chaospace.fun/wp-includes/images/w-logo-blue-white-bg.png">https://www.chaospace.fun/wp-includes/images/w-logo-blue-white-bg.png</a> # 头像<br>url: <a target="_blank" rel="noopener" href="https://www.chaospace.fun/">https://www.chaospace.fun/</a> # 链接<br>screenshot: <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/12/mnJbP1lLWrtURf5.png">https://i.loli.net/2020/10/12/mnJbP1lLWrtURf5.png</a> # 截图<br>keywords: 蓝光影视 # 关键词<br>description: 蓝光影视 热门美剧 字幕分享 最好用的影视资源站。 # 描述</li>
+<li>title: 樱花动漫 # 名称<br>avatar: <a target="_blank" rel="noopener" href="http://www.yhdm.io/favicon.ico">http://www.yhdm.io/favicon.ico</a> # 头像<br>url: <a target="_blank" rel="noopener" href="http://www.yhdm.io/">http://www.yhdm.io/</a> # 链接<br>screenshot: <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/12/aeov7PpB4Xtk1sN.png">https://i.loli.net/2020/10/12/aeov7PpB4Xtk1sN.png</a> # 截图<br>keywords: 樱花动漫 # 关键词<br>description: 专注动漫的门户网站。 # 描述</li>
+</ul>
+</li>
+<li>group: 学习 # 分组标题<br>description: 学习 # 分组描述<br>items:<ul>
+<li>title: 菜鸟教程 # 名称<br>avatar: <a target="_blank" rel="noopener" href="https://static.runoob.com/images/favicon.ico">https://static.runoob.com/images/favicon.ico</a> # 头像<br>url: <a target="_blank" rel="noopener" href="https://www.runoob.com/">https://www.runoob.com/</a> # 链接<br>screenshot: <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/rJP3cSEikpFTqZA.png">https://i.loli.net/2020/09/21/rJP3cSEikpFTqZA.png</a> # 截图<br>keywords: 菜鸟教程 # 关键词<br>description: 菜鸟教程-学的不仅是技术，更是梦想！ # 描述</li>
+</ul>
+</li>
+</ul>
 
   
   
@@ -818,6 +831,22 @@ setInterval("createtime()",250);
         
           
     <li>
+      <a class='vlts-menu fix-cursor-default' href=/tool/
+        
+        
+        
+        
+          id="tool"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 工具箱
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
       <a class='vlts-menu fix-cursor-default' href=https://github.com/kelecn/
         
         
@@ -1012,7 +1041,7 @@ setInterval("createtime()",250);
       }
 
       // 有音乐播放器
-      if ('true' == true && ('home,image,source,friends,about,hr,print,hr,music'||[]).includes('music')) {
+      if ('true' == true && ('home,image,tool,source,friends,about,hr,print,hr,music'||[]).includes('music')) {
         // 如果有aplayer，初始化一下
       	try {
       		checkAPlayer();
