@@ -17,13 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>精简代码：改换运算符 - kelecn</title>
+  <title>一文搞懂TCP与UDP的区别 - kelecn</title>
   
-    <meta name="keywords" content="C++,ARM,嵌入式,C,单片机">
+    <meta name="keywords" content="TCP,UDP,计算机网络">
   
 
   
-    <meta name="description" content="简介： 精简代码：改换运算符">
+    <meta name="description" content="简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。">
   
 
   <!-- feed -->
@@ -494,7 +494,7 @@
  
 <div id="pjax-data" style="display: none"> 
   <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">精简代码：改换运算符</div> 
+  <div id="pjax-pageTitle">一文搞懂TCP与UDP的区别</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -534,7 +534,7 @@
     
     
       <h1 class="title">
-        精简代码：改换运算符
+        一文搞懂TCP与UDP的区别
       </h1>
       <div class='new-meta-box'>
         
@@ -565,7 +565,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月22日</p>
+    <p>发布于：2020年8月26日</p>
   </a>
 </div>
 
@@ -576,13 +576,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：997字</p>
+      <p>字数：2.9k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：4分钟</p>
+      <p>时长：9分钟</p>
     </a>
   </div>
 
@@ -594,7 +594,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="精简代码：改换运算符" data-path="/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/">
+      <div id="lc-pv" data-title="一文搞懂TCP与UDP的区别" data-path="/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -611,19 +611,145 @@
 
 
   
-  <p>简介： 精简代码：改换运算符<br><img src="https://w.wallhaven.cc/full/48/wallhaven-48o3ky.jpg"></p>
+  <p>简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。<br><img src="https://i.loli.net/2020/10/15/icOPNUCS2Kgzy7W.jpg"></p>
 <a id="more"></a>
-<h5 id="1、位运算（-amp-）替换取余（-）运算"><a href="#1、位运算（-amp-）替换取余（-）运算" class="headerlink" title="1、位运算（&amp;）替换取余（%）运算"></a>1、位运算（&amp;）替换取余（%）运算</h5><p><strong>即：如果Y =<img src="https://private.codecogs.com/gif.latex?2%5E%7Bn%7D" alt="2^{n}">,则X%Y可以变化为X&amp;(Y-1)</strong><br>由于我们知道位运算比较高效，在某些情况下，当b为2的n次方时，有如下替换公式：<br>a % b = a &amp; (b-1)(b=2^n)<br>即：a % 2^n = a &amp; (2^n-1)<br>例如：14%8，取余数，相当于取出低位，而余数最大为7，14二进制为1110，8的二进制1000，8-1 = 7的二进制为0111，由于现在低位全为1，让其跟14做&amp;运算，正好取出的是其低位上的余数。1110&amp;0111=110即6=14%8；（此公式只适用b=2^n，是因为可以保证b始终只有最高位为1，其他二进制位全部为0，减去1，之后，可以把高位1消除，其他位都为1，而与1做&amp;运算，会保留原来的数。）</p>
-<h5 id="2、左移运算（-lt-lt-）替换乘法（-）运算"><a href="#2、左移运算（-lt-lt-）替换乘法（-）运算" class="headerlink" title="2、左移运算（&lt;&lt;）替换乘法（*）运算"></a>2、左移运算（&lt;&lt;）替换乘法（*）运算</h5><p>a=a8;<br>b=b/8;<br><strong>可以改为：</strong><br>a=a&lt;&lt;3;<br>b=b&gt;&gt;3;<br><strong>说明：</strong><br>除2 = 右移1位； 乘2 = 左移1位<br>除4 = 右移2位； 乘4 = 左移2位<br>除8 = 右移3位； 乘8 = 左移3位<br><strong>通常如果需要乘以或除以2的n次方，都可以用移位的方法代替，大部分的C编译器,用移位的方法得到代码比调用乘除法子程序生成的代码效率高。</strong><br><strong>实际上，只要是乘以或除以一个整数才可以用移位的方法得到结果。</strong><br>如：<br>a=a9 =a(8+1)=a8+a1<br><strong>可以改为：</strong><br>a=(a&lt;&lt;3)+a<br>如：<br>a=a7 =a(8-1)=a8-a1<br><strong>可以改为：</strong><br>a=(a&lt;&lt;3)-a</p>
-<p><strong>总结：a=an; n分解成(2^m + s),则a=an可以改为a=(a&lt;&lt;m)+as;as再同理分解替换。</strong></p>
-<p>例：a=a10 =&gt; a=a(8+2) =&gt; a=a8 + a2 =&gt; a=(a&lt;&lt;3)+(a&lt;&lt;1)</p>
-<h5 id="3、右移运算（-gt-gt-）替换除法（-）运算"><a href="#3、右移运算（-gt-gt-）替换除法（-）运算" class="headerlink" title="3、右移运算（&gt;&gt;）替换除法（/）运算"></a>3、右移运算（&gt;&gt;）替换除法（/）运算</h5><p>a=a*8;<br>b=b/8;<br><strong>可以改为：</strong><br>a=a&lt;&lt;3;<br>b=b&gt;&gt;3;<br><strong>说明：</strong><br>除2 = 右移1位； 乘2 = 左移1位<br>除4 = 右移2位； 乘4 = 左移2位<br>除8 = 右移3位； 乘8 = 左移3位<br><strong>通常如果需要乘以或除以2的n次方，都可以用移位的方法代替，大部分的C编译器,用移位的方法得到代码比调用乘除法子程序生成的代码效率高。</strong><br><strong>实际上，只要是乘以或除以一个整数才可以用移位的方法得到结果。</strong><br>如：<br>a=a/9 =a/(8+1)=a/8+a/1<br><strong>可以改为：</strong><br>a=(a&gt;&gt;3)+a<br>如：<br>a=a/7 =a/(8-1)=a/8-a/1<br><strong>可以改为：</strong><br>a=(a&gt;&gt;3)-a<br><strong>总结：a=a/n; n分解成(2^m + s),则a=a/n可以改为a=(a&gt;&gt;m)+a/s;a/s再同理分解替换。</strong><br>例：a=a/10 =&gt; a=a/(8+2) =&gt; a=a/8 + a/2 =&gt; a=(a&gt;&gt;3)+(a&gt;&gt;1)</p>
-<h5 id="4、C-C-中的移位操作容易出错的情况："><a href="#4、C-C-中的移位操作容易出错的情况：" class="headerlink" title="4、C/C++中的移位操作容易出错的情况："></a>4、C/C++中的移位操作容易出错的情况：</h5><ul>
-<li><strong>什么样的数据类型可以直接移位</strong><br> 只有整型数据才能用移位替代乘除法，如：char、short、int、long、unsigned char、unsigned short、unsigned int、unsigned long。（double、float、bool、long double则不可以进行移位操作。）</li>
-<li><strong>有符号数据类型移位需要注意符号位</strong><br>对于char、short、int、long这些有符号的数据类型：<br>对负数进行左移：符号位始终为1，其他位左移。<br>对正数进行左移：所有位左移，即 &lt;&lt;，可能会变成负数<br>对负数进行右移：取绝对值，然后右移，再取相反数<br>对正数进行右移：所有位右移，即 &gt;&gt;</li>
-<li><strong>无符号数据类型的移位操作</strong><br>对于unsigned char、unsigned short、unsigned int、unsigned long这些无符号数据类型：<br>没有特殊要说明的，使用&lt;&lt; 和 &gt;&gt; 操作符就OK了。<h5 id="5、参考资料："><a href="#5、参考资料：" class="headerlink" title="5、参考资料："></a>5、参考资料：</h5></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/LZAlgorithm/article/details/101348934">使用位运算替换取余操作</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34473360/article/details/90547684">移位操作与乘除法的关系</a></li>
+
+<h5 id=""><a href="#" class="headerlink" title=""></a><div class="note "><p>一、TCP/IP网络模型</p></div></h5><p>计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议（protocol）。</p>
+<p>TCP/IP 是互联网相关的各类协议族的总称，比如：TCP，UDP，IP，FTP，HTTP，ICMP，SMTP 等都属于 TCP/IP 族内的协议。</p>
+<p>TCP/IP模型是互联网的基础，它是一系列网络协议的总称。这些协议可以划分为四层，分别为链路层、网络层、传输层和应用层。</p>
+<ul>
+<li>链路层：负责封装和解封装IP报文，发送和接受ARP/RARP报文等。</li>
+<li>网络层：负责路由以及把分组报文发送给目标网络或主机。</li>
+<li>传输层：负责对报文进行分组和重组，并以TCP或UDP协议格式封装报文。</li>
+<li>应用层：负责向用户提供应用程序，比如HTTP、FTP、Telnet、DNS、SMTP等。</li>
+</ul>
+<p><img src="https://i.loli.net/2020/10/15/1gqV3oWnEi7yZxB.png"></p>
+<p>在网络体系结构中网络通信的建立必须是在通信双方的对等层进行，不能交错。 在整个数据传输过程中，数据在发送端时经过各层时都要附加上相应层的协议头和协议尾（仅数据链路层需要封装协议尾）部分，也就是要对数据进行协议封装，以标识对应层所用的通信协议。接下去介绍TCP/IP 中有两个具有代表性的传输层协议—-TCP 和 UDP。</p>
+<h5 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="note "><p>二、UDP</p></div></h5><p>UDP协议全称是用户数据报协议，在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议。在OSI模型中，在第四层——传输层，处于IP协议的上一层。UDP有不提供数据包分组、组装和不能对数据包进行排序的缺点，也就是说，当报文发送之后，是无法得知其是否安全完整到达的。</p>
+<p>它有以下几个特点：</p>
+<p><strong>1. 面向无连接</strong></p>
+<p>首先 UDP 是不需要和 TCP一样在发送数据前进行三次握手建立连接的，想发数据就可以开始发送了。并且也只是数据报文的搬运工，不会对数据报文进行任何拆分和拼接操作。</p>
+<p>具体来说就是：</p>
+<ul>
+<li>在发送端，应用层将数据传递给传输层的 UDP 协议，UDP 只会给数据增加一个 UDP 头标识下是 UDP 协议，然后就传递给网络层了</li>
+<li>在接收端，网络层将数据传递给传输层，UDP 只去除 IP 报文头就传递给应用层，不会任何拼接操作</li>
+</ul>
+<p><strong>2. 有单播，多播，广播的功能</strong></p>
+<p>UDP 不止支持一对一的传输方式，同样支持一对多，多对多，多对一的方式，也就是说 UDP 提供了单播，多播，广播的功能。</p>
+<p><strong>3. UDP是面向报文的</strong></p>
+<p>发送方的UDP对应用程序交下来的报文，在添加首部后就向下交付IP层。UDP对应用层交下来的报文，既不合并，也不拆分，而是保留这些报文的边界。因此，应用程序必须选择合适大小的报文</p>
+<p><strong>4. 不可靠性</strong></p>
+<p>首先不可靠性体现在无连接上，通信都不需要建立连接，想发就发，这样的情况肯定不可靠。</p>
+<p>并且收到什么数据就传递什么数据，并且也不会备份数据，发送数据也不会关心对方是否已经正确接收到数据了。</p>
+<p>再者网络环境时好时坏，但是 UDP 因为没有拥塞控制，一直会以恒定的速度发送数据。即使网络条件不好，也不会对发送速率进行调整。这样实现的弊端就是在网络条件不好的情况下可能会导致丢包，但是优点也很明显，在某些实时性要求高的场景（比如电话会议）就需要使用 UDP 而不是 TCP。</p>
+<p><img src="https://i.loli.net/2020/10/15/CV5nmJiacTAyQFH.gif"></p>
+<p>从上面的动态图可以得知，UDP只会把想发的数据报文一股脑的丢给对方，并不在意数据有无安全完整到达。</p>
+<p><strong>5. 头部开销小，传输数据报文时是很高效的。</strong></p>
+<p><img src="https://i.loli.net/2020/10/15/xcSuoCbsHUvTgnE.png"></p>
+<p>UDP 头部包含了以下几个数据：</p>
+<ul>
+<li>两个十六位的端口号，分别为源端口（可选字段）和目标端口</li>
+<li>整个数据报文的长度</li>
+<li>整个数据报文的检验和（IPv4 可选 字段），该字段用于发现头部信息和数据中的错误</li>
+</ul>
+<p>因此 UDP 的头部开销小，只有八字节，相比 TCP 的至少二十字节要少得多，在传输数据报文时是很高效的</p>
+<h5 id="-2"><a href="#-2" class="headerlink" title=""></a><div class="note "><p>三、TCP</p></div></h5><p>当一台计算机想要与另一台计算机通讯时，两台计算机之间的通信需要畅通且可靠，这样才能保证正确收发数据。例如，当你想查看网页或查看电子邮件时，希望完整且按顺序查看网页，而不丢失任何内容。当你下载文件时，希望获得的是完整的文件，而不仅仅是文件的一部分，因为如果数据丢失或乱序，都不是你希望得到的结果，于是就用到了TCP。</p>
+<p>TCP协议全称是传输控制协议是一种面向连接的、可靠的、基于字节流的传输层通信协议，由 IETF 的RFC 793定义。TCP 是面向连接的、可靠的流协议。流就是指不间断的数据结构，你可以把它想象成排水管中的水流。</p>
+<p><strong>1. TCP连接过程</strong></p>
+<p>如下图所示，可以看到建立一个TCP连接的过程为（三次握手的过程）:</p>
+<p><img src="https://i.loli.net/2020/10/15/5cVC9ElRnb1jqQZ.png"></p>
+<p><strong>第一次握手</strong></p>
+<p>客户端向服务端发送连接请求报文段。该报文段中包含自身的数据通讯初始序号。请求发送后，客户端便进入 SYN-SENT 状态。</p>
+<p><strong>第二次握手</strong></p>
+<p>服务端收到连接请求报文段后，如果同意连接，则会发送一个应答，该应答中也会包含自身的数据通讯初始序号，发送完成后便进入 SYN-RECEIVED 状态。</p>
+<p><strong>第三次握手</strong></p>
+<p>当客户端收到连接同意的应答后，还要向服务端发送一个确认报文。客户端发完这个报文段后便进入 ESTABLISHED 状态，服务端收到这个应答后也进入 ESTABLISHED 状态，此时连接建立成功。</p>
+<p>这里可能大家会有个疑惑：为什么 TCP 建立连接需要三次握手，而不是两次？这是因为这是为了防止出现失效的连接请求报文段被服务端接收的情况，从而产生错误。</p>
+<p><img src="https://i.loli.net/2020/10/15/jzIdoxmeAnbp9HM.gif"></p>
+<p><strong>2. TCP断开链接</strong></p>
+<p><img src="https://i.loli.net/2020/10/15/hgMfjN9XKrvuxUc.png"></p>
+<p>TCP 是全双工的，在断开连接时两端都需要发送 FIN 和 ACK。</p>
+<p><strong>第一次握手</strong></p>
+<p>若客户端 A 认为数据发送完成，则它需要向服务端 B 发送连接释放请求。</p>
+<p><strong>第二次握手</strong></p>
+<p>B 收到连接释放请求后，会告诉应用层要释放 TCP 链接。然后会发送 ACK 包，并进入 CLOSE_WAIT 状态，此时表明 A 到 B 的连接已经释放，不再接收 A 发的数据了。但是因为 TCP 连接是双向的，所以 B 仍旧可以发送数据给 A。</p>
+<p><strong>第三次握手</strong></p>
+<p>B 如果此时还有没发完的数据会继续发送，完毕后会向 A 发送连接释放请求，然后 B 便进入 LAST-ACK 状态。</p>
+<p><strong>第四次握手</strong></p>
+<p>A 收到释放请求后，向 B 发送确认应答，此时 A 进入 TIME-WAIT 状态。该状态会持续 2MSL（最大段生存期，指报文段在网络中生存的时间，超时会被抛弃） 时间，若该时间段内没有 B 的重发请求的话，就进入 CLOSED 状态。当 B 收到确认应答后，也便进入 CLOSED 状态。</p>
+<p><strong>3. TCP协议的特点</strong></p>
+<ul>
+<li><p>面向连接</p>
+<p>面向连接，是指发送数据之前必须在两端建立连接。建立连接的方法是“三次握手”，这样能建立可靠的连接。建立连接，是为数据的可靠传输打下了基础。</p>
+</li>
+<li><p>仅支持单播传输</p>
+</li>
+</ul>
+<p>每条TCP传输连接只能有两个端点，只能进行点对点的数据传输，不支持多播和广播传输方式。</p>
+<ul>
+<li>面向字节流</li>
+</ul>
+<p>TCP不像UDP一样那样一个个报文独立地传输，而是在不保留报文边界的情况下以字节流方式进行传输。</p>
+<ul>
+<li><p>可靠传输</p>
+<p>对于可靠传输，判断丢包，误码靠的是TCP的段编号以及确认号。TCP为了保证报文传输的可靠，就给每个包一个序号，同时序号也保证了传送到接收端实体的包的按序接收。然后接收端实体对已成功收到的字节发回一个相应的确认(ACK)；如果发送端实体在合理的往返时延(RTT)内未收到确认，那么对应的数据（假设丢失了）将会被重传。</p>
+</li>
+<li><p>提供拥塞控制</p>
+</li>
+</ul>
+<p>当网络出现拥塞的时候，TCP能够减小向网络注入数据的速率和数量，缓解拥塞</p>
+<ul>
+<li>TCP提供全双工通信</li>
+</ul>
+<p>TCP允许通信双方的应用程序在任何时候都能发送数据，因为TCP连接的两端都设有缓存，用来临时存放双向通信的数据。当然，TCP可以立即发送一个数据段，也可以缓存一段时间以便一次发送更多的数据段（最大的数据段大小取决于MSS）</p>
+<h5 id="-3"><a href="#-3" class="headerlink" title=""></a><div class="note "><p>四、TCP和UDP的比较</p></div></h5><p><strong>1. 对比</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">UDP</th>
+<th>TCP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">是否连接</td>
+<td align="left">无连接</td>
+<td>面向连接</td>
+</tr>
+<tr>
+<td align="left">是否可靠</td>
+<td align="left">不可靠传输，不使用流量控制和拥塞控制</td>
+<td>可靠传输，使用流量控制和拥塞控制</td>
+</tr>
+<tr>
+<td align="left">连接对象个数</td>
+<td align="left">支持一对一，一对多，多对一和多对多交互通信</td>
+<td>只能是一对一通信</td>
+</tr>
+<tr>
+<td align="left">传输方式</td>
+<td align="left">面向报文</td>
+<td>面向字节流</td>
+</tr>
+<tr>
+<td align="left">首部开销</td>
+<td align="left">首部开销小，仅8字节</td>
+<td>首部最小20字节，最大60字节</td>
+</tr>
+<tr>
+<td align="left">适用场景</td>
+<td align="left">适用于实时应用（IP电话、视频会议、直播等）</td>
+<td>适用于要求可靠传输的应用，例如文件传输</td>
+</tr>
+</tbody></table>
+<p><strong>2. 总结</strong></p>
+<ul>
+<li><p>TCP向上层提供面向连接的可靠服务 ，UDP向上层提供无连接不可靠服务。</p>
+</li>
+<li><p>虽然 UDP 并没有 TCP 传输来的准确，但是也能在很多实时性要求高的地方有所作为</p>
+</li>
+<li><p>对数据准确性要求高，速度可以相对较慢的，可以选用TCP</p>
+<h5 id="-4"><a href="#-4" class="headerlink" title=""></a><div class="note "><p>参考文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/fundebug/p/differences-of-tcp-and-udp.html">一文搞懂TCP与UDP的区别</a></p></div></h5></li>
 </ul>
 
   
@@ -642,7 +768,7 @@
               
             
               
-                <p>本文永久链接是：<a href=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/>https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/</a></p>
+                <p>本文永久链接是：<a href=https://kelecn.top/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/>https://kelecn.top/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/</a></p>
               
             
           </blockquote>
@@ -671,7 +797,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ARM/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ARM</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>嵌入式</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>单片机</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/TCP/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>TCP</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/UDP/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>UDP</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>计算机网络</p></a></div>
 
 
         
@@ -684,7 +810,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/&title=一文搞懂TCP与UDP的区别 - kelecn&summary=简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。"
           
           >
           
@@ -696,7 +822,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/&title=一文搞懂TCP与UDP的区别 - kelecn&summary=简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。"
           
           >
           
@@ -708,7 +834,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&title=精简代码：改换运算符 - kelecn&summary=简介： 精简代码：改换运算符"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/&title=一文搞懂TCP与UDP的区别 - kelecn&summary=简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。"
           
           >
           
@@ -722,7 +848,7 @@
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -730,7 +856,7 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://kelecn.top/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/&text=精简代码：改换运算符 - kelecn"
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.top/2020/08/26/17%E3%80%81%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82TCP%E4%B8%8EUDP%E7%9A%84%E5%8C%BA%E5%88%AB/&text=一文搞懂TCP与UDP的区别 - kelecn"
           
           >
           
@@ -756,23 +882,13 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/08/25/16%E3%80%81C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%A4%8D%E4%B9%A0%EF%BC%89/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C语言基础知识（复习）</p>
+      
+        <a class='next' href='/2020/08/25/16%E3%80%81C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%A4%8D%E4%B9%A0%EF%BC%89/'>
+          <p class='title'>C语言基础知识（复习）<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>简介： 嵌入式笔试相关题目、考点。
 
 
 1、static修饰的局部变量、全局变量、函数1）、用于声明函数体内的变量为静态局部变量，存储在静态数据存储区，在函数被调用过程中维持其值保持不变。2）、...</p>
-        </a>
-      
-      
-        <a class='next' href='/2020/08/18/14%E3%80%81%E6%88%91%E7%9A%84GitHub%E5%9B%BE%E5%BA%8A%EF%BC%88%E5%9F%BA%E4%BA%8EPicGo%EF%BC%89/'>
-          <p class='title'>基于PicGo的GitHub图床<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>简介：GitHub图床（基于PicGo）
-
-
-GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub就不用我多言。2. 新建一个仓库
-记下你取的仓库名。
-3. ...</p>
         </a>
       
     </div>
@@ -945,7 +1061,7 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E4%BD%8D%E8%BF%90%E7%AE%97%EF%BC%88-amp-%EF%BC%89%E6%9B%BF%E6%8D%A2%E5%8F%96%E4%BD%99%EF%BC%88-%EF%BC%89%E8%BF%90%E7%AE%97"><span class="toc-text">1、位运算（&amp;）替换取余（%）运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%B7%A6%E7%A7%BB%E8%BF%90%E7%AE%97%EF%BC%88-lt-lt-%EF%BC%89%E6%9B%BF%E6%8D%A2%E4%B9%98%E6%B3%95%EF%BC%88-%EF%BC%89%E8%BF%90%E7%AE%97"><span class="toc-text">2、左移运算（&lt;&lt;）替换乘法（*）运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E5%8F%B3%E7%A7%BB%E8%BF%90%E7%AE%97%EF%BC%88-gt-gt-%EF%BC%89%E6%9B%BF%E6%8D%A2%E9%99%A4%E6%B3%95%EF%BC%88-%EF%BC%89%E8%BF%90%E7%AE%97"><span class="toc-text">3、右移运算（&gt;&gt;）替换除法（&#x2F;）运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4%E3%80%81C-C-%E4%B8%AD%E7%9A%84%E7%A7%BB%E4%BD%8D%E6%93%8D%E4%BD%9C%E5%AE%B9%E6%98%93%E5%87%BA%E9%94%99%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%9A"><span class="toc-text">4、C&#x2F;C++中的移位操作容易出错的情况：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5%E3%80%81%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A"><span class="toc-text">5、参考资料：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-text">一、TCP&#x2F;IP网络模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-1"><span class="toc-text">二、UDP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-2"><span class="toc-text">三、TCP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-3"><span class="toc-text">四、TCP和UDP的比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-4"><span class="toc-text">参考文章：一文搞懂TCP与UDP的区别</span></a></li></ol>
     </div>
   </section>
 
