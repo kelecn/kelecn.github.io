@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：ARM - kelecn</title>
+  <title>C语言内存管理 - kelecn</title>
+  
+    <meta name="keywords" content="嵌入式,C语言,内存">
   
 
+  
+    <meta name="description" content="简介：嵌入式系统的内存资源很稀缺，其内存页会更小，在嵌入式开发当中需要特别注意内存管理。">
   
 
   <!-- feed -->
@@ -411,7 +413,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-backstretch'></div>
           
@@ -491,8 +493,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">C语言内存管理</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -521,127 +523,271 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        C语言内存管理
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://i.loli.net/2020/09/20/bPtBmVjzhY9w3qM.png">
+    <p>kelecn</p>
+  </a>
+</div>
+
           
         
           
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/">
-        精简代码：改换运算符
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>简介： 精简代码：改换运算符<br><img src="https://w.wallhaven.cc/full/48/wallhaven-48o3ky.jpg"></p>
-    
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
           
-          <a class='avatar' href='/'><img src='https://i.loli.net/2020/09/20/bPtBmVjzhY9w3qM.png'></a>
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年9月7日</p>
+  </a>
+</div>
+
+          
         
-        <time>2020-08-22</time>
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：920字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3分钟</p>
+    </a>
+  </div>
+
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="C语言内存管理" data-path="/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>简介：嵌入式系统的内存资源很稀缺，其内存页会更小，在嵌入式开发当中需要特别注意内存管理。<br><img src="https://w.wallhaven.cc/full/0w/wallhaven-0wqylq.jpg"></p>
+<a id="more"></a>
+<h4 id=""><a href="#" class="headerlink" title=""></a><div class="note "><p>1.内存分配方式</p></div></h4><p>　　内存分配方式有三种：<br>　　[1]从静态存储区域分配。内存在程序编译的时候就已经分配好，这块内存在程序的整个运行期间都存在。例如全局变量，static变量。<br>　　[2]在栈上创建。在执行函数时，函数内局部变量的存储单元都可以在栈上创建，函数执行结束时这些存储单元自动被释放。栈内存分配运算内置于处理器的指令集中，效率很高，但是分配的内存容量有限。<br>　　[3]从堆上分配，亦称动态内存分配。程序在运行的时候用malloc或new申请任意多少的内存，程序员自己负责在何时用free或delete释 放内存。动态内存的生存期由程序员决定，使用非常灵活，但如果在堆上分配了空间，就有责任回收它，否则运行的程序会出现内存泄漏，频繁地分配和释放不同大 小的堆空间将会产生堆内碎块。</p>
+<h4 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="note "><p>2.程序的内存空间</p></div></h4><p>　　在C语言程序中，代码是放在内存中执行的，我们大致将程序所占用的内存分为四个区域：栈区 堆区 数据区 代码区。<br>　　一个由C/C++编译的程序占用的内存分为以下几个部分,</p>
+<h5 id="1、栈区（stack）"><a href="#1、栈区（stack）" class="headerlink" title="1、栈区（stack）"></a>1、栈区（stack）</h5><p>由编译器自动分配释放 ，存放为运行函数而分配的局部变量、函数参数、返回数据、返回地址等。其操作方式类似于数据结构中的栈。 例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">recive</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">&#125;<span class="comment">//其中，参数a，参数b和变量c都是存放在栈区，当函数执行完毕的时候，它们占有的空间自动释放。</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2、堆区（heap）"><a href="#2、堆区（heap）" class="headerlink" title="2、堆区（heap）"></a>2、堆区（heap）</h5><p>一般由程序员分配释放（malloc&amp;free）， 若程序员不释放，程序结束时可能由OS(operating system)回收 。分配方式类似于链表。例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *src;</span><br><span class="line">src = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="number">4</span> *<span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line"><span class="comment">//动态分配内存，表示查找可用的连续4个字节内存的空间，并将该内存首地址强制转换为指向字符数据的指针赋给scr，为src这个指针变量分配4个char类型的空间。</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3、数据区（全局区）"><a href="#3、数据区（全局区）" class="headerlink" title="3、数据区（全局区）"></a>3、数据区（全局区）</h5><p>1、（文字）常量区：存放常量，一般是字符串常量。<br>2、静态区（static）：存放全局变量和静态变量。<br>该区域是在程序结束后由操作系统释放。</p>
+<h5 id="4、程序代码区"><a href="#4、程序代码区" class="headerlink" title="4、程序代码区"></a>4、程序代码区</h5><p>存放函数体（类成员函数和全局函数）的二进制代码，也是由操作系统进行管理。</p>
+<h4 id="-2"><a href="#-2" class="headerlink" title=""></a><div class="note "><p>3、一个例子</p></div></h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">char</span>* p1[<span class="number">3</span>]= &#123;<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>,<span class="string">&quot;ghi&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> p2[<span class="number">3</span>][<span class="number">4</span>]= &#123;<span class="string">&quot;123&quot;</span>,<span class="string">&quot;456&quot;</span>,<span class="string">&quot;789&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span>** p3= (<span class="keyword">char</span>**)<span class="built_in">malloc</span>( <span class="number">3</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>*));</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i &lt; <span class="number">3</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p3[i]= (<span class="keyword">char</span> *)<span class="built_in">malloc</span> ( <span class="number">5</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line">        <span class="built_in">sprintf</span>(p3[i],<span class="string">&quot;%d%d%d&quot;</span>,i,i,i);  </span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        sprintf()函数:最常见的应用之一是把整数打印到字符串中</span></span><br><span class="line"><span class="comment">        例如：</span></span><br><span class="line"><span class="comment">        srpintf(s,&quot;%d&quot;,123);</span></span><br><span class="line"><span class="comment">        输出为：&quot;123&quot;</span></span><br><span class="line"><span class="comment">        输出结果不会打印在屏幕上，而是写入字符串中</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,p3[i]);</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        printf()函数才将结果输出到屏幕上</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(p3);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images/%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90.jpg"></p>
+<h4 id="-3"><a href="#-3" class="headerlink" title=""></a><div class="note "><p>参考资料</p></div></h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yif1991/p/5049638.html">C语言知识整理（3）：内存管理（详细版）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/98cb5f584a31">C语言中一些关于内存四区的归纳</a></p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/08/22/15%E3%80%81%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://kelecn.top/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/>https://kelecn.top/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://i.loli.net/2020/09/22/jfZtx53q6owkhLJ.png'>
+            
+              <img src='https://i.loli.net/2020/09/22/YzwLcrTsFlfG42v.jpg'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
-        
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/06/11/12%E3%80%81ARM%E5%A4%84%E7%90%86%E5%99%A87%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F/">
-        ARM处理器7种工作模式
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>简介：ARM处理器7种工作模式（特权模式，异常模式，用户模式）。</p>
-<p><img src="https://w.wallhaven.cc/full/2k/wallhaven-2kd28x.jpg"></p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
         
           
-          <a class='avatar' href='/'><img src='https://i.loli.net/2020/09/20/bPtBmVjzhY9w3qM.png'></a>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>嵌入式</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C语言</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%86%85%E5%AD%98/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>内存</p></a></div>
+
+
         
-        <time>2020-06-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2020/06/11/12%E3%80%81ARM%E5%A4%84%E7%90%86%E5%99%A87%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
-            阅读全文
-          </a>
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/&title=C语言内存管理 - kelecn&summary=简介：嵌入式系统的内存资源很稀缺，其内存页会更小，在嵌入式开发当中需要特别注意内存管理。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/&title=C语言内存管理 - kelecn&summary=简介：嵌入式系统的内存资源很稀缺，其内存页会更小，在嵌入式开发当中需要特别注意内存管理。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/&title=C语言内存管理 - kelecn&summary=简介：嵌入式系统的内存资源很稀缺，其内存页会更小，在嵌入式开发当中需要特别注意内存管理。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFLElEQVR42u3bQY7jMAwEwPz/07P3XQQWm61MgC3dktiyVPKlh5zXj/Er44UAPHgDPHgDPHijAP8Kxz8T/vX9u+uennt63en1T+t8hHqzr9QLPHjw4MGDBw8ePPgmfLqQ0w1vAVLY1otUOzjw4MGDBw8ePHjw4C/APwaAw2DUni8NTm3g7f7AgwcPHjx48ODBg/8m+McHLuedFkpawae9L/DgwYMHDx48ePDgvxl+O9oNVq1CCXjw4MGDBw8ePHjw3wg/btApbTBtkGodSLr/WkMTePDgwYMHDx48ePABfBpY/tfPsRd48ODBgwcPHjx48AX49mgXTk4DVKvg8nN5gAcPHjx48ODBgwffgE8LGdNAcfq8Ww1HrcLN9sDBgwcPHjx48ODBg2/Cn0KfLmwbVNqgW7i08eq4AgUePHjw4MGDBw8e/AB+WnDYBpDpQaZw0+emL9T0gMGDBw8ePHjw4MGDb8CnDUdTqHThaQEjnf/WdeDBgwcPHjx48ODBN+HTAsQ2YNwG3n7eBsK3DuDBgwcPHjx48ODBF+A/FYSmG2mta7uen+U47iQDDx48ePDgwYMHD34Avw042/vSg2jNOy2gpAEQPHjw4MGDBw8ePPjfhD8NCtP5p5/jAFMKSvFBggcPHjx48ODBgwd/Af52QWM7//T+tFCSvmCP6wMPHjx48ODBgwcPvgB/OzC1D3b6nFvrjRuswIMHDx48ePDgwYO/CL8NKKcL2jYMpQ1M6Qswfc44QIEHDx48ePDgwYMHH8C3G3ymkGkDUevg2wWi4wAFHjx48ODBgwcPHnzhHxOmoK3GplvzTqHT54IHDx48ePDgwYMH/xvwaSNQupFPBaVPNUI9Pgc8ePDgwYMHDx48+AJ8WgjYLvjW81vzpQWPx/vBgwcPHjx48ODBgy/CbxuC2sEmDVBp4WUbkI5fSPDgwYMHDx48ePDgL8C3Go6mhZDtc39r/ePABh48ePDgwYMHDx58ET79g3+7gHC7kWoa/E4PpNbQBB48ePDgwYMHDx78Afz0D/vT728fcFqQ2BZk0gIQePDgwYMHDx48ePA34NMAcxoo2htsNVql+506ggcPHjx48ODBgwd/A37aoNMqLKRjWpCZ7rcV5MCDBw8ePHjw4MGDvwGfLjiFSQ9oG+zajVNjD/DgwYMHDx48ePDgC/DbwsV0w2kj0LRwMj3g0xdlGtjeFkLAgwcPHjx48ODBg1/Ap8HjFng70KQFjjSgPQZF8ODBgwcPHjx48OAvwE8XNg1S0+tajUWt9aSBEzx48ODBgwcPHjz4JvytDaeBZRvI0nG7IAIePHjw4MGDBw8efBO+vaDT76e/twsq1xqWnj6DBw8ePHjw4MGDB1+E3waVNIhtA9t2Pa371hUo8ODBgwcPHjx48OAH8GmQmcJuG6a2DVC37z8uFIEHDx48ePDgwYMHX4CvB4RloWR6Xbvhqf2igQcPHjx48ODBgwd/A/4VjmkBIQ1G24OdztcKeG/nAw8ePHjw4MGDBw++CN8OTK2CyDRAbQNWK0C9nQ88ePDgwYMHDx48+AvwrcCRFkBey5EecGsdjy8uePDgwYMHDx48ePBfAJ8u5Gn+099Pv281TE33AR48ePDgwYMHDx78N8JPCx1psLrVqLQFHQc78ODBgwcPHjx48OAvwE8bmqYbmjYwpUCthqfpfXEhBDx48ODBgwcPHjz4AH7bOLTdwDY4nc6frmMMfFoIAQ8ePHjw4MGDBw8+gDc+O8CDB2+AB2+AB28sxh8Po6eZE8A5XgAAAABJRU5ErkJggg==">
+          </div>
         </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.top/2020/09/07/21%E3%80%81C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/&text=C语言内存管理 - kelecn"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2020/09/05/20%E3%80%81%E5%B8%B8%E8%A7%81%E6%80%BB%E7%BA%BF%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%EF%BC%9ASPI%E3%80%81I2C%E3%80%81UART%E3%80%81USART%E3%80%81CAN%E3%80%81USB/'>
+          <p class='title'>常见总线通讯协议：SPI、I2C、UART、USART、CAN、USB等<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：介绍常见总线通讯协议：SPI、I2C、UART、USART、CAN、USB等。
+
+1、SPI：串行外设接口SPI（Serial Peripheral Interface）是一种由Motor...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -756,55 +902,6 @@
     
   
 
-  <section class="widget category shadow floatable desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%80%BB%E7%BB%93/" href="/categories/%E6%80%BB%E7%BB%93/"
-            id="categoriesE680BBE7BB93"
-            ><div class='name'>总结</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF/" href="/categories/%E6%8A%80%E6%9C%AF/"
-            id="categoriesE68A80E69CAF"
-            ><div class='name'>技术</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            id="categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%94%9F%E6%B4%BB/" href="/categories/%E7%94%9F%E6%B4%BB/"
-            id="categoriesE7949FE6B4BB"
-            ><div class='name'>生活</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%9F%A5%E8%AF%86/" href="/categories/%E7%9F%A5%E8%AF%86/"
-            id="categoriesE79FA5E8AF86"
-            ><div class='name'>知识</div><div class='badge'>(16)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
   <section class="widget tagcloud shadow floatable desktop mobile">
     
   <header>
@@ -824,8 +921,32 @@
 
   
 
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">1.内存分配方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#-1"><span class="toc-text">2.程序的内存空间</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E6%A0%88%E5%8C%BA%EF%BC%88stack%EF%BC%89"><span class="toc-text">1、栈区（stack）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%A0%86%E5%8C%BA%EF%BC%88heap%EF%BC%89"><span class="toc-text">2、堆区（heap）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E5%8C%BA%EF%BC%88%E5%85%A8%E5%B1%80%E5%8C%BA%EF%BC%89"><span class="toc-text">3、数据区（全局区）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4%E3%80%81%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E5%8C%BA"><span class="toc-text">4、程序代码区</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#-2"><span class="toc-text">3、一个例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#-3"><span class="toc-text">参考资料</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
 
 </aside>
+
 
 
       </div>
