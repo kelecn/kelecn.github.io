@@ -582,7 +582,7 @@
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：9分钟</p>
+      <p>时长：10分钟</p>
     </a>
   </div>
 
@@ -613,7 +613,9 @@
   
   <p>简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。<br><img src="https://i.loli.net/2020/10/15/icOPNUCS2Kgzy7W.jpg"></p>
 <a id="more"></a>
-<h5 id=""><a href="#" class="headerlink" title=""></a><div class="note "><p>一、TCP/IP网络模型</p></div></h5><p>计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议（protocol）。</p>
+<h3 id="一、TCP-IP网络模型"><a href="#一、TCP-IP网络模型" class="headerlink" title="一、TCP/IP网络模型"></a>一、TCP/IP网络模型</h3><hr>
+
+<p>计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议（protocol）。</p>
 <p>TCP/IP 是互联网相关的各类协议族的总称，比如：TCP，UDP，IP，FTP，HTTP，ICMP，SMTP 等都属于 TCP/IP 族内的协议。</p>
 <p>TCP/IP模型是互联网的基础，它是一系列网络协议的总称。这些协议可以划分为四层，分别为链路层、网络层、传输层和应用层。</p>
 <ul>
@@ -624,7 +626,9 @@
 </ul>
 <p><img src="https://i.loli.net/2020/10/15/1gqV3oWnEi7yZxB.png"></p>
 <p>在网络体系结构中网络通信的建立必须是在通信双方的对等层进行，不能交错。 在整个数据传输过程中，数据在发送端时经过各层时都要附加上相应层的协议头和协议尾（仅数据链路层需要封装协议尾）部分，也就是要对数据进行协议封装，以标识对应层所用的通信协议。接下去介绍TCP/IP 中有两个具有代表性的传输层协议—-TCP 和 UDP。</p>
-<h5 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="note "><p>二、UDP</p></div></h5><p>UDP协议全称是用户数据报协议，在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议。在OSI模型中，在第四层——传输层，处于IP协议的上一层。UDP有不提供数据包分组、组装和不能对数据包进行排序的缺点，也就是说，当报文发送之后，是无法得知其是否安全完整到达的。</p>
+<h3 id="二、UDP"><a href="#二、UDP" class="headerlink" title="二、UDP"></a>二、UDP</h3><hr>
+
+<p>UDP协议全称是用户数据报协议，在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议。在OSI模型中，在第四层——传输层，处于IP协议的上一层。UDP有不提供数据包分组、组装和不能对数据包进行排序的缺点，也就是说，当报文发送之后，是无法得知其是否安全完整到达的。</p>
 <p>它有以下几个特点：</p>
 <p><strong>1. 面向无连接</strong></p>
 <p>首先 UDP 是不需要和 TCP一样在发送数据前进行三次握手建立连接的，想发数据就可以开始发送了。并且也只是数据报文的搬运工，不会对数据报文进行任何拆分和拼接操作。</p>
@@ -652,7 +656,9 @@
 <li>整个数据报文的检验和（IPv4 可选 字段），该字段用于发现头部信息和数据中的错误</li>
 </ul>
 <p>因此 UDP 的头部开销小，只有八字节，相比 TCP 的至少二十字节要少得多，在传输数据报文时是很高效的</p>
-<h5 id="-2"><a href="#-2" class="headerlink" title=""></a><div class="note "><p>三、TCP</p></div></h5><p>当一台计算机想要与另一台计算机通讯时，两台计算机之间的通信需要畅通且可靠，这样才能保证正确收发数据。例如，当你想查看网页或查看电子邮件时，希望完整且按顺序查看网页，而不丢失任何内容。当你下载文件时，希望获得的是完整的文件，而不仅仅是文件的一部分，因为如果数据丢失或乱序，都不是你希望得到的结果，于是就用到了TCP。</p>
+<h3 id="三、TCP"><a href="#三、TCP" class="headerlink" title="三、TCP"></a>三、TCP</h3><hr>
+
+<p>当一台计算机想要与另一台计算机通讯时，两台计算机之间的通信需要畅通且可靠，这样才能保证正确收发数据。例如，当你想查看网页或查看电子邮件时，希望完整且按顺序查看网页，而不丢失任何内容。当你下载文件时，希望获得的是完整的文件，而不仅仅是文件的一部分，因为如果数据丢失或乱序，都不是你希望得到的结果，于是就用到了TCP。</p>
 <p>TCP协议全称是传输控制协议是一种面向连接的、可靠的、基于字节流的传输层通信协议，由 IETF 的RFC 793定义。TCP 是面向连接的、可靠的流协议。流就是指不间断的数据结构，你可以把它想象成排水管中的水流。</p>
 <p><strong>1. TCP连接过程</strong></p>
 <p>如下图所示，可以看到建立一个TCP连接的过程为（三次握手的过程）:</p>
@@ -701,7 +707,9 @@
 <li>TCP提供全双工通信</li>
 </ul>
 <p>TCP允许通信双方的应用程序在任何时候都能发送数据，因为TCP连接的两端都设有缓存，用来临时存放双向通信的数据。当然，TCP可以立即发送一个数据段，也可以缓存一段时间以便一次发送更多的数据段（最大的数据段大小取决于MSS）</p>
-<h5 id="-3"><a href="#-3" class="headerlink" title=""></a><div class="note "><p>四、TCP和UDP的比较</p></div></h5><p><strong>1. 对比</strong></p>
+<h3 id="四、TCP和UDP的比较"><a href="#四、TCP和UDP的比较" class="headerlink" title="四、TCP和UDP的比较"></a>四、TCP和UDP的比较</h3><hr>
+
+<p><strong>1. 对比</strong></p>
 <table>
 <thead>
 <tr>
@@ -747,8 +755,10 @@
 <li>虽然 UDP 并没有 TCP 传输来的准确，但是也能在很多实时性要求高的地方有所作为</li>
 <li>对数据准确性要求高，速度可以相对较慢的，可以选用TCP</li>
 </ul>
-<p><strong>参考文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/fundebug/p/differences-of-tcp-and-udp.html">一文搞懂TCP与UDP的区别</a></strong></p>
-<p>​                   <strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38950316/article/details/81087809">TCP的三次握手与四次挥手理解及面试题（很全面）</a></strong></p>
+<h3 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a><strong>五、参考文章</strong></h3><hr>
+
+<p><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fundebug/p/differences-of-tcp-and-udp.html">一文搞懂TCP与UDP的区别</a></strong> </p>
+<p><strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38950316/article/details/81087809">TCP的三次握手与四次挥手理解及面试题（很全面）</a></strong></p>
 
   
   
@@ -884,8 +894,10 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>几种常见的DC-DC拓扑</p>
           <p class='content'>简介：开关电源三大基础拓扑解析：BUCK/BOOST/BUCK-BOOST
 
-1、Buck 拓扑电路Buck电路是一个降压电路，Uin=Ul+Uo。因Uin&gt;Uo,故具有降压作用。
-2、B...</p>
+一、Buck 拓扑电路
+
+Buck电路是一个降压电路，Uin=Ul+Uo。因Uin&gt;Uo,故具有降压作用。
+二...</p>
         </a>
       
       
@@ -1068,7 +1080,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-text">一、TCP&#x2F;IP网络模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-1"><span class="toc-text">二、UDP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-2"><span class="toc-text">三、TCP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-3"><span class="toc-text">四、TCP和UDP的比较</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81TCP-IP%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="toc-text">一、TCP&#x2F;IP网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81UDP"><span class="toc-text">二、UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81TCP"><span class="toc-text">三、TCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81TCP%E5%92%8CUDP%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">四、TCP和UDP的比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">五、参考文章</span></a></li></ol>
     </div>
   </section>
 
