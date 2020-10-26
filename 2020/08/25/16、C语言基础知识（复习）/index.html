@@ -613,7 +613,6 @@
   
   <p>简介： 嵌入式笔试相关题目、考点。<br><img src="https://w.wallhaven.cc/full/5w/wallhaven-5wr6y9.jpg"></p>
 <a id="more"></a>
-
 <h5 id=""><a href="#" class="headerlink" title=""></a><div class="note "><p>1、static修饰的局部变量、全局变量、函数</p></div></h5><p>1）、用于声明函数体内的变量为静态局部变量，存储在静态数据存储区，在函数被调用过程中维持其值保持不变。<br>2）、在文件内（函数体外）被声明为静态的变量，可以被文件内的所有函数访问，但不能被其他文件的函数访问，是一个本地的局部变量。<br>3）、在文件内,被声明为静态的函数只可被文件内的其他函数调用，但不能被其他文件的函数调用。</p>
 <h5 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="note "><p>2、关键词const的理解</p></div></h5><p>常类型是指使用类型修饰符const说明的类型，常类型的变量或对象的值是不能被更新的。不管出现在任何上下文都是为这个目的而服务的。<br>注意:非const变量默认为extern。要使const变量能够在其他文件中访问，必须在文件中显式地指定它为extern。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> a;</span><br><span class="line"><span class="comment">//同上面的代码行是等价的，都表示一个常整形数。</span></span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> a;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* const具有&quot;左结合&quot;性，即const修饰*，那么，不难理解，该句表示一个指向整数的常指针，</span></span><br><span class="line"><span class="comment">   a指向的整数可以修改，但指针a不能修改。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> a;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 同理，下面的这两行，根据&quot;左结合&quot;性，const修饰的是(*a)，也即是一个整数，</span></span><br><span class="line"><span class="comment">   所以，这两句表示指针指向一个常整数。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *a;</span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *a;</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据&quot;左结合&quot;性质，第一个const修饰(*)，第二个const修饰(a)，因此，这句话表示一个指向常整数的常指针。</span></span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *a <span class="keyword">const</span>;</span><br></pre></td></tr></table></figure>
@@ -788,8 +787,7 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>一文搞懂TCP与UDP的区别</p>
           <p class='content'>简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。
 
-
-一、TCP/IP网络模型计...</p>
+一、TCP/IP网络模型计算...</p>
         </a>
       
       
