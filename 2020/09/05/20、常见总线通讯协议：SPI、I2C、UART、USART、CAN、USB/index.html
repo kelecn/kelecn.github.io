@@ -616,8 +616,10 @@
 <h3 id="一、SPI：串行外设接口"><a href="#一、SPI：串行外设接口" class="headerlink" title="一、SPI：串行外设接口"></a>一、SPI：串行外设接口</h3><hr>
 
 <p>SPI（Serial Peripheral Interface）是一种由Motorola公司提出的串行串行同步通讯协议，由一个主设备和一个或多个从设备组成。其拥有四根(类)硬脚引线，分别为 SDI（串行数据输入），SDO（串行数据输出），SCK（串行移位时钟），CS（片选）。因为一个主设备可以挂多个从设备，则通过片选引脚对从设备进行选择。从设备的工作时钟则是来自于主设备的SCK线。</p>
-<h5 id="1-1-电路示意图"><a href="#1-1-电路示意图" class="headerlink" title="1.1  电路示意图"></a>1.1  电路示意图</h5><p><img src="https://i.loli.net/2020/10/19/AMdWBKQ3rEuqY6J.png"></p>
-<h5 id="1-2-数据的传输"><a href="#1-2-数据的传输" class="headerlink" title="1.2  数据的传输"></a>1.2  数据的传输</h5><p>SPI在数据传输的时候，需要确定两件事情：其一，数据是在时钟的上升沿采集还是下降沿采集；其二，时钟的初始(空闲)状态是为高电平还是低电平。而I2C的空闲状态，时钟线为高电平；数据采集的时候，时钟线也为高电平。但SPI给出了更自由的方式。</p>
+<p><strong>1.1  电路示意图</strong></p>
+<p><img src="https://i.loli.net/2020/10/19/AMdWBKQ3rEuqY6J.png"></p>
+<p><strong>1.2  数据的传输</strong></p>
+<p>SPI在数据传输的时候，需要确定两件事情：其一，数据是在时钟的上升沿采集还是下降沿采集；其二，时钟的初始(空闲)状态是为高电平还是低电平。而I2C的空闲状态，时钟线为高电平；数据采集的时候，时钟线也为高电平。但SPI给出了更自由的方式。</p>
 <p>CPOL：时钟极性, 表示 SPI 在空闲时, 时钟信号是高电平还是低电平。</p>
 <p>CPHA：时钟相位, 表示 SPI 设备是在 SCK 管脚上的时钟信号变为上升沿时触发数据采样, 还是在时钟信号变为下降沿时触发数据采样。</p>
 <p>那么，SPI CPOL有两种可能，CPHA有两种可能，则SPI数据传输就有四种可能—按照标准的说法，SPI数据传输就有四种模式。</p>
@@ -626,29 +628,36 @@
 <p><img src="https://i.loli.net/2020/10/19/ZBQTzHjsCqoXaLM.png"></p>
 <p><img src="https://i.loli.net/2020/10/19/rvpmoZsayKjuPDk.png"></p>
 <p><img src="https://i.loli.net/2020/10/19/uK87tNvjsEnoxS5.png"></p>
-<h5 id="1-3-SPI读写"><a href="#1-3-SPI读写" class="headerlink" title="1.3  SPI读写"></a>1.3  SPI读写</h5><p>SPI在硬件设计上采用的双数据线制，根据设计，在SPI通信过程中，主从设备之间会形成一个数据环形链路—也即是，主设备向从设备写一次数据，从设备就会回一次数据(至于该从设备回复的数据是否有效，则另当别论—如果有效，主设备就把它读入；如果无效，则丢弃即可)。</p>
+<p><strong>1.3  SPI读写</strong></p>
+<p>SPI在硬件设计上采用的双数据线制，根据设计，在SPI通信过程中，主从设备之间会形成一个数据环形链路—也即是，主设备向从设备写一次数据，从设备就会回一次数据(至于该从设备回复的数据是否有效，则另当别论—如果有效，主设备就把它读入；如果无效，则丢弃即可)。</p>
 <p><img src="https://i.loli.net/2020/10/19/I3XNlJKQFuhe1Za.png"></p>
 <p><img src="https://i.loli.net/2020/10/19/X1ekaFGwvPjcSYh.png"></p>
 <h3 id="二、I2C：意为IC之间总线"><a href="#二、I2C：意为IC之间总线" class="headerlink" title="二、I2C：意为IC之间总线"></a>二、I2C：意为IC之间总线</h3><hr>
 
 <p><strong>I²C</strong> (<strong>Inter-Integrated Circuit</strong>)。其拥有一根数据线SDA和一根时钟线SCL。其总线通过上拉电阻与电源相连接。每个接到I2C总线上的器件都有唯一的地址。其中，主动发起操作的一方为主机，另外一方为从机。</p>
-<h5 id="1-1-电路示意图-1"><a href="#1-1-电路示意图-1" class="headerlink" title="1.1  电路示意图"></a>1.1  电路示意图</h5><p><img src="https://i.loli.net/2020/10/19/bOAjyodXL4QEfFe.png"></p>
-<h5 id="1-2-数据传输"><a href="#1-2-数据传输" class="headerlink" title="1.2 数据传输"></a>1.2 数据传输</h5><p>当没有数据传输的时候，两根总线都为高电平；当采集IIC上的数据时，其时钟线SCL必须是高电平且SDA的数据必须保持稳定不变—将SDA的电平与SCL的高电平进行“与”操作后，以便确定SDA上是1还是0；在SCL为低电平的时候，SDA上的数据可以进行跳变。</p>
+<p><strong>1.1  电路示意图</strong></p>
+<p><img src="https://i.loli.net/2020/10/19/bOAjyodXL4QEfFe.png"></p>
+<p><strong>1.2 数据传输</strong></p>
+<p>当没有数据传输的时候，两根总线都为高电平；当采集IIC上的数据时，其时钟线SCL必须是高电平且SDA的数据必须保持稳定不变—将SDA的电平与SCL的高电平进行“与”操作后，以便确定SDA上是1还是0；在SCL为低电平的时候，SDA上的数据可以进行跳变。</p>
 <p>数据传输开始时，需要发送一个起始信号；数据传输结束后，需要发送一个终止信号；每8bit数据传输结束，都需要一个ACK。起止信号都有Master发出，而ACK则可能由Master或者SLAVE来发出。数据的传输采用大端传输。</p>
 <p>开始信号：SCL为高电平，SDA的电平由高跳到低表示开始信号。</p>
 <p>终止信号：SCL为高电平，SDA的电平由低跳到高表示终止信号。</p>
 <p><img src="https://i.loli.net/2020/10/19/Aj2czE6vKdFxs5P.png"></p>
-<h5 id="1-3-数据协议"><a href="#1-3-数据协议" class="headerlink" title="1.3 数据协议"></a>1.3 数据协议</h5><p><img src="https://i.loli.net/2020/10/19/GnaKejT4yMIcRiz.png"></p>
-<h5 id="1-4-I2C读写流程"><a href="#1-4-I2C读写流程" class="headerlink" title="1.4  I2C读写流程"></a>1.4  I2C读写流程</h5><p><img src="https://i.loli.net/2020/10/19/qT2A8OmuDR1CoaY.png"></p>
+<p><strong>1.3 数据协议</strong></p>
+<p><img src="https://i.loli.net/2020/10/19/GnaKejT4yMIcRiz.png"></p>
+<p><strong>1.4  I2C读写流程</strong></p>
+<p><img src="https://i.loli.net/2020/10/19/qT2A8OmuDR1CoaY.png"></p>
 <p><img src="https://i.loli.net/2020/10/19/oTSdiG3Ov89jMey.png"></p>
 <p><img src="https://i.loli.net/2020/10/19/iMXBxWsm9E5A2NQ.png"></p>
 <p><img src="https://i.loli.net/2020/10/19/zRjVw9kO5aBTlyH.png"></p>
 <h3 id="三、UART：通用异步收发器"><a href="#三、UART：通用异步收发器" class="headerlink" title="三、UART：通用异步收发器"></a>三、UART：通用异步收发器</h3><hr>
+**1.1  电路示意图**
 
-<h5 id="1-1-电路示意图-2"><a href="#1-1-电路示意图-2" class="headerlink" title="1.1  电路示意图"></a>1.1  电路示意图</h5><p>UART是一个大家族，其包括了RS232、RS499、RS423、RS422和RS485等接口标准规范和总线标准规范。它们的主要区别在于其各自的电平范围不相同。</p>
+<p>UART是一个大家族，其包括了RS232、RS499、RS423、RS422和RS485等接口标准规范和总线标准规范。它们的主要区别在于其各自的电平范围不相同。</p>
 <p>嵌入式设备中常常使用到的是TTL、TTL转RS232的这种方式。常用的就三根引线：发送线TX、接收线RX、电平参考地线GND。</p>
 <p><img src="https://i.loli.net/2020/10/19/IdEzHLYABVh5rQD.png"></p>
-<h5 id="1-2-通信协议"><a href="#1-2-通信协议" class="headerlink" title="1.2  通信协议"></a>1.2  通信协议</h5><p>将传输数据的每个字符一位接一位地传输。</p>
+<p><strong>1.2  通信协议</strong></p>
+<p>将传输数据的每个字符一位接一位地传输。</p>
 <p><img src="https://i.loli.net/2020/10/19/8pUDkvCqPsVKbrg.png"></p>
 <p>起始位：先发出一个逻辑”0”的信号，表示传输字符的开始。</p>
 <p>数据位：紧接着起始位之后。数据位的个数可以是4、5、6、7、8等，构成一个字符。通常采用ASCII码。</p>
@@ -830,9 +839,9 @@
           <p class='title'>精简指令集计算机(RISC)和复杂指令集计算机(CISC)的区别<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>简介：精简指令集计算机(RISC)和复杂指令集计算机(CISC)的区别
 
-一、RISC（reduced instruction set computer，精简指令集计算机）
+一、RISC（精简指令集计算机）
 
-RISC是一种执行...</p>
+RISC（reduced instruction set computer，精简指令...</p>
         </a>
       
     </div>
@@ -1005,7 +1014,7 @@ RISC是一种执行...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81SPI%EF%BC%9A%E4%B8%B2%E8%A1%8C%E5%A4%96%E8%AE%BE%E6%8E%A5%E5%8F%A3"><span class="toc-text">一、SPI：串行外设接口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E7%94%B5%E8%B7%AF%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="toc-text">1.1  电路示意图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BC%A0%E8%BE%93"><span class="toc-text">1.2  数据的传输</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-SPI%E8%AF%BB%E5%86%99"><span class="toc-text">1.3  SPI读写</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81I2C%EF%BC%9A%E6%84%8F%E4%B8%BAIC%E4%B9%8B%E9%97%B4%E6%80%BB%E7%BA%BF"><span class="toc-text">二、I2C：意为IC之间总线</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E7%94%B5%E8%B7%AF%E7%A4%BA%E6%84%8F%E5%9B%BE-1"><span class="toc-text">1.1  电路示意图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="toc-text">1.2 数据传输</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-%E6%95%B0%E6%8D%AE%E5%8D%8F%E8%AE%AE"><span class="toc-text">1.3 数据协议</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-I2C%E8%AF%BB%E5%86%99%E6%B5%81%E7%A8%8B"><span class="toc-text">1.4  I2C读写流程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81UART%EF%BC%9A%E9%80%9A%E7%94%A8%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8"><span class="toc-text">三、UART：通用异步收发器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E7%94%B5%E8%B7%AF%E7%A4%BA%E6%84%8F%E5%9B%BE-2"><span class="toc-text">1.1  电路示意图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE"><span class="toc-text">1.2  通信协议</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81USART%EF%BC%9A%E9%80%9A%E7%94%A8%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8"><span class="toc-text">四、USART：通用同步异步收发器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81CAN%EF%BC%9A%E7%8E%B0%E5%9C%BA%E6%80%BB%E7%BA%BF"><span class="toc-text">五、CAN：现场总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81LIN%EF%BC%9A%E5%B1%80%E5%9F%9F%E4%BA%92%E8%81%94%E7%BD%91%E7%BB%9C"><span class="toc-text">六、LIN：局域互联网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81USB%EF%BC%9A%E9%80%9A%E7%94%A8%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF"><span class="toc-text">七、USB：通用串行总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81GPIO%EF%BC%9A%E9%80%9A%E7%94%A8%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA"><span class="toc-text">八、GPIO：通用输入&#x2F;输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81SPI%E3%80%81I2C%E3%80%81UART%E3%80%81CAN%E3%80%81LIN%E5%AF%B9%E6%AF%94"><span class="toc-text">九、SPI、I2C、UART、CAN、LIN对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">十、参考文献</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81SPI%EF%BC%9A%E4%B8%B2%E8%A1%8C%E5%A4%96%E8%AE%BE%E6%8E%A5%E5%8F%A3"><span class="toc-text">一、SPI：串行外设接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81I2C%EF%BC%9A%E6%84%8F%E4%B8%BAIC%E4%B9%8B%E9%97%B4%E6%80%BB%E7%BA%BF"><span class="toc-text">二、I2C：意为IC之间总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81UART%EF%BC%9A%E9%80%9A%E7%94%A8%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8"><span class="toc-text">三、UART：通用异步收发器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81USART%EF%BC%9A%E9%80%9A%E7%94%A8%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8"><span class="toc-text">四、USART：通用同步异步收发器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81CAN%EF%BC%9A%E7%8E%B0%E5%9C%BA%E6%80%BB%E7%BA%BF"><span class="toc-text">五、CAN：现场总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81LIN%EF%BC%9A%E5%B1%80%E5%9F%9F%E4%BA%92%E8%81%94%E7%BD%91%E7%BB%9C"><span class="toc-text">六、LIN：局域互联网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81USB%EF%BC%9A%E9%80%9A%E7%94%A8%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF"><span class="toc-text">七、USB：通用串行总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81GPIO%EF%BC%9A%E9%80%9A%E7%94%A8%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA"><span class="toc-text">八、GPIO：通用输入&#x2F;输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81SPI%E3%80%81I2C%E3%80%81UART%E3%80%81CAN%E3%80%81LIN%E5%AF%B9%E6%AF%94"><span class="toc-text">九、SPI、I2C、UART、CAN、LIN对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">十、参考文献</span></a></li></ol>
     </div>
   </section>
 
