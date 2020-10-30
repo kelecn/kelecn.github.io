@@ -635,24 +635,25 @@
 <span class='p red'>Td：</span>控制器的微分时间，也称微分系数。<br>
 
 <p><img src="https://cdn.jsdelivr.net/gh/kelecn/images/PID.gif"></p>
-<h5 id="1、P-比例部分"><a href="#1、P-比例部分" class="headerlink" title="1、P - 比例部分"></a><strong>1、P - 比例部分</strong></h5><p>比例环节的作用是对偏差瞬间作出反应。偏差一旦产生控制器立即产生控制作用， 使控制量向减少偏差的方向变化。 控制作用的强弱取决于比例系数Kp， 比例系数Kp越大，控制作用越强， 则过渡过程越快， 控制过程的静态偏差也就越小； 但是Kp越大，也越容易产生振荡， 破坏系统的稳定性。 故而，<span class='p green'>比例系数Kp选择必须恰当， 才能过渡时间少， 静差小而又稳定的效果</span>。</p>
-<h5 id="2、I-积分部分"><a href="#2、I-积分部分" class="headerlink" title="2、I - 积分部分"></a><strong>2、I - 积分部分</strong></h5><p>从积分部分的数学表达式可以知道， 只要存在偏差， 则它的控制作用就不断的增加； 只有在偏差e(t)＝0时， 它的积分才能是一个常数，控制作用才是一个不会增加的常数。 可见，<span class='p blue'>积分部分可以消除系统的偏差</span>。<br></p>
-<span class='p red'>需要设置一个积分量。只要偏差存在，就不断地对偏差进行积分（累加），并反应在调节力度上。</span><br>
+<p><strong>1、P - 比例部分</strong></p>
+<p>比例环节的作用是对偏差瞬间作出反应。偏差一旦产生控制器立即产生控制作用， 使控制量向减少偏差的方向变化。 控制作用的强弱取决于比例系数Kp， 比例系数Kp越大，控制作用越强， 则过渡过程越快， 控制过程的静态偏差也就越小； 但是Kp越大，也越容易产生振荡， 破坏系统的稳定性。 故而，<span class='p green'>比例系数Kp选择必须恰当， 才能过渡时间少， 静差小而又稳定的效果</span>。</p>
+<p><strong>2、I - 积分部分</strong></p>
+<p>从积分部分的数学表达式可以知道， 只要存在偏差， 则它的控制作用就不断的增加； 只有在偏差e(t)＝0时， 它的积分才能是一个常数，控制作用才是一个不会增加的常数。 可见，<span class='p blue'>积分部分可以消除系统的偏差</span>。<br></p>
+<span class='p red'>我们需要设置一个积分量。只要偏差存在，就不断地对偏差进行积分（累加），并反应在调节力度上。</span><br>
 
 <span class='p blue'>积分环节的调节作用虽然会消除静态误差，但也会降低系统的响应速度，增加系统的超调量。</span>积分常数Ti越大，积分的积累作用越弱，这时系统在过渡时不会产生振荡； 但是增大积分常数Ti会减慢静态误差的消除过程，消除偏差所需的时间也较长， 但可以减少超调量，提高系统的稳定性。
 
 <p>当 Ti 较小时， 则积分的作用较强，这时系统过渡时间中有可能产生振荡，不过消除偏差所需的时间较短。所以必须根据实际控制的具体要求来确定Ti 。</p>
-<h5 id="3、D-微分部分"><a href="#3、D-微分部分" class="headerlink" title="3、D - 微分部分"></a><strong>3、D - 微分部分</strong></h5><span class='p yellow'>实际的控制系统除了希望消除静态误差外，还要求加快调节过程。在偏差出现的瞬间，或在偏差变化的瞬间， 不但要对偏差量做出立即响应（比例环节的作用）， 而且要根据偏差的变化趋势预先给出适当的纠正。</span>为了实现这一作用，可在 PI 控制器的基础上加入微分环节，形成 PID 控制器。
+<p><strong>3、D - 微分部分</strong></p>
+<span class='p cyan'>实际的控制系统除了希望消除静态误差外，还要求加快调节过程。在偏差出现的瞬间，或在偏差变化的瞬间， 不但要对偏差量做出立即响应（比例环节的作用）， 而且要根据偏差的变化趋势预先给出适当的纠正。</span>为了实现这一作用，可在 PI 控制器的基础上加入微分环节，形成 PID 控制器。<br>
 
-<span class='p red'>我们需要一个控制作用，让被控制的物理量的“变化速度”趋于0，即类似于“阻尼”的作用。</span>
+<span class='p red'>我们需要一个控制作用，让被控制的物理量的“变化速度”趋于0，即类似于“阻尼”的作用。</span><br>
 
 <p><img src="https://i.loli.net/2020/10/30/QDwJWtsneoM17X6.gif"></p>
-<span class='p yellow'>微分环节的作用使阻止偏差的变化。</span>它是根据偏差的变化趋势（变化速度）进行控制。偏差变化的越快，微分控制器的输出就越大，并能在偏差值变大之前进行修正。微分作用的引入， 将有助于减小超调量， 克服振荡， 使系统趋于稳定， 特别对髙阶系统非常有利， 它加快了系统的跟踪速度。但微分的作用对输入信号的噪声很敏感，对那些噪声较大的系统一般不用微分， 或在微分起作用之前先对输入信号进行滤波。
-
+<span class='p cyan'>微分环节的作用使阻止偏差的变化。</span>它是根据偏差的变化趋势（变化速度）进行控制。偏差变化的越快，微分控制器的输出就越大，并能在偏差值变大之前进行修正。微分作用的引入， 将有助于减小超调量， 克服振荡， 使系统趋于稳定， 特别对髙阶系统非常有利， 它加快了系统的跟踪速度。但微分的作用对输入信号的噪声很敏感，对那些噪声较大的系统一般不用微分， 或在微分起作用之前先对输入信号进行滤波。
 
 
 <h3 id="三、PID算法应用实例"><a href="#三、PID算法应用实例" class="headerlink" title="三、PID算法应用实例"></a>三、PID算法应用实例</h3><hr>
-
 
 
 <p>PID 控制算法可以分为<strong>位置式 PID</strong> 和<strong>增量式 PID</strong> 控制算法。</p>
@@ -668,8 +669,6 @@
 <p><strong>2.增量式PID</strong></p>
 <p>$$<br>\Delta u(k)=u(k)-u(k-1)=K_P[e(k)-e(k-1)]+K_Ie(k)+K_D[e(k)-2e(k-1)-e(k-2)]<br>$$</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">float</span> Kp;                       <span class="comment">//比例系数Proportional</span></span><br><span class="line">  <span class="keyword">float</span> Ki;                       <span class="comment">//积分系数Integral</span></span><br><span class="line">  <span class="keyword">float</span> Kd;                       <span class="comment">//微分系数Derivative</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">float</span> Ek;                       <span class="comment">//当前误差</span></span><br><span class="line">  <span class="keyword">float</span> Ek1;                      <span class="comment">//前一次误差 e(k-1)</span></span><br><span class="line">  <span class="keyword">float</span> Ek2;                      <span class="comment">//再前一次误差 e(k-2)</span></span><br><span class="line">&#125;PID_IncTypeDef;</span><br><span class="line"></span><br><span class="line"><span class="comment">/************************************************</span></span><br><span class="line"><span class="comment">函数名称 ： PID_Inc</span></span><br><span class="line"><span class="comment">功    能 ： PID增量(Increment)计算</span></span><br><span class="line"><span class="comment">参    数 ： SetValue ------ 设置值(期望值)</span></span><br><span class="line"><span class="comment">            ActualValue --- 实际值(反馈值)</span></span><br><span class="line"><span class="comment">            PID ----------- PID数据结构</span></span><br><span class="line"><span class="comment">返 回 值 ： PIDInc -------- 本次PID增量(+/-)</span></span><br><span class="line"><span class="comment">作    者 ： strongerHuang</span></span><br><span class="line"><span class="comment">*************************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">PID_Inc</span><span class="params">(<span class="keyword">float</span> SetValue, <span class="keyword">float</span> ActualValue, PID_IncTypeDef *PID)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">float</span> PIDInc;                                  <span class="comment">//增量</span></span><br><span class="line"></span><br><span class="line">  PID-&gt;Ek = SetValue - ActualValue;</span><br><span class="line">  PIDInc = (PID-&gt;Kp * PID-&gt;Ek) - (PID-&gt;Ki * PID-&gt;Ek1) + (PID-&gt;Kd * PID-&gt;Ek2);</span><br><span class="line"></span><br><span class="line">  PID-&gt;Ek2 = PID-&gt;Ek1;</span><br><span class="line">  PID-&gt;Ek1 = PID-&gt;Ek;  <span class="keyword">return</span> PIDInc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h3><hr>
 
@@ -1047,7 +1046,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFPID%E7%AE%97%E6%B3%95"><span class="toc-text">一、什么是PID算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81PID%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-text">二、PID算法原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81P-%E6%AF%94%E4%BE%8B%E9%83%A8%E5%88%86"><span class="toc-text">1、P - 比例部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81I-%E7%A7%AF%E5%88%86%E9%83%A8%E5%88%86"><span class="toc-text">2、I - 积分部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81D-%E5%BE%AE%E5%88%86%E9%83%A8%E5%88%86"><span class="toc-text">3、D - 微分部分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81PID%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">三、PID算法应用实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">四、参考文章</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFPID%E7%AE%97%E6%B3%95"><span class="toc-text">一、什么是PID算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81PID%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-text">二、PID算法原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81PID%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">三、PID算法应用实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">四、参考文章</span></a></li></ol>
     </div>
   </section>
 
