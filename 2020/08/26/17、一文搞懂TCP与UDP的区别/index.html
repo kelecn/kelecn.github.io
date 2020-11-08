@@ -54,7 +54,7 @@
   
 
   
-    <link rel="shortcut icon" type='image/x-icon' href="https://i.loli.net/2020/09/18/SoiA7VpMCkgHUYu.png">
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/kelecn/images@master/favicon.ico">
   
 
   
@@ -643,7 +643,7 @@
 
 
   
-  <p>简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。<br><img src="https://i.loli.net/2020/10/15/icOPNUCS2Kgzy7W.jpg"></p>
+  <p>简介：网络协议是每个IT工程师都必须要掌握的知识，TCP/IP 中有两个具有代表性的传输层协议，分别是 TCP 和 UDP，本文将介绍下这两者以及它们之间的区别。<br><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/TCP&UDP.jpg"></p>
 <a id="more"></a>
 <h3 id="一、TCP-IP网络模型"><a href="#一、TCP-IP网络模型" class="headerlink" title="一、TCP/IP网络模型"></a>一、TCP/IP网络模型</h3><hr>
 
@@ -656,7 +656,7 @@
 <li>传输层：负责对报文进行分组和重组，并以TCP或UDP协议格式封装报文。</li>
 <li>应用层：负责向用户提供应用程序，比如HTTP、FTP、Telnet、DNS、SMTP等。</li>
 </ul>
-<p><img src="https://i.loli.net/2020/10/15/1gqV3oWnEi7yZxB.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/2019-03-21-01.png"></p>
 <p>在网络体系结构中网络通信的建立必须是在通信双方的对等层进行，不能交错。 在整个数据传输过程中，数据在发送端时经过各层时都要附加上相应层的协议头和协议尾（仅数据链路层需要封装协议尾）部分，也就是要对数据进行协议封装，以标识对应层所用的通信协议。接下去介绍TCP/IP 中有两个具有代表性的传输层协议—-TCP 和 UDP。</p>
 <h3 id="二、UDP"><a href="#二、UDP" class="headerlink" title="二、UDP"></a>二、UDP</h3><hr>
 
@@ -677,10 +677,10 @@
 <p>首先不可靠性体现在无连接上，通信都不需要建立连接，想发就发，这样的情况肯定不可靠。</p>
 <p>并且收到什么数据就传递什么数据，并且也不会备份数据，发送数据也不会关心对方是否已经正确接收到数据了。</p>
 <p>再者网络环境时好时坏，但是 UDP 因为没有拥塞控制，一直会以恒定的速度发送数据。即使网络条件不好，也不会对发送速率进行调整。这样实现的弊端就是在网络条件不好的情况下可能会导致丢包，但是优点也很明显，在某些实时性要求高的场景（比如电话会议）就需要使用 UDP 而不是 TCP。</p>
-<p><img src="https://i.loli.net/2020/10/15/CV5nmJiacTAyQFH.gif"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/2019-03-21-02.gif"></p>
 <p>从上面的动态图可以得知，UDP只会把想发的数据报文一股脑的丢给对方，并不在意数据有无安全完整到达。</p>
 <p><strong>5. 头部开销小，传输数据报文时是很高效的。</strong></p>
-<p><img src="https://i.loli.net/2020/10/15/xcSuoCbsHUvTgnE.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/2019-03-21-03.png"></p>
 <p>UDP 头部包含了以下几个数据：</p>
 <ul>
 <li>两个十六位的端口号，分别为源端口（可选字段）和目标端口</li>
@@ -694,7 +694,7 @@
 <p>TCP协议全称是传输控制协议是一种面向连接的、可靠的、基于字节流的传输层通信协议，由 IETF 的RFC 793定义。TCP 是面向连接的、可靠的流协议。流就是指不间断的数据结构，你可以把它想象成排水管中的水流。</p>
 <p><strong>1. TCP连接过程</strong></p>
 <p>如下图所示，可以看到建立一个TCP连接的过程为（三次握手的过程）:</p>
-<p><img src="https://i.loli.net/2020/10/15/5cVC9ElRnb1jqQZ.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/2019-03-21-04.png"></p>
 <p><strong>第一次握手</strong></p>
 <p>客户端向服务端发送连接请求报文段。该报文段中包含自身的数据通讯初始序号。请求发送后，客户端便进入 SYN-SENT 状态。</p>
 <p><strong>第二次握手</strong></p>
@@ -702,9 +702,9 @@
 <p><strong>第三次握手</strong></p>
 <p>当客户端收到连接同意的应答后，还要向服务端发送一个确认报文。客户端发完这个报文段后便进入 ESTABLISHED 状态，服务端收到这个应答后也进入 ESTABLISHED 状态，此时连接建立成功。</p>
 <p>这里可能大家会有个疑惑：为什么 TCP 建立连接需要三次握手，而不是两次？这是因为这是为了防止出现失效的连接请求报文段被服务端接收的情况，从而产生错误。</p>
-<p><img src="https://i.loli.net/2020/10/15/jzIdoxmeAnbp9HM.gif"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/2019-03-21-05.gif"></p>
 <p><strong>2. TCP断开链接</strong></p>
-<p><img src="https://i.loli.net/2020/10/15/hgMfjN9XKrvuxUc.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/2019-03-21-06.png"></p>
 <p>TCP 是全双工的，在断开连接时两端都需要发送 FIN 和 ACK。</p>
 <p><strong>第一次握手</strong></p>
 <p>若客户端 A 认为数据发送完成，则它需要向服务端 B 发送连接释放请求。</p>
