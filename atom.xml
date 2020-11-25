@@ -6,7 +6,7 @@
   <link href="https://kelecn.top/atom.xml" rel="self"/>
   
   <link href="https://kelecn.top/"/>
-  <updated>2020-11-25T10:44:51.753Z</updated>
+  <updated>2020-11-25T11:29:52.485Z</updated>
   <id>https://kelecn.top/</id>
   
   <author>
@@ -17,9 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ss</title>
+    <link href="https://kelecn.top/posts/54628/"/>
+    <id>https://kelecn.top/posts/54628/</id>
+    <published>2020-11-25T11:29:05.000Z</published>
+    <updated>2020-11-25T11:29:52.485Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>基于QT开发的局域网聊天室</title>
-    <link href="https://kelecn.top/posts/29647"/>
-    <id>https://kelecn.top/posts/29647</id>
+    <link href="https://kelecn.top/posts/29647/"/>
+    <id>https://kelecn.top/posts/29647/</id>
     <published>2020-11-11T12:00:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -46,8 +66,8 @@
   
   <entry>
     <title>PID控制算法</title>
-    <link href="https://kelecn.top/posts/16358"/>
-    <id>https://kelecn.top/posts/16358</id>
+    <link href="https://kelecn.top/posts/16358/"/>
+    <id>https://kelecn.top/posts/16358/</id>
     <published>2020-09-09T12:00:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -74,8 +94,8 @@
   
   <entry>
     <title>C语言内存管理</title>
-    <link href="https://kelecn.top/posts/24097"/>
-    <id>https://kelecn.top/posts/24097</id>
+    <link href="https://kelecn.top/posts/24097/"/>
+    <id>https://kelecn.top/posts/24097/</id>
     <published>2020-09-07T12:00:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -99,8 +119,8 @@
   
   <entry>
     <title>常见总线通讯协议：SPI、I2C、UART、USART、CAN、USB等</title>
-    <link href="https://kelecn.top/posts/55976"/>
-    <id>https://kelecn.top/posts/55976</id>
+    <link href="https://kelecn.top/posts/55976/"/>
+    <id>https://kelecn.top/posts/55976/</id>
     <published>2020-09-05T13:50:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -126,8 +146,8 @@
   
   <entry>
     <title>精简指令集计算机(RISC)和复杂指令集计算机(CISC)的区别</title>
-    <link href="https://kelecn.top/posts/38602"/>
-    <id>https://kelecn.top/posts/38602</id>
+    <link href="https://kelecn.top/posts/38602/"/>
+    <id>https://kelecn.top/posts/38602/</id>
     <published>2020-09-01T13:50:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -151,8 +171,8 @@
   
   <entry>
     <title>几种常见的DC-DC拓扑</title>
-    <link href="https://kelecn.top/posts/50067"/>
-    <id>https://kelecn.top/posts/50067</id>
+    <link href="https://kelecn.top/posts/50067/"/>
+    <id>https://kelecn.top/posts/50067/</id>
     <published>2020-08-28T13:50:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -176,8 +196,8 @@
   
   <entry>
     <title>一文搞懂TCP与UDP的区别</title>
-    <link href="https://kelecn.top/posts/22814"/>
-    <id>https://kelecn.top/posts/22814</id>
+    <link href="https://kelecn.top/posts/22814/"/>
+    <id>https://kelecn.top/posts/22814/</id>
     <published>2020-08-26T13:57:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -201,8 +221,8 @@
   
   <entry>
     <title>C语言基础知识（复习）</title>
-    <link href="https://kelecn.top/posts/57201"/>
-    <id>https://kelecn.top/posts/57201</id>
+    <link href="https://kelecn.top/posts/57201/"/>
+    <id>https://kelecn.top/posts/57201/</id>
     <published>2020-08-25T13:57:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
@@ -228,8 +248,8 @@
   
   <entry>
     <title>精简代码：改换运算符</title>
-    <link href="https://kelecn.top/posts/38646"/>
-    <id>https://kelecn.top/posts/38646</id>
+    <link href="https://kelecn.top/posts/38646/"/>
+    <id>https://kelecn.top/posts/38646/</id>
     <published>2020-08-22T13:57:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -257,8 +277,8 @@
   
   <entry>
     <title>基于PicGo的GitHub图床</title>
-    <link href="https://kelecn.top/posts/10250"/>
-    <id>https://kelecn.top/posts/10250</id>
+    <link href="https://kelecn.top/posts/10250/"/>
+    <id>https://kelecn.top/posts/10250/</id>
     <published>2020-08-18T13:57:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -287,8 +307,8 @@
   
   <entry>
     <title>ARM处理器7种工作模式</title>
-    <link href="https://kelecn.top/posts/4235"/>
-    <id>https://kelecn.top/posts/4235</id>
+    <link href="https://kelecn.top/posts/4235/"/>
+    <id>https://kelecn.top/posts/4235/</id>
     <published>2020-06-11T13:47:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -315,8 +335,8 @@
   
   <entry>
     <title>测试相册功能</title>
-    <link href="https://kelecn.top/posts/39047"/>
-    <id>https://kelecn.top/posts/39047</id>
+    <link href="https://kelecn.top/posts/39047/"/>
+    <id>https://kelecn.top/posts/39047/</id>
     <published>2020-06-09T13:57:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -343,8 +363,8 @@
   
   <entry>
     <title>C++与Java多态的区别</title>
-    <link href="https://kelecn.top/posts/33552"/>
-    <id>https://kelecn.top/posts/33552</id>
+    <link href="https://kelecn.top/posts/33552/"/>
+    <id>https://kelecn.top/posts/33552/</id>
     <published>2020-06-06T13:40:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -373,8 +393,8 @@
   
   <entry>
     <title>C++重载注意点</title>
-    <link href="https://kelecn.top/posts/18002"/>
-    <id>https://kelecn.top/posts/18002</id>
+    <link href="https://kelecn.top/posts/18002/"/>
+    <id>https://kelecn.top/posts/18002/</id>
     <published>2020-05-20T13:30:00.000Z</published>
     <updated>2020-11-25T10:44:51.737Z</updated>
     
@@ -401,8 +421,8 @@
   
   <entry>
     <title>C++返回对象和返回引用</title>
-    <link href="https://kelecn.top/posts/10995"/>
-    <id>https://kelecn.top/posts/10995</id>
+    <link href="https://kelecn.top/posts/10995/"/>
+    <id>https://kelecn.top/posts/10995/</id>
     <published>2020-04-19T13:20:07.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -431,8 +451,8 @@
   
   <entry>
     <title>关于free和delete的使用</title>
-    <link href="https://kelecn.top/posts/26216"/>
-    <id>https://kelecn.top/posts/26216</id>
+    <link href="https://kelecn.top/posts/26216/"/>
+    <id>https://kelecn.top/posts/26216/</id>
     <published>2020-03-29T13:10:00.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -461,8 +481,8 @@
   
   <entry>
     <title>常量指针与指针常量</title>
-    <link href="https://kelecn.top/posts/8326"/>
-    <id>https://kelecn.top/posts/8326</id>
+    <link href="https://kelecn.top/posts/8326/"/>
+    <id>https://kelecn.top/posts/8326/</id>
     <published>2020-03-11T13:07:00.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -491,8 +511,8 @@
   
   <entry>
     <title>编程过程中遇到的一些问题总结（C++&amp;Java）</title>
-    <link href="https://kelecn.top/posts/6416"/>
-    <id>https://kelecn.top/posts/6416</id>
+    <link href="https://kelecn.top/posts/6416/"/>
+    <id>https://kelecn.top/posts/6416/</id>
     <published>2020-02-18T02:05:00.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -519,8 +539,8 @@
   
   <entry>
     <title>JAVA测试题</title>
-    <link href="https://kelecn.top/posts/19203"/>
-    <id>https://kelecn.top/posts/19203</id>
+    <link href="https://kelecn.top/posts/19203/"/>
+    <id>https://kelecn.top/posts/19203/</id>
     <published>2020-02-07T02:05:00.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -547,8 +567,8 @@
   
   <entry>
     <title>面向对象的程序设计实验（C++）</title>
-    <link href="https://kelecn.top/posts/29708"/>
-    <id>https://kelecn.top/posts/29708</id>
+    <link href="https://kelecn.top/posts/29708/"/>
+    <id>https://kelecn.top/posts/29708/</id>
     <published>2019-12-25T02:51:34.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -577,8 +597,8 @@
   
   <entry>
     <title>嵌入式开发为什么选择C语言？</title>
-    <link href="https://kelecn.top/posts/63638"/>
-    <id>https://kelecn.top/posts/63638</id>
+    <link href="https://kelecn.top/posts/63638/"/>
+    <id>https://kelecn.top/posts/63638/</id>
     <published>2019-11-25T09:08:29.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -605,8 +625,8 @@
   
   <entry>
     <title>Matlab Gui关于edit keypressfcn的响应</title>
-    <link href="https://kelecn.top/posts/17834"/>
-    <id>https://kelecn.top/posts/17834</id>
+    <link href="https://kelecn.top/posts/17834/"/>
+    <id>https://kelecn.top/posts/17834/</id>
     <published>2019-10-02T04:00:00.000Z</published>
     <updated>2020-11-25T10:44:51.768Z</updated>
     
@@ -631,8 +651,8 @@
   
   <entry>
     <title>Kelecn的第一条博客！</title>
-    <link href="https://kelecn.top/posts/59565"/>
-    <id>https://kelecn.top/posts/59565</id>
+    <link href="https://kelecn.top/posts/59565/"/>
+    <id>https://kelecn.top/posts/59565/</id>
     <published>2019-09-19T09:10:00.000Z</published>
     <updated>2020-11-25T10:44:51.753Z</updated>
     
