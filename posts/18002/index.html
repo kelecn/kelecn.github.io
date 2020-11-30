@@ -23,8 +23,7 @@
   
 
   
-    <meta name="description" content="简介：C++重载注意点。
-">
+    <meta name="description" content="简介：C++重载注意点。">
   
 
   <!-- feed -->
@@ -561,6 +560,12 @@
 
 
   
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://w.wallhaven.cc/full/g8/wallhaven-g8e98d.png'/>
+      </a>
+    </div>
+  
   <div class="article-meta" id="top">
     
     
@@ -643,7 +648,6 @@
 
   
   <p>简介：C++重载注意点。</p>
-<p><img src="https://w.wallhaven.cc/full/g8/wallhaven-g8e98d.png"></p>
 <a id="more"></a>
 
 <h4 id="1-调用函数在前，定义函数在后，进行原型声明"><a href="#1-调用函数在前，定义函数在后，进行原型声明" class="headerlink" title="1.调用函数在前，定义函数在后，进行原型声明"></a>1.调用函数在前，定义函数在后，进行原型声明</h4><h4 id="2-函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载"><a href="#2-函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载" class="headerlink" title="2.函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载"></a>2.函数重载注意：参数类型和个数相同，参数顺序不同，也可以重载</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">double</span> b)</span></span>;<span class="comment">//调用函数在前，定义函数在后，进行原型声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span> <span class="params">(<span class="keyword">double</span> b,<span class="keyword">int</span> a)</span></span>;<span class="comment">//调用函数在前，定义函数在后，进行原型声明</span></span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">8</span>;</span><br><span class="line">    <span class="keyword">double</span> y=<span class="number">8</span>;</span><br><span class="line">    print(x,y);</span><br><span class="line">    print(y,x);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">double</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;showpoint&lt;&lt;<span class="string">&quot;1&quot;</span>&lt;&lt;a&lt;&lt;b&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span> <span class="params">(<span class="keyword">double</span> b,<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;showpoint&lt;&lt;<span class="string">&quot;2&quot;</span>&lt;&lt; a&lt;&lt;b &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
@@ -712,8 +716,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/posts/18002/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。
-"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/posts/18002/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。"
           
           >
           
@@ -725,8 +728,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/posts/18002/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。
-"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/posts/18002/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。"
           
           >
           
@@ -738,8 +740,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/posts/18002/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。
-"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/posts/18002/&title=C++重载注意点 - kelecn&summary=简介：C++重载注意点。"
           
           >
           
@@ -791,8 +792,7 @@
           <p class='content'>简介：C++与Java多态的区别。
 
 
-
-多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C++和Java都具有多态机制，但是他们的实现不同，使用时的效果也会...</p>
+多态是指用父指针指向不同子类对象时，调用其共有的函数，不同的子类会有不同的行为。虽然C++和Java都具有多态机制，但是他们的实现不同，使用时的效果也会略...</p>
         </a>
       
       
@@ -801,10 +801,9 @@
           <p class='content'>简介：C++返回对象和返回引用。
 
 
-
 我们发现，在C++中，有些成员函数返回的是对象，而有些函数返回的又是引用。
 返回对象和返回引用的最主要的区别就是函数原型和函数头。
-123Car run(...</p>
+123Car run(c...</p>
         </a>
       
     </div>

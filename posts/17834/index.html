@@ -23,8 +23,7 @@
   
 
   
-    <meta name="description" content="简介：Matlab GUI键盘输入。
-">
+    <meta name="description" content="简介：Matlab GUI键盘输入相关代码。">
   
 
   <!-- feed -->
@@ -561,6 +560,12 @@
 
 
   
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://w.wallhaven.cc/full/zm/wallhaven-zme9dg.png'/>
+      </a>
+    </div>
+  
   <div class="article-meta" id="top">
     
     
@@ -608,7 +613,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：106字</p>
+      <p>字数：110字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -642,8 +647,7 @@
   </div>
 
   
-  <p>简介：Matlab GUI键盘输入。</p>
-<p><img src="https://w.wallhaven.cc/full/zm/wallhaven-zme9dg.png"></p>
+  <p>简介：Matlab GUI键盘输入相关代码。</p>
 <a id="more"></a>
 
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">showmap</span></span></span><br><span class="line">  fig=<span class="built_in">figure</span>( <span class="string">&#x27;Name&#x27;</span>,<span class="string">&#x27;Timer&#x27;</span>,<span class="string">&#x27;Position&#x27;</span>,[<span class="number">0</span>,<span class="number">0</span>,<span class="number">500</span>,<span class="number">500</span>] ,<span class="string">&#x27;NumberTitle&#x27;</span>,<span class="string">&#x27;off&#x27;</span>,<span class="string">&#x27;visible&#x27;</span>,<span class="string">&#x27;off&#x27;</span>);</span><br><span class="line">  movegui(fig,<span class="string">&#x27;center&#x27;</span>);</span><br><span class="line">  set(fig,<span class="string">&#x27;visible&#x27;</span>,<span class="string">&#x27;on&#x27;</span>);</span><br><span class="line">  ttext= uicontrol(<span class="string">&#x27;Style&#x27;</span>,<span class="string">&#x27;edit&#x27;</span>,<span class="string">&#x27;Position&#x27;</span>,[<span class="number">150</span>,<span class="number">250</span>,<span class="number">200</span>,<span class="number">30</span>],<span class="string">&#x27;String&#x27;</span>,<span class="string">&#x27;Press  &quot;Start&quot;&#x27;</span>,...</span><br><span class="line">      <span class="string">&#x27;KeyPressFcn&#x27;</span>,@keyPress);</span><br><span class="line"></span><br><span class="line"> ii=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">keyPress</span><span class="params">(x,y)</span></span></span><br><span class="line">        set(ttext,<span class="string">&#x27;string&#x27;</span>,num2str(ii));</span><br><span class="line">        ii = ii+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
@@ -713,8 +717,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/posts/17834/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=简介：Matlab GUI键盘输入。
-"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/posts/17834/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=简介：Matlab GUI键盘输入相关代码。"
           
           >
           
@@ -726,8 +729,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/posts/17834/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=简介：Matlab GUI键盘输入。
-"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/posts/17834/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=简介：Matlab GUI键盘输入相关代码。"
           
           >
           
@@ -739,8 +741,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/posts/17834/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=简介：Matlab GUI键盘输入。
-"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/posts/17834/&title=Matlab Gui关于edit keypressfcn的响应 - kelecn&summary=简介：Matlab GUI键盘输入相关代码。"
           
           >
           
@@ -790,11 +791,10 @@
         <a class='prev' href='/posts/63638/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>嵌入式开发为什么选择C语言？</p>
           <p class='content'>简介:嵌入式+C语言=？
-
  
 
 1.从语言特点来说①C语言有出色的可移植性，能在多种不同体系结构的软/硬平台上运行。
-②简洁紧凑，使用灵活的语法机制，并能直接访问硬件能够直接访问硬件的语言有：...</p>
+②简洁紧凑，使用灵活的语法机制，并能直接访问硬件能够直接访问硬件的语言有：汇...</p>
         </a>
       
       
@@ -803,8 +803,7 @@
           <p class='content'>简介：您好！Hexo！
 
 
-
-123456789101112131415161718                   .::::.                 .::::::::.   ...</p>
+123456789101112131415161718                   .::::.                 .::::::::.    ...</p>
         </a>
       
     </div>
