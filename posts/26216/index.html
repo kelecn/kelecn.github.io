@@ -649,7 +649,6 @@
   
   <p>简介：关于free和delete的使用</p>
 <a id="more"></a>
-
 <p>两个同时存在是有它的原因的，free是函数，它只释放内存，但不会调用析构函数，如果用free去释放new申请的空间，会因为无法调用析构函数而出现不必要的错误。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *point = (<span class="keyword">char</span> *) <span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="built_in">strcpy</span>(point, “hello”);  </span><br><span class="line"><span class="built_in">free</span>(point); <span class="comment">// Be careful here，point 所指的内存被释放，but point 所指的地址仍然不变  </span></span><br><span class="line">…  </span><br><span class="line"><span class="keyword">if</span>(point != <span class="literal">NULL</span>) <span class="comment">// 没有起到防错作用  </span></span><br><span class="line">&#123;  </span><br><span class="line"><span class="built_in">strcpy</span>(point, “jackery”); <span class="comment">// error  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -796,10 +795,9 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++返回对象和返回引用</p>
           <p class='content'>简介：C++返回对象和返回引用。
 
-
 我们发现，在C++中，有些成员函数返回的是对象，而有些函数返回的又是引用。
 返回对象和返回引用的最主要的区别就是函数原型和函数头。
-123Car run(c...</p>
+123Car run(co...</p>
         </a>
       
       
@@ -807,10 +805,9 @@
           <p class='title'>常量指针与指针常量<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>简介：常量指针与指针常量的区别。
 
-
 常量指针(被指向的对象是常量)定义：又叫常指针，可以理解为常量的指针，指向的是个常量
 关键点：
-常量指针指向的对象不能通过这个指针来修改，可是仍然可以通过原...</p>
+常量指针指向的对象不能通过这个指针来修改，可是仍然可以通过原来...</p>
         </a>
       
     </div>
