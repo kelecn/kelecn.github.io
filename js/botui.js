@@ -53,7 +53,7 @@ botui.message.bot({
     if (res.value == "gg") {
         return botui.message.bot({
             delay: 1500,
-            content: "![告辞](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1901389031,3540709863&fm=26&gp=0.jpg)"
+            content: "![告辞](https://cdn.jsdelivr.net/gh/kelecn/images@master/gaoci%20.jpg)"
         })
     }
 });
