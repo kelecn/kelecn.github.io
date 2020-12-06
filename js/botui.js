@@ -75,12 +75,12 @@ var other = function() {
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: "主要工作方向：嵌入式、物联网、嵌入式"
+            content: "主要工作方向：嵌入式、物联网、硬件"
         })
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: "喜欢折腾，热爱折腾，目前正在计算机一道上探索中"
+            content: "喜欢折腾，热爱折腾，目前正在嵌入式的道路上探索中"
         })
     }).then(function() {
         return botui.action.button({
