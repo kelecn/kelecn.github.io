@@ -23,26 +23,26 @@ for(var s=a.css,u=a.type,l=a.enterClass,f=a.enterToClass,p=a.enterActiveClass,d=
 var botui = new BotUI("kelecnbot");
 botui.message.bot({
     delay: 200,
-    content: "Hi, there👋"
+    content: "Hi, 陌生人👋👋👋"
 }).then(function() {
     return botui.message.bot({
         delay: 1000,
-        content: "这里是 kelecn"
+        content: "这里是 kelecn😋😋😋"
     })
 }).then(function() {
     return botui.message.bot({
         delay: 1000,
-        content: "一个热爱技术的蓝孩子~"
+        content: "一个热爱技术的蓝孩子~😉😉😉"
     })
 }).then(function() {
     return botui.action.button({
         delay: 1500,
         action: [{
-            text: "然后呢？ 😃",
+            text: "然后呢？ 😃😃😃",
             value: "and"
         },
         {
-            text: "少废话！ 🙄",
+            text: "少废话！ 🙄🙄🙄",
             value: "gg"
         }]
     })
@@ -61,11 +61,11 @@ botui.message.bot({
 var other = function() {
     botui.message.bot({
         delay: 1500,
-        content: "😘"
+        content: "😘😘😘"
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: "主修的电子信息科学与技术专业，是个即将毕业的大四狗"
+            content: "主修的电子信息科学与技术专业，是个即将毕业的大四狗🐧🐧🐧"
         })
     }).then(function() {
         return botui.message.bot({
@@ -80,13 +80,13 @@ var other = function() {
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: "喜欢折腾，热爱折腾，目前正在嵌入式的道路上探索中"
+            content: "喜欢动手，热爱学习新知识，目前正在嵌入式的道路上探索中💪💪💪"
         })
     }).then(function() {
         return botui.action.button({
             delay: 1500,
             action: [{
-                text: "为什么叫 kelecn 呢？ 🤔",
+                text: "为什么叫 kelecn 呢？ 🤔🤔🤔",
                 value: "next"
             }]
         })
