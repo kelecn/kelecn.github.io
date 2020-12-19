@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kelecn.top/friends/index.html</loc>
+    
+    <lastmod>2020-12-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kelecn.top/about/index.html</loc>
     
     <lastmod>2020-12-13</lastmod>
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/friends/index.html</loc>
-    
-    <lastmod>2020-11-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kelecn.top/tool/index.html</loc>
     
     <lastmod>2020-11-17</lastmod>
@@ -291,6 +291,13 @@
   </url>
   
   <url>
+    <loc>https://kelecn.top/tags/Java/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kelecn.top/tags/ARM/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
@@ -313,13 +320,6 @@
   
   <url>
     <loc>https://kelecn.top/tags/%E7%A1%AC%E4%BB%B6/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/Java/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -487,13 +487,6 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/tags/%E5%86%85%E5%AD%98/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kelecn.top/tags/PID/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
@@ -502,6 +495,13 @@
   
   <url>
     <loc>https://kelecn.top/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
