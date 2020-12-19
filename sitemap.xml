@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kelecn.top/ByteDanceVerify.html</loc>
-    
-    <lastmod>2020-12-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kelecn.top/about/index.html</loc>
     
     <lastmod>2020-12-13</lastmod>
@@ -431,56 +424,7 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/tags/CISC/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/RISC/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/%E6%8C%87%E4%BB%A4%E9%9B%86/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kelecn.top/tags/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/SPI/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/I2C/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/USB/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/%E6%80%BB%E7%BA%BF/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -515,7 +459,21 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/tags/QT/</loc>
+    <loc>https://kelecn.top/tags/CISC/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/RISC/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/%E6%8C%87%E4%BB%A4%E9%9B%86/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -530,6 +488,41 @@
   
   <url>
     <loc>https://kelecn.top/tags/Gui/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/QT/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/SPI/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/I2C/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/USB/</loc>
+    <lastmod>2020-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/%E6%80%BB%E7%BA%BF/</loc>
     <lastmod>2020-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
