@@ -424,13 +424,6 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/tags/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2020-12-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kelecn.top/tags/CISC/</loc>
     <lastmod>2020-12-20</lastmod>
     <changefreq>daily</changefreq>
@@ -446,6 +439,13 @@
   
   <url>
     <loc>https://kelecn.top/tags/%E6%8C%87%E4%BB%A4%E9%9B%86/</loc>
+    <lastmod>2020-12-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kelecn.top/tags/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2020-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
