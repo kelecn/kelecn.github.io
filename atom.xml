@@ -6,7 +6,7 @@
   <link href="https://kelecn.top/atom.xml" rel="self"/>
   
   <link href="https://kelecn.top/"/>
-  <updated>2020-12-11T08:28:05.132Z</updated>
+  <updated>2020-12-24T15:59:10.956Z</updated>
   <id>https://kelecn.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初探机器视觉模块OpenMV</title>
+    <link href="https://kelecn.top/posts/9237/"/>
+    <id>https://kelecn.top/posts/9237/</id>
+    <published>2020-12-24T16:50:41.000Z</published>
+    <updated>2020-12-24T15:59:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>简介：OpenMV是一款开源，低成本，可扩展，支持Python的机器视觉模块，可媲美机器视觉世界的Arduino 。</p><a id="more"></a><h3 id="一、OpenMV简介"><a href="#一、OpenMV简介" class="headerlink" title="一、OpenMV简介"></a>一、OpenMV简介</h3><hr>​        OpenMV是一个开源，低成本，功能强大的机器视觉模块。以STM32F427CPU为核心，集成了OV7725摄像头芯片，在小巧的硬件模块上，用C语言高效地实现了核心机器视觉算法，并提供Python编程接口。<p>​        OpenMV采用的STM32F427拥有丰富的硬件资源，引出UART，I2C，SPI，PWM，ADC，DAC以及GPIO等接口方便扩展外围功能。USB接口用于连接电脑上的集成开发环境OpenMVIDE，协助完成编程、调试和更新固件等工作。TF卡槽支持大容量的TF卡（最大32GB），可以用于存放程序和保存照片等。</p><p><img src="https://cdn.shopifycdn.net/s/files/1/0803/9211/products/new-cam-v4-angle-web_grande.jpg?v=1536445279"></p><p><strong>OpenMV官方教程：</strong></p><p><strong>开源项目GitHub链接：</strong></p><div class="tag link"><a class="link-card" title="OpenMV" href="https://github.com/openmv"><div class="left"><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/OpenMV.png"/></div><div class="right"><p class="text">OpenMV</p><p class="url">https://github.com/openmv</p></div></a></div><h3 id="二、OpenMV功能"><a href="#二、OpenMV功能" class="headerlink" title="二、OpenMV功能"></a>二、OpenMV功能</h3><hr><p>​        OpenMV上的机器视觉算法包括寻找色块、人脸检测、眼球跟踪、边缘检测、标志跟踪等。可以用来实现非法入侵检测、产品的残次品筛选、跟踪固定的标记物等。使用者仅需要写一些简单的Python代码，即可轻松的完成各种机器视觉相关的任务。小巧的设计，使得OpenMV可以用到很多创意的产品上。比如，可以给自己的机器人提供周边环境感知能力；给智能车增加视觉巡线功能；给智能玩具增加识别人脸功能，提高产品趣味性等；甚至，可以给工厂产品线增加残次品筛选功能等。</p><h3 id="三、OpenMV项目"><a href="#三、OpenMV项目" class="headerlink" title="三、OpenMV项目"></a>三、OpenMV项目</h3><hr>]]></content>
+    
+    
+    <summary type="html">kelecn&#39;s Blog，一个记录个人成长的地方。</summary>
+    
+    
+    
+    <category term="技术" scheme="https://kelecn.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="硬件" scheme="https://kelecn.top/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+    <category term="OpenMV" scheme="https://kelecn.top/tags/OpenMV/"/>
+    
+    <category term="机器视觉" scheme="https://kelecn.top/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"/>
+    
+    <category term="Python" scheme="https://kelecn.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>基于QT开发的局域网聊天室</title>
