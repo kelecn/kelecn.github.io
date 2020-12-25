@@ -243,11 +243,11 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="C++" scheme="https://kelecn.top/tags/C/"/>
     
     <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     <category term="C" scheme="https://kelecn.top/tags/C/"/>
     
@@ -270,11 +270,11 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
+    <category term="C++" scheme="https://kelecn.top/tags/C/"/>
+    
     <category term="ARM" scheme="https://kelecn.top/tags/ARM/"/>
     
     <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    <category term="C++" scheme="https://kelecn.top/tags/C/"/>
     
     <category term="C" scheme="https://kelecn.top/tags/C/"/>
     
@@ -439,8 +439,6 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="面向对象" scheme="https://kelecn.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     <category term="C++" scheme="https://kelecn.top/tags/C/"/>
@@ -448,6 +446,8 @@
     <category term="代码" scheme="https://kelecn.top/tags/%E4%BB%A3%E7%A0%81/"/>
     
     <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -468,8 +468,6 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="面向对象" scheme="https://kelecn.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     <category term="C++" scheme="https://kelecn.top/tags/C/"/>
@@ -477,6 +475,8 @@
     <category term="代码" scheme="https://kelecn.top/tags/%E4%BB%A3%E7%A0%81/"/>
     
     <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -497,8 +497,6 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="面向对象" scheme="https://kelecn.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     <category term="C++" scheme="https://kelecn.top/tags/C/"/>
@@ -506,6 +504,8 @@
     <category term="代码" scheme="https://kelecn.top/tags/%E4%BB%A3%E7%A0%81/"/>
     
     <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -580,8 +580,6 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="面向对象" scheme="https://kelecn.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     <category term="C++" scheme="https://kelecn.top/tags/C/"/>
@@ -589,6 +587,8 @@
     <category term="代码" scheme="https://kelecn.top/tags/%E4%BB%A3%E7%A0%81/"/>
     
     <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -609,11 +609,11 @@
     <category term="知识" scheme="https://kelecn.top/categories/%E7%9F%A5%E8%AF%86/"/>
     
     
+    <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
     <category term="嵌入式" scheme="https://kelecn.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     <category term="硬件" scheme="https://kelecn.top/tags/%E7%A1%AC%E4%BB%B6/"/>
-    
-    <category term="编程" scheme="https://kelecn.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
     <category term="C语言" scheme="https://kelecn.top/tags/C%E8%AF%AD%E8%A8%80/"/>
     
