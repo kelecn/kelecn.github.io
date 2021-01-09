@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.4'>
+<html lang="zh-CN">
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.2.0'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
     
   
   <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
 
   <!-- 页面元数据 -->
   
@@ -35,32 +37,8 @@
   
 
   <!-- link -->
-  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
-
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css">
-
-  
-
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
-
-  
-
   
     <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/kelecn/images@master/favicon.ico">
-  
-
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-  
-
   
 
   <!-- import link -->
@@ -68,41 +46,16 @@
 
   
     
-      
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css">
-
-    
-  
-  
-    
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/first.css">
 
   
+
   
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
-  <!-- 脚本懒加载函数 -->
-  <script>
-  function loadScript(src, cb) {
-    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-    var script = document.createElement('script');
-    script.setAttribute('type','text/javascript');
-    if (cb) script.onload = cb;
-    script.setAttribute('src', src);
-    HEAD.appendChild(script);
-  }
- <!--  //https://github.com/filamentgroup/loadCSS -->
-  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
-  </script>
+
   <script id="loadcss"></script>
-<script>
-(function(){
-var el = document.createElement("script");
-el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?c2369dd31ea4560171e850474137e58eb600ec2627ac7dbae655c758ce6c9ee5fbafa6f427421b9f2198aec0f4e479d9a4e6a9fe7766ab71b33088bf0e9140a7";
-el.id = "ttzz";
-var s = document.getElementsByTagName("script")[0];
-s.parentNode.insertBefore(el, s);
-})(window)
-</script>
 <!-- //360自动收录 -->
 <script>
 (function(){
@@ -126,16 +79,19 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 })();
 </script>
 </head>
+
 <body>
-  <header class="l_header always shadow floatable "  >
+  
+
+<header id="l_header" class="l_header always shadow floatable "  >
   <div class='container'>
-  <div class='wrapper'>
+  <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
-          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -307,20 +263,32 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fa fa-fan fa-spin fa-fw'></i>日常
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/tool/
                   
                   
                   
                     id="tool"
                   >
-                  <i class='fa fa-fan fa-spin fa-fw'></i>工具
+                  <i class='fas fa-code fa-fw'></i>工具
                 </a>
                 
               </li>
             
           
-          
-            
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/mygames/
@@ -335,20 +303,36 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
               </li>
             
           
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://kelecn.avosapps.us/
+                  
+                  
+                  
+                    id="https:kelecnavosappsus"
+                  >
+                  <i class='fas fa-database fa-fw'></i>后台
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/moon/
-                  
-                  
-                  
-                    id="moon"
-                  >
+                <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fas fa-moon fa-fw'></i>关灯
                 </a>
-                
-              </li>
+              <li>
             
           
           
@@ -386,8 +370,21 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
           
 				</ul>
 			</div>
-<div id="weather"></div>
-<script src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tqa.js"></script>
+<div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "slim",
+      location: "WS0E9D8WN298",
+      geolocation: true,
+      language: "auto",
+      unit: "c",
+      theme: "auto",
+      token: "e4c761d6-40a6-4dbc-a8f7-ff871a728fb5",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
@@ -554,20 +551,32 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
               
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fa fa-fan fa-spin fa-fw'></i>日常
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/tool/
                   
                   
                   
                     id="tool"
                   >
-                  <i class='fa fa-fan fa-spin fa-fw'></i>工具
+                  <i class='fas fa-code fa-fw'></i>工具
                 </a>
                 
               </li>
             
           
-            
-              
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/mygames/
@@ -582,20 +591,36 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
               </li>
             
           
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://kelecn.avosapps.us/
+                  
+                  
+                  
+                    id="https:kelecnavosappsus"
+                  >
+                  <i class='fas fa-database fa-fw'></i>后台
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
             
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/moon/
-                  
-                  
-                  
-                    id="moon"
-                  >
+                <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fas fa-moon fa-fw'></i>关灯
                 </a>
-                
-              </li>
+              <li>
             
           
             
@@ -636,17 +661,16 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 			</ul>
 		</div>
 	</div>
-  </div> 
+  </div>
 </header>
 
-  <div class="l_body">
-    <div class="l_cover">
+  <div id="l_body">
+    <div id="l_cover">
   
     
-    
-        <div class='cover-wrapper post dock' style="display: none;">
+        <div id="half" class='cover-wrapper post dock' style="display: ;">
           
-            <div class='cover-backstretch'></div>
+            <div id='cover-backstretch'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -709,49 +733,14 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
   </div>
 </div>
 
-          <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
         </div>
     
   
   </div>
-  
-    <div class='safearea'>
-      <div class='body-wrapper' id="pjax-container">
-        
-          <!--此文件用来存放一些不方便取值的变量--> 
-<!--思路大概是将值藏到重加载的区域内--> 
- 
- 
- 
-<div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">true</div> 
-  <div id="pjax-pageTitle">精简代码：改换运算符</div> 
-  <div id="pjax-enable-cover">true</div> 
-  <div id="pjax-comment-path"></div> 
-  <div id="pjax-comment-placeholder"></div> 
-</div> 
- 
- 
-<script> 
-  // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
-    document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
-    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
-  } else { 
-    if ("half" == "half") { // 半屏 
-      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
-      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
-      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
-      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
-    } 
-    document.getElementsByClassName('cover-wrapper')[0].style.display = ""; 
-    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
-  } 
-</script> 
- 
 
-        
+    <div id='safearea'>
+      <div class='body-wrapper' id="pjax-container">
         
 
 <div class='l_main'>
@@ -846,6 +835,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     
   </div>
 
+
   
   <p>简介： 精简代码：改换运算符</p>
 <a id="more"></a>
@@ -868,9 +858,17 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\57201\" title="C语言基础知识（复习）" rel="bookmark "><img src="https://w.wallhaven.cc/full/5w/wallhaven-5wr6y9.jpg" /><span class="title">C语言基础知识（复习）</span><span class="excerpt">简介： 嵌入式笔试相关题目、考点。</span></a><a class="item" href="\posts\29708\" title="面向对象的程序设计实验（C++）" rel="bookmark "><img src="https://w.wallhaven.cc/full/w8/wallhaven-w86gex.png" /><span class="title">面向对象的程序设计实验（C++）</span><span class="excerpt">简介：面向对象程序设计（C++）。</span></a><a class="item" href="\posts\8326\" title="常量指针与指针常量" rel="bookmark "><img src="https://w.wallhaven.cc/full/ym/wallhaven-ymoo2x.jpg" /><span class="title">常量指针与指针常量</span><span class="excerpt">简介：常量指针与指针常量的区别。</span></a><a class="item" href="\posts\10995\" title="C++返回对象和返回引用" rel="bookmark "><img src="https://w.wallhaven.cc/full/ym/wallhaven-ym181g.jpg" /><span class="title">C++返回对象和返回引用</span><span class="excerpt">简介：C++返回对象和返回引用。</span></a><a class="item" href="\posts\18002\" title="C++重载注意点" rel="bookmark "><img src="https://w.wallhaven.cc/full/g8/wallhaven-g8e98d.png" /><span class="title">C++重载注意点</span><span class="excerpt">简介：C++重载注意点。</span></a></div></section></div>
+      
       
         <div class='copyright'>
-		  <blockquote>
+          <blockquote>
             
               
                 <p><svg id="icon-touxiang" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M614.72 554.538c-49.086-6.399-100.27-2.1-149.256-2.1-119.465 0-209.04 95.972-206.84 215.437 0 17.095 8.498 31.99 23.493 40.488 14.896 10.697 34.09 14.896 53.285 17.095 61.882 6.398 123.664 6.398 198.342 6.398 40.488 0 93.872-2.1 142.858-4.298 27.692 0 53.284-4.3 78.877-14.896 19.194-8.498 29.89-19.194 31.99-40.488 8.498-104.57-72.478-204.84-172.75-217.636zM680.8 375.39c0-87.474-74.678-162.053-164.251-162.053-89.574 0-162.053 74.679-162.053 162.053-2.1 87.474 74.678 164.252 162.053 164.252 89.673 0 164.252-74.678 164.252-164.252z" fill="#FFFFFF"></path><path d="M512.35 0C228.733 0 0.5 228.233 0.5 511.85s228.233 511.85 511.85 511.85 511.85-228.233 511.85-511.85S795.967 0 512.35 0z m275.12 772.074c-2.1 21.294-12.797 31.99-31.991 40.488-25.593 10.697-51.185 14.896-78.877 14.896-49.086 2.099-102.37 4.298-142.858 4.298-74.678 0-136.46 0-198.342-6.398-19.195-2.1-38.389-6.398-53.285-17.095-14.895-8.497-23.493-23.493-23.493-40.488-2.1-119.465 87.475-215.437 206.84-215.437 49.085 0 100.27-4.299 149.256 2.1 100.27 12.896 181.247 113.166 172.75 217.636zM354.495 375.39c0-87.474 72.479-162.053 162.053-162.053S680.8 288.016 680.8 375.39c0 89.574-74.679 164.252-164.252 164.252-87.375 0-164.152-76.778-162.053-164.252z" fill="#249FF8"></path></svg>本文由 <a href="https://kelecn.top/" data-pjax-state="">kelecn</a> 创作，如果您觉得本文不错，请随意赞赏</p>
@@ -892,10 +890,10 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
               
             
           </blockquote>
-		  	</div>
-		  <div class='donate'>
-			<iframe src="https://kelecn.top/sponsor-page/drinks" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
-			</div>
+        </div>
+ <div class='donate'>
+<iframe src="https://kelecn.top/sponsor-page/drinks" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+</div>
       
       
     </div>
@@ -988,6 +986,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     </div>
   </div>
 
+
   
   
 
@@ -1056,9 +1055,9 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
           <h2>kelecn</h2>
         
         
+          <p>唯爱与科技不可辜负！</p>
+
         
-          <p><span id="jinrishici-sentence">kelecn</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
     
@@ -1114,6 +1113,7 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
     
   </div>
 </section>
+
   
 
   
@@ -1166,10 +1166,240 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
 
 
     <div class='content'>
-      <a href="/tags/ARM/" style="font-size: 16px; color: #8b8b8b">ARM</a> <a href="/tags/Boost/" style="font-size: 14px; color: #999">Boost</a> <a href="/tags/Buck/" style="font-size: 14px; color: #999">Buck</a> <a href="/tags/C/" style="font-size: 16px; color: #8b8b8b">C</a> <a href="/tags/C/" style="font-size: 22px; color: #636363">C++</a> <a href="/tags/CISC/" style="font-size: 14px; color: #999">CISC</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 18px; color: #7e7e7e">C语言</a> <a href="/tags/DCDC/" style="font-size: 14px; color: #999">DCDC</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Gui/" style="font-size: 14px; color: #999">Gui</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #7e7e7e">Hexo</a> <a href="/tags/I2C/" style="font-size: 14px; color: #999">I2C</a> <a href="/tags/Java/" style="font-size: 18px; color: #7e7e7e">Java</a> <a href="/tags/Kelecn/" style="font-size: 16px; color: #8b8b8b">Kelecn</a> <a href="/tags/Matlab/" style="font-size: 14px; color: #999">Matlab</a> <a href="/tags/OpenMV/" style="font-size: 14px; color: #999">OpenMV</a> <a href="/tags/PID/" style="font-size: 14px; color: #999">PID</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/QT/" style="font-size: 14px; color: #999">QT</a> <a href="/tags/RISC/" style="font-size: 14px; color: #999">RISC</a> <a href="/tags/SPI/" style="font-size: 14px; color: #999">SPI</a> <a href="/tags/TCP/" style="font-size: 16px; color: #8b8b8b">TCP</a> <a href="/tags/UDP/" style="font-size: 16px; color: #8b8b8b">UDP</a> <a href="/tags/USB/" style="font-size: 14px; color: #999">USB</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 20px; color: #707070">代码</a> <a href="/tags/%E5%86%85%E5%AD%98/" style="font-size: 14px; color: #999">内存</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 14px; color: #999">单片机</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E5%A4%84%E7%90%86%E5%99%A8/" style="font-size: 14px; color: #999">处理器</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 24px; color: #555">嵌入式</a> <a href="/tags/%E6%80%BB%E7%BA%BF/" style="font-size: 14px; color: #999">总线</a> <a href="/tags/%E6%8C%87%E4%BB%A4%E9%9B%86/" style="font-size: 14px; color: #999">指令集</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 14px; color: #999">日记</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" style="font-size: 14px; color: #999">机器视觉</a> <a href="/tags/%E7%9B%B8%E5%86%8C/" style="font-size: 16px; color: #8b8b8b">相册</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 18px; color: #7e7e7e">硬件</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 22px; color: #636363">编程</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">计算机网络</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 20px; color: #707070">面向对象</a>
+      <a href="/tags/ARM/" style="font-size: 16px; color: #8b8b8b">ARM</a> <a href="/tags/Boost/" style="font-size: 14px; color: #999">Boost</a> <a href="/tags/Buck/" style="font-size: 14px; color: #999">Buck</a> <a href="/tags/C/" style="font-size: 16px; color: #8b8b8b">C</a> <a href="/tags/C/" style="font-size: 22px; color: #636363">C++</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/CISC/" style="font-size: 14px; color: #999">CISC</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 18px; color: #7e7e7e">C语言</a> <a href="/tags/DCDC/" style="font-size: 14px; color: #999">DCDC</a> <a href="/tags/Github/" style="font-size: 16px; color: #8b8b8b">Github</a> <a href="/tags/Gui/" style="font-size: 14px; color: #999">Gui</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #7e7e7e">Hexo</a> <a href="/tags/I2C/" style="font-size: 14px; color: #999">I2C</a> <a href="/tags/Java/" style="font-size: 18px; color: #7e7e7e">Java</a> <a href="/tags/Kelecn/" style="font-size: 16px; color: #8b8b8b">Kelecn</a> <a href="/tags/Matlab/" style="font-size: 14px; color: #999">Matlab</a> <a href="/tags/OpenMV/" style="font-size: 14px; color: #999">OpenMV</a> <a href="/tags/PID/" style="font-size: 14px; color: #999">PID</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/QT/" style="font-size: 14px; color: #999">QT</a> <a href="/tags/RISC/" style="font-size: 14px; color: #999">RISC</a> <a href="/tags/SPI/" style="font-size: 14px; color: #999">SPI</a> <a href="/tags/TCP/" style="font-size: 16px; color: #8b8b8b">TCP</a> <a href="/tags/UDP/" style="font-size: 16px; color: #8b8b8b">UDP</a> <a href="/tags/USB/" style="font-size: 14px; color: #999">USB</a> <a href="/tags/jsDelivr/" style="font-size: 14px; color: #999">jsDelivr</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 20px; color: #707070">代码</a> <a href="/tags/%E5%86%85%E5%AD%98/" style="font-size: 14px; color: #999">内存</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 14px; color: #999">单片机</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E5%A4%84%E7%90%86%E5%99%A8/" style="font-size: 14px; color: #999">处理器</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" style="font-size: 24px; color: #555">嵌入式</a> <a href="/tags/%E6%80%BB%E7%BA%BF/" style="font-size: 14px; color: #999">总线</a> <a href="/tags/%E6%8C%87%E4%BB%A4%E9%9B%86/" style="font-size: 14px; color: #999">指令集</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 14px; color: #999">日记</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" style="font-size: 14px; color: #999">机器视觉</a> <a href="/tags/%E7%9B%B8%E5%86%8C/" style="font-size: 16px; color: #8b8b8b">相册</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 18px; color: #7e7e7e">硬件</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 14px; color: #999">缓存</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 22px; color: #636363">编程</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">计算机网络</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 20px; color: #707070">面向对象</a>
     </div>
   </section>
 
+
+  
+
+  
+    
+    
+
+<section class="widget page shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i><span class='name'>实时天气</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
+          <section class="article typo">
+            <div class="article-entry" itemprop="articleBody">
+              
+                <iframe width="300" scrolling="no" height="75" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=35&icon=1&site=34"></iframe>
+              
+            </div>
+          </section>
+        </article>
+      
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget page shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class='name'>地球村</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
+          <section class="article typo">
+            <div class="article-entry" itemprop="articleBody">
+              
+                <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=570eyq5mses&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
+              
+            </div>
+          </section>
+        </article>
+      
+    
+      
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</section>
 
   
 
@@ -1201,21 +1431,27 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
 
 </aside>
 
+
+
+        
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
 <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="精简代码：改换运算符";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.remove("show");
+  
 </script>
 
+        
       </div>
       
   
@@ -1295,7 +1531,14 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
       
     
       
-       <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        
+          <div><p><span id="lc-sv">总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人<br></span> <span><a target="_blank" rel="noopener" href="https://hexo.io/"><img src="https://img.shields.io/badge/Powered-Hexo-blue.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://img.shields.io/badge/Theme-Volantis-brightgreen.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://github.com/"><img src="https://img.shields.io/badge/HostBy-Github-purple.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/"><img src="https://img.shields.io/badge/DNS-%E8%85%BE%E8%AE%AF%E4%BA%91-ff69b4.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange.svg?style=plastic"></a></span></p>
+</div>
+        
+      
+    
+      
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
     var now = new Date(); 
     function createtime() { 
@@ -1312,10 +1555,7 @@ GitHub图床（基于PicGo）1. 首先你得有一个GitHub账号。注册GitHub
     } 
 setInterval("createtime()",250);
 </script> 
-，总访问量为
-          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-          次
-        
+
       
     
       
@@ -1325,13 +1565,101 @@ setInterval("createtime()",250);
         </div>
       
     
+
   </footer>
 
-      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+
+      <a id="s-top" class="fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
     </div>
   </div>
   <div>
-    <!-- required -->
+    <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
 
@@ -1396,8 +1724,7 @@ setInterval("createtime()",250);
 <script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 
     <script type="text/javascript">
-      $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/kelecn/images@master/001.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/002.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/003.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/004.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/005.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/006.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/007.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/008.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/009.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/010.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/011.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/012.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/013.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/014.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/015.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/016.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/017.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/018.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/019.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/020.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/021.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/022.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/023.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/024.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/025.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/026.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/027.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/028.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/029.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/030.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/031.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/032.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/033.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/034.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/035.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/036.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/037.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/038.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/039.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/040.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/041.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/042.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/043.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/044.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/045.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/046.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/047.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/048.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/049.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/050.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/051.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/052.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/053.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/054.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/055.jpg", "https://cdn.jsdelivr.net/gh/kelecn/images@master/056.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/kelecn/images@master/wallhaven-2elpe6.png"];
         if ('true' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1411,22 +1738,17 @@ setInterval("createtime()",250);
           }
           shuffle(imgs);
         }
-        if ('.cover-backstretch') {
-          $('.cover-backstretch').backstretch(
-            imgs,
-          {
-            duration: "10000",
-            fade: "1500"
-          });
-        } else {
+	  function Pjax_backstretch(){
+        
           $.backstretch(
             imgs,
           {
             duration: "10000",
             fade: "1500"
           });
-        }
-      });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
     </script>
   
 
@@ -1734,19 +2056,6 @@ setInterval("createtime()",250);
 
 
 
-  <script>
-  function loadIssuesJS() {
-    if ($(".md").find(".issues-api").length == 0) return;
-    setTimeout(function() {
-      loadScript('/js/issues.js');
-    }, 1);
-  };
-  $(function () {
-    loadIssuesJS();
-  });
-</script>
-
-
 
 
 
@@ -1847,22 +2156,24 @@ setInterval("createtime()",250);
   let APlayerController = new Object();
   APlayerController.id = '3086382016';  // 设定全局音乐播放ID
   APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.LoadMetingJS=0
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return
+    clearInterval(checkAPlayer)
+	if (!window.volantis.LoadMetingJS&&!window.MetingJSElement){
+	  window.LoadMetingJS=1
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
+	  }
+  }, 2500)
+
+  
+    loadScript("/js/aplayer.js")
+  
+
 </script>
-
-  
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-
-
-  
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
-
-
-
-
-  
-<script src="/js/aplayer.js"></script>
-
-
 
 
 
@@ -1906,9 +2217,9 @@ setInterval("createtime()",250);
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
 
-    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
 
-    let path = $.trim($('#pjax-comment-path').text());
+    let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
@@ -1929,6 +2240,7 @@ setInterval("createtime()",250);
       highlight: 'true',
       mathJax: 'false',
       enableQQ: 'true',
+      recordIP: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
       emojiMaps: emojiMaps
@@ -1943,72 +2255,6 @@ setInterval("createtime()",250);
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5/lib/darkmode-js.min.js" aysc></script>
-
-<script type="text/javascript">
-function getClientHeight(){
-  var clientHeight=0;
-  if(document.body.clientHeight&&document.documentElement.clientHeight){
-  var clientHeight = (document.body.clientHeight<document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
-  }else{
-  var clientHeight = (document.body.clientHeight>document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
-  }
-  return clientHeight;
-}
-function supportCss3(style) {
-  var prefix = ['webkit', 'Moz', 'ms', 'o'],
-  i,
-  humpString = [],
-  htmlStyle = document.documentElement.style,
-  _toHumb = function (string) {
-  return string.replace(/-(\w)/g, function ($0, $1) {
-  return $1.toUpperCase();
-  });
-  };
-  for (i in prefix)
-  humpString.push(_toHumb(prefix[i] + '-' + style));
-  humpString.push(_toHumb(style));
-  for (i in humpString)
-  if (humpString[i] in htmlStyle) return true;
-  return false;
-};
-//配置信息
-var options = {
-  bottom: '32px',
-  right: 'unset',
-  left: '16px',
-  time: '0s',
-  mixColor: '#f4f4f4',
-  backgroundColor: '#f4f4f4',
-  buttonColorDark: '#333',
-  buttonColorLight: '#ddd',
-  saveInCookies: true,
-  label: '',
-  autoMatchOsTheme: true
-};
-// 卡片兼容处理 mix-blend-mode 与 effect: [blur] 冲突
-
-function pjax_darkmodejs(){
-  
-}
-// mix-blend-mode support?
-if(supportCss3('mix-blend-mode')){
-  window.darkmode = new Darkmode(options);
-  
-  pjax_darkmodejs();
-}
-////////////////Development///////////////////////
-//////////////darkmode模式切换////////////////////
-//window.darkmode.toggle();                     //
-//////////////darkmode模式判断////////////////////
-//console.log(window.darkmode.isActivated())    //
-//////////////////////////////////////////////////
-</script>
-
-
-
-
   <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
 
 
@@ -2017,28 +2263,31 @@ if(supportCss3('mix-blend-mode')){
 
 
 
-
-  
-    
-<script src="/js/search.js"></script>
-
-  
-
-
 <!-- optional -->
 
   <script>
 const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
 const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
-(function ($) {
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js',setSearchService);
+	
+})
+
+function listenSearch(){
   
     customSearch = new HexoSearch({
       imagePath: SearchServiceimagePath
     });
   
-})(jQuery);
-
+}
+function setSearchService() {
+	listenSearch();
+	
+}
 </script>
+
 
 
 
@@ -2068,7 +2317,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
   
     
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
 
     <script>hljs.initHighlightingOnLoad();</script>
   
@@ -2285,7 +2534,193 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+  try {
+    localStorage.setItem(k, v);
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
+const removeLS = (k) => {
+  try {
+    localStorage.removeItem(k);
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
+const getLS = (k) => {
+  try {
+    return localStorage.getItem(k);
+  } catch (e) {
+    console.log(e.message);
+    return null;
+  }
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
 <!-- more -->
+
+
 
 
     
@@ -2294,22 +2729,23 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
 
+
 <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
 
 <div class="pjax-animate">
   
-    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
-    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <div class="loading-circle"><div id="loader-circle"></div></div>
     <script>
       window.ShowLoading = function() {
-        NProgress.start();
+        $(".loading-circle").css("display", "block");
       };
       window.HideLoading = function() {
-        NProgress.done();
+        $(".loading-circle").css("display", "none");
       }
     </script>
   
 </div>
+
 
 <script>
     var pjax;
@@ -2318,6 +2754,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
         selectors: [
           "title",
+          "#l_cover",
           "#pjax-container",
           "#pjax-header-nav-list"
         ],
@@ -2327,7 +2764,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
     });
 
     document.addEventListener('pjax:send', function (e) {
-      window.stop(); // 相当于点击了浏览器的停止按钮
+      //window.stop(); // 相当于点击了浏览器的停止按钮
 
       try {
         var currentUrl = window.location.pathname;
@@ -2346,31 +2783,34 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       if (typeof $.fancybox != "undefined") {
         $.fancybox.close();    // 关闭弹窗
       }
-      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
-      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
-      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
 
       // 解绑事件 避免重复监听
-      $('.s-top').unbind('click');
+      volantis.$topBtn.unbind('click');
       $('.menu a').unbind('click');
       $(window).unbind('resize');
       $(window).unbind('scroll');
       $(document).unbind('scroll');
       $(document).unbind('click');
       $('body').unbind('click');
+	  
       window.ShowLoading();
+	  
     });
 
     document.addEventListener('pjax:complete', function () {
       // 关于百度统计对 SPA 页面的处理：
       // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
       // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
-      // 
+       
 
       // 关于谷歌统计对 SPA 页面的处理：
       // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
       // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
       
+	 
 
       $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
       $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
@@ -2384,22 +2824,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
             pjax_fancybox();
           }
         
-          
-          if ('.cover-backstretch') {
-            $('.cover-backstretch').backstretch("resize");
-            if($('.cover-wrapper').is(':hidden')){
-              $('.cover-backstretch').backstretch("pause");
-            }else{
-              $('.cover-backstretch').backstretch("next");
-            }
-          } else {
-            $.backstretch("resize");
-            if($('.cover-wrapper').is(':hidden')){
-              $.backstretch("pause");
-            }else{
-              $.backstretch("next");
-            }
-          }
+		  Pjax_backstretch()
         
         
         document.querySelectorAll('pre code').forEach((block) => {
@@ -2409,10 +2834,6 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         
           pjax_scrollrebeal();
         
-        
-          if (typeof IssuesAPI == "undefined") {
-            loadIssuesJS();
-          }
         
         
           pjax_initCopyCode();
@@ -2424,16 +2845,18 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         
         
         
-          pjax_darkmodejs();
-        
       } catch (e) {
         console.log(e);
       }
+	  
       window.HideLoading();
+	  
     });
 
     document.addEventListener('pjax:error', function (e) {
+	  
       window.HideLoading();
+	  
       window.location.href = e.triggerElement.href;
     });
 </script>
