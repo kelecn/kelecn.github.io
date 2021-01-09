@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kelecn.top/tool/index.html</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kelecn.top/posts/22877/</loc>
     
     <lastmod>2021-01-09</lastmod>
@@ -205,13 +212,6 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/tool/index.html</loc>
-    
-    <lastmod>2020-11-17</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kelecn.top/mygames/index.html</loc>
     
     <lastmod>2020-11-01</lastmod>
@@ -368,6 +368,13 @@
   </url>
   
   <url>
+    <loc>https://kelecn.top/tags/Kelecn/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kelecn.top/tags/%E5%9B%BE%E5%BA%8A/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -383,13 +390,6 @@
   
   <url>
     <loc>https://kelecn.top/tags/PicGo/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/Kelecn/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -515,6 +515,13 @@
   </url>
   
   <url>
+    <loc>https://kelecn.top/tags/%E5%86%85%E5%AD%98/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kelecn.top/tags/PID/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -530,13 +537,6 @@
   
   <url>
     <loc>https://kelecn.top/tags/QT/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -608,14 +608,14 @@
   </url>
   
   <url>
-    <loc>https://kelecn.top/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://kelecn.top/categories/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://kelecn.top/categories/%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://kelecn.top/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
