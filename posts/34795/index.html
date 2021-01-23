@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,9 +19,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2020/12 - kelecn</title>
+  <title>给博客添加捐赠小部件 - kelecn</title>
+  
+    <meta name="keywords" content="Hexo,Volantis,Github,捐赠">
   
 
+  
+    <meta name="description" content="kelecn's Blog，一个记录个人成长的地方。">
   
 
   <!-- feed -->
@@ -666,7 +668,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="half" class='cover-wrapper post dock' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -742,79 +744,412 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
+  <article class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
   
-  
+
+
   
     <div class='headimg-div'>
-      <a class='headimg-a' href="/posts/9237/">
-        <img class='headimg' src='https://w.wallhaven.cc/full/nm/wallhaven-nmyv2y.jpg'/>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://th.wallhaven.cc/small/6o/6oqzgq.jpg'/>
       </a>
     </div>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" >
-      <a href="/posts/9237/">
-        初探机器视觉模块OpenMV
-      </a>
-    </h2>
-  
-  <div class='md'>
     
-      <p>简介：OpenMV是一款开源，低成本，可扩展，支持Python的机器视觉模块，可媲美机器视觉世界的Arduino。</p>
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title">
+        给博客添加捐赠小部件
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg'></a>
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg">
+    <p>kelecn</p>
+  </a>
+</div>
+
+          
         
-        <time>2020-12-25</time>
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    </a>
+  </div>
+
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月20日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：939字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="给博客添加捐赠小部件" data-path="/posts/34795/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>简介：<a target="_blank" rel="noopener" href="https://github.com/Kaiyuan/sponsor-page">sponsor-page</a>是一个开源的捐赠按钮样式，可以用于美化我们的博客。</p>
+<a id="more"></a>
+
+<div class="note quote"><p>说在前面，捐赠是不可能捐赠的</p></div>
+
+<p>只有<del>白嫖</del>才能维持得了生活，捐赠按钮主要还是起一个美化的效果。</p>
+<p><strong>参考项目：</strong><div class="tag link"><a class="link-card" title="sponsor-page" target="_blank" rel="noopener" href="https://github.com/Kaiyuan/sponsor-page"><div class="left"><img src="https://avatars.githubusercontent.com/u/1176383?s=460&u=cc441a3e9787befdc37b75124e1c0dba1873485e&v=4"/></div><div class="right"><p class="text">sponsor-page</p><p class="url">https://github.com/Kaiyuan/sponsor-page</p></div></a></div></p>
+<p>该项目主要主要有四种捐赠渠道：</p>
+<ul>
+<li><p>PayPal</p>
+</li>
+<li><p>比特币</p>
+</li>
+<li><p>支付宝</p>
+</li>
+<li><p>微信支付</p>
+<div class="note up"><p>我考虑到，比特币在国内使用有限，就把比特币换成了QQ支付，有需要的朋友也可以直接用我的。</p></div>
+
+<div class="tag link"><a class="link-card" title="sponsor-page" target="_blank" rel="noopener" href="https://github.com/kelecn/sponsor-page"><div class="left"><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg"/></div><div class="right"><p class="text">sponsor-page</p><p class="url">https://github.com/kelecn/sponsor-page</p></div></a></div>
+
+
+
+</li>
+</ul>
+<h3 id="一、捐赠按钮的修改"><a href="#一、捐赠按钮的修改" class="headerlink" title="一、捐赠按钮的修改"></a>一、捐赠按钮的修改</h3><hr>
+
+<ol>
+<li><p>首先，直接把对应项目fork到自己的Github，需要比特币按钮可以选择原版的<a target="_blank" rel="noopener" href="https://github.com/Kaiyuan/sponsor-page">sponsor-page</a>，需要QQ支付按钮可以选择我修改后的<a target="_blank" rel="noopener" href="https://github.com/kelecn/sponsor-page">sponsor-page</a>，如果有其他支付方式需求，自己按需修改即可。</p>
+</li>
+<li><p>第二步，二维码美化，相信大家的路子肯定很多，欢迎在评论区推荐一下，我这边就给大家推荐一个常用的：<div class="tag link"><a class="link-card" title="草料二维码" target="_blank" rel="noopener" href="https://cli.im/"><div class="left"><img src="https://static.clewm.net/static/images/favicon.ico"/></div><div class="right"><p class="text">草料二维码</p><p class="url">https://cli.im/</p></div></a></div></p>
+<p>还有PayPal链接、支付宝链接，各位去对应平台获取即可。</p>
+</li>
+<li><p>第三步，当然就是修改自己对应的支付二维码图片（sponsor-page\simple\images）、<a target="_blank" rel="noopener" href="https://www.paypal.com/paypalme/kelecn">PayPal</a>（sponsor-page\simple\index.html和sponsor-page\drinks\index.html）链接和<a target="_blank" rel="noopener" href="https://qr.alipay.com/fkx05422rnstyh9yihg7u78">支付宝</a>（sponsor-page\drinks\script.js）链接啦，你可以直接在Github是上传和修改相应文件即可，也可以克隆到本地，修改后再一起推送到Github。</p>
+</li>
+</ol>
+<h3 id="二、捐赠按钮的使用（部署到Github）"><a href="#二、捐赠按钮的使用（部署到Github）" class="headerlink" title="二、捐赠按钮的使用（部署到Github）"></a>二、捐赠按钮的使用（部署到Github）</h3><hr>
+
+<ul>
+<li>直接开启对应项目的GitHub Pages即可，访问。（博客要是Github+Coding双线部署可能会出现套娃现象，国内线路访问捐赠页面，不会去访问Github Pages，会访问国内的404页面）</li>
+<li>下面会介绍对应的解决方法——将捐赠按钮页面部署到博客本地（无论是国内还是国外访问都会正常）</li>
+</ul>
+<p><img src="https://7.dusays.com/2021/01/23/cb1ac313b3a8c.png"></p>
+<h3 id="三、捐赠按钮的使用（部署到博客）"><a href="#三、捐赠按钮的使用（部署到博客）" class="headerlink" title="三、捐赠按钮的使用（部署到博客）"></a>三、捐赠按钮的使用（部署到博客）</h3><hr>
+
+<ol>
+<li><p>首先，定位Volantis主题的捐赠布局。（themes\volantis\layout\_partial\article.ejs）</p>
+</li>
+<li><p>修改article.ejs文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;blockquote&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;上面用于定位，下面为新添加的，对应修改src即可，要是已经部署到Github Pages，直接使用对应链接即可，要是想放在博客项目中，可往下看</span><br><span class="line">&lt;div class&#x3D;&#39;donate&#39;&gt;</span><br><span class="line">&lt;iframe src&#x3D;&quot;https:&#x2F;&#x2F;kelecn.top&#x2F;donate&#x2F;drinks&quot; style&#x3D;&quot;overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;&quot;  frameborder&#x3D;&quot;0&quot; scrolling&#x3D;&quot;no&quot;&gt;&lt;&#x2F;iframe&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到博客项目中（本地）</p>
+<ul>
+<li><p>直接将刚才修改好的Github项目克隆到本地，放到博客项目的source中，文件夹命名随意（一般为donate）</p>
+</li>
+<li><p>在_config.yml中修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Directory</span><br><span class="line">...</span><br><span class="line">skip_render: &quot;donate&#x2F;**&quot; #hexo会跳过donate文件夹编译，直接把donate文件夹搬移到public</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>则对应的捐赠按钮访问链接为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、域名/donate/drinks</span></span><br><span class="line">https:<span class="comment">//kelecn.top/donate/drinks</span></span><br><span class="line"><span class="comment">//2、域名/donate/simple</span></span><br><span class="line">https:<span class="comment">//kelecn.top/donate/simple</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>捐赠按钮展示（可以用任意Html页面展示）</p>
+<ul>
+<li><p>simple页面</p>
+<div class='donate1'>
+
+<iframe src="https://kelecn.top/donate/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//simple对应引用代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://kelecn.top/donate/simple/&quot;</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;&quot;</span>  <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>drinks页面</p>
+<div class='donate2'>
+
+   <iframe src="https://kelecn.top/donate/drinks/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//drinks对应引用代码</span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://kelecn.top/donate/drinks/&quot;</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;&quot;</span>  <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="四、特别感谢"><a href="#四、特别感谢" class="headerlink" title="四、特别感谢"></a>四、特别感谢</h3><hr>
+
+<p>特别感谢<a target="_blank" rel="noopener" href="https://github.com/Kaiyuan/sponsor-page">sponsor-page</a>项目的大力支持，喜欢的朋友，欢迎去其Github点点小星星~</p>
+<div class="tag link"><a class="link-card" title="sponsor-page" target="_blank" rel="noopener" href="https://github.com/Kaiyuan/sponsor-page"><div class="left"><img src="https://avatars.githubusercontent.com/u/1176383?s=460&u=cc441a3e9787befdc37b75124e1c0dba1873485e&v=4"/></div><div class="right"><p class="text">sponsor-page</p><p class="url">https://github.com/Kaiyuan/sponsor-page</p></div></a></div>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/9237/'>
-            阅读全文
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\10250\" title="基于PicGo的GitHub图床" rel="bookmark "><img src="https://w.wallhaven.cc/full/2e/wallhaven-2ekjlm.png" /><span class="title">基于PicGo的GitHub图床</span><span class="excerpt">简介：GitHub图床（基于PicGo）</span></a><a class="item" href="\posts\39047\" title="测试相册功能" rel="bookmark "><img src="https://w.wallhaven.cc/full/4g/wallhaven-4g789d.png" /><span class="title">测试相册功能</span></a><a class="item" href="\posts\59565\" title="Kelecn的第一条博客！" rel="bookmark "><img src="https://w.wallhaven.cc/full/76/wallhaven-76opry.png" /><span class="title">Kelecn的第一条博客！</span><span class="excerpt">简介：您好！Hexo！</span></a><a class="item" href="\posts\22877\" title="jsDelivr CDN的使用及缓存刷新" rel="bookmark "><img src="https://w.wallhaven.cc/full/z8/wallhaven-z8xd1w.jpg" /><span class="title">jsDelivr CDN的使用及缓存刷新</span><span class="excerpt">kelecn's Blog，一个记录个人成长的地方。</span></a><a class="item" href="\posts\29647\" title="基于QT开发的局域网聊天室" rel="bookmark "><img src="https://w.wallhaven.cc/full/8x/wallhaven-8xjljk.png" /><span class="title">基于QT开发的局域网聊天室</span><span class="excerpt">kelecn's Blog，一个记录个人成长的地方。</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p><svg id="icon-touxiang" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M614.72 554.538c-49.086-6.399-100.27-2.1-149.256-2.1-119.465 0-209.04 95.972-206.84 215.437 0 17.095 8.498 31.99 23.493 40.488 14.896 10.697 34.09 14.896 53.285 17.095 61.882 6.398 123.664 6.398 198.342 6.398 40.488 0 93.872-2.1 142.858-4.298 27.692 0 53.284-4.3 78.877-14.896 19.194-8.498 29.89-19.194 31.99-40.488 8.498-104.57-72.478-204.84-172.75-217.636zM680.8 375.39c0-87.474-74.678-162.053-164.251-162.053-89.574 0-162.053 74.679-162.053 162.053-2.1 87.474 74.678 164.252 162.053 164.252 89.673 0 164.252-74.678 164.252-164.252z" fill="#FFFFFF"></path><path d="M512.35 0C228.733 0 0.5 228.233 0.5 511.85s228.233 511.85 511.85 511.85 511.85-228.233 511.85-511.85S795.967 0 512.35 0z m275.12 772.074c-2.1 21.294-12.797 31.99-31.991 40.488-25.593 10.697-51.185 14.896-78.877 14.896-49.086 2.099-102.37 4.298-142.858 4.298-74.678 0-136.46 0-198.342-6.398-19.195-2.1-38.389-6.398-53.285-17.095-14.895-8.497-23.493-23.493-23.493-40.488-2.1-119.465 87.475-215.437 206.84-215.437 49.085 0 100.27-4.299 149.256 2.1 100.27 12.896 181.247 113.166 172.75 217.636zM354.495 375.39c0-87.474 72.479-162.053 162.053-162.053S680.8 288.016 680.8 375.39c0 89.574-74.679 164.252-164.252 164.252-87.375 0-164.152-76.778-162.053-164.252z" fill="#249FF8"></path></svg>本文由 <a href="https://kelecn.top/" data-pjax-state="">kelecn</a> 创作，如果您觉得本文不错，请随意赞赏</p>
+
+              
+            
+              
+                <p><svg id="icon-fenxiang" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#F3B243"></path><path d="M630.784 323.584m-90.112 0a90.112 90.112 0 1 0 180.224 0 90.112 90.112 0 1 0-180.224 0Z" fill="#FFFFFF"></path><path d="M630.784 688.128m-90.112 0a90.112 90.112 0 1 0 180.224 0 90.112 90.112 0 1 0-180.224 0Z" fill="#FFFFFF"></path><path d="M319.488 512m-90.112 0a90.112 90.112 0 1 0 180.224 0 90.112 90.112 0 1 0-180.224 0Z" fill="#FFFFFF"></path><path d="M341.037056 480.370688l257.343488-175.7184 27.713536 40.59136-257.339392 175.7184z" fill="#FFFFFF"></path><path d="M349.052928 488.452096l252.854272 182.10816-28.725248 39.886848-252.874752-182.10816z" fill="#FFFFFF"></path></svg>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+
+              
+            
+              
+                <p><svg id="icon-ziyuan" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M511.854421 0a511.854421 511.854421 0 1 0 512.145579 511.854421A511.854421 511.854421 0 0 0 511.854421 0z" fill="#39B54A"></path><path d="M576.491328 630.355417l-116.462895 116.462894a129.56497 129.56497 0 0 1-182.555587 0l-2.0381-2.038101a128.982656 128.982656 0 0 1 0-182.26443l81.232868-81.232868a179.644015 179.644015 0 0 0 13.102076 70.460051l-52.69946 52.408302a69.877737 69.877737 0 0 0 0 98.702303l2.038101 2.038101a70.168894 70.168894 0 0 0 98.702303 0l116.462895-116.462894a69.877737 69.877737 0 0 0 0-98.702304l-2.038101-2.0381a69.586579 69.586579 0 0 0-13.975547-10.772818l42.508956-42.508956a128.109184 128.109184 0 0 1 13.102076 11.355132l2.0381 2.0381a129.273813 129.273813 0 0 1 0 182.26443z" fill="#FFFFFF"></path><path d="M746.235997 460.901905l-81.232869 81.232869a179.352858 179.352858 0 0 0-13.102076-70.460051l52.69946-52.408303a69.877737 69.877737 0 0 0 0-98.702303l-2.038101-2.038101a69.877737 69.877737 0 0 0-98.702303 0l-116.462894 116.462895a69.877737 69.877737 0 0 0 0 98.702303l2.0381 2.038101a68.421951 68.421951 0 0 0 13.975548 10.772817l-42.508957 42.508957a136.552744 136.552744 0 0 1-13.102076-11.355132l-2.0381-2.038101a128.982656 128.982656 0 0 1 0-182.26443l116.462894-116.462894a129.56497 129.56497 0 0 1 182.555587 0l2.038101 2.0381a128.982656 128.982656 0 0 1 0 182.26443z" fill="#FFFFFF"></path></svg>本文永久链接是：<a href=https://kelecn.top/posts/34795/>https://kelecn.top/posts/34795/</a></p>
+              
+            
+              
+                <p><svg id="icon-juanzeng" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#F24827" p-id="19155"></path><path d="M713.953882 364.318118a133.647059 133.647059 0 0 0-189.003294 0l-13.327059 13.327058-13.342117-13.327058a133.647059 133.647059 0 0 0-189.003294 0 133.632 133.632 0 0 0 0 188.988235l13.327058 13.342118 189.018353 160.918588 188.988236-160.933647 13.342117-13.327059a133.662118 133.662118 0 0 0 0-188.988235z" fill="#FFFFFF" p-id="19156"></path></svg>您的喜欢是作者写作最大的动力！</p>
+
+              
+            
+          </blockquote>
         </div>
+ <div class='donate'>
+<iframe src="https://kelecn.top/donate/drinks" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+</div>
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Github/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Github</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Volantis/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Volantis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8D%90%E8%B5%A0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>捐赠</p></a></div>
+
+
         
       
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/posts/34795/&title=给博客添加捐赠小部件 - kelecn&pics=true&summary=简介：sponsor-page是一个开源的捐赠按钮样式，可以用于美化我们的博客。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/qq.png">
+          
+        </a>
+      
     
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/posts/34795/&title=给博客添加捐赠小部件 - kelecn&pics=true&summary=简介：sponsor-page是一个开源的捐赠按钮样式，可以用于美化我们的博客。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/posts/34795/&title=给博客添加捐赠小部件 - kelecn&pics=true&summary=简介：sponsor-page是一个开源的捐赠按钮样式，可以用于美化我们的博客。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACQ0lEQVR42u3aQW4DQQgEQP//08kDoijQYDnGNTdr5Vlq9tKCeXx96HqAg4ODg4Mfgj/C9WPD4vNygb/sN60XHBwcHBz8Irxb0FbB3fdN6wUHBwcHB78M/zMAPAmUBqF2veDg4ODg4ODtQFENNt0AAw4ODg4ODr4H7w4UukEGHBwcHBwcfG+gsBVotgMTODg4ODj4J8HjC3Mv+v3ym43g4ODg4OD/AD5d6UWB6fO4XnBwcHBw8EPwNCCkDYbqBYHqgbTrAwcHBwcHPwSvbtwNMtPAkx5geaAADg4ODg5+EF4tcGsgUD246j7jDgw4ODg4OPgbw9Pg0i5g6X/dgwQHBwcHB78ITwf10wt502DTPUhwcHBwcPBL8GnjYBwohhcA4oECODg4ODj4AXgaUNKLetMA031fnNzAwcHBwcHfAL7VAOg2NLYCTLUucHBwcHDwi/Buo6A7cEifdz/EOLmBg4ODg4O/ITwOAsWAMx0opBcM2pMUcHBwcHDwQ/DtQUI6AFgPOuDg4ODg4IfhaWFrDf9wwBBPUsDBwcHBwQ/Duw2I6QWDbgOiHbTAwcHBwcEPwadrqzERD/q7BwMODg4ODn4I/gjXtJBuENlqnICDg4ODg1+EdwNLWuCzAky5fnBwcHBw8MPwarDY+v+/naSAg4ODg4N/MDy9GNANMNUDAgcHBwcHB99vMKTvTwcf4ODg4ODgl+HdoLFVcPq+9gcBBwcHBwc/CE+DQXfAMB0UpB8GHBwcHBz8IvzTFjg4ODg4+IH1DdKRBR8JO70SAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.top/posts/34795/&text=给博客添加捐赠小部件 - kelecn"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
 
 
-	
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/22877/'>
+          <p class='title'>jsDelivr CDN的使用及缓存刷新<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：jsDelivr 是一个免费、开源的加速CDN公共服务。
+
+
+​        之前搭建的基于PicGo的GitHub图床，自动生成的链接由于没有经过CDN加速，相当于直接访问Github...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -938,55 +1273,6 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     
   
 
-  <section class="widget category shadow floatable desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%80%BB%E7%BB%93/" href="/categories/%E6%80%BB%E7%BB%93/"
-            id="categoriesE680BBE7BB93"
-            ><div class='name'>总结</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF/" href="/categories/%E6%8A%80%E6%9C%AF/"
-            id="categoriesE68A80E69CAF"
-            ><div class='name'>技术</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            id="categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%94%9F%E6%B4%BB/" href="/categories/%E7%94%9F%E6%B4%BB/"
-            id="categoriesE7949FE6B4BB"
-            ><div class='name'>生活</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%9F%A5%E8%AF%86/" href="/categories/%E7%9F%A5%E8%AF%86/"
-            id="categoriesE79FA5E8AF86"
-            ><div class='name'>知识</div><div class='badge'>(17)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
   <section class="widget tagcloud shadow floatable desktop mobile">
     
   <header>
@@ -1001,8 +1287,6 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     </div>
   </section>
 
-
-  
 
   
 
@@ -1233,159 +1517,33 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
   
 
   
+
+  
     
     
 
-<section class="widget shadow floatable desktop">
-  
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>26 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2019/09/09'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>22k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Sat Jan 23 2021 20:16:36 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-01-23 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-01-23 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8D%90%E8%B5%A0%E6%8C%89%E9%92%AE%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="toc-text">一、捐赠按钮的修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8D%90%E8%B5%A0%E6%8C%89%E9%92%AE%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E9%83%A8%E7%BD%B2%E5%88%B0Github%EF%BC%89"><span class="toc-text">二、捐赠按钮的使用（部署到Github）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%8D%90%E8%B5%A0%E6%8C%89%E9%92%AE%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2%EF%BC%89"><span class="toc-text">三、捐赠按钮的使用（部署到博客）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%89%B9%E5%88%AB%E6%84%9F%E8%B0%A2"><span class="toc-text">四、特别感谢</span></a></li></ol>
     </div>
-  </div>
-</section>
+  </section>
 
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow floatable desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://cdn.jsdelivr.net/gh/kelecn/images@master/Wechat.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/kelecn/images@master/Alipay.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
         
@@ -1395,8 +1553,8 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="给博客添加捐赠小部件";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
