@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.2.0'>
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -18,6 +18,9 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
 
   <!-- 页面元数据 -->
   
@@ -54,32 +57,56 @@
   
 
   <script id="loadcss"></script>
-<!-- //360自动收录 -->
+
+  
 <script>
-(function(){
-var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
-document.write('<script src="' + src + '" id="sozz"><\/script>');
-})();
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
 </script>
-<!-- //百度自动收录 -->
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
 </head>
 
-<body>
-  
+  <body>
+    
 
 <header id="l_header" class="l_header always shadow floatable "  >
   <div class='container'>
@@ -319,6 +346,22 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
           
                     
                   </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fas fa-bell fa-fw'></i>哔哔
+                </a>
                 
               </li>
             
@@ -615,6 +658,22 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
               
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fas fa-bell fa-fw'></i>哔哔
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fas fa-moon fa-fw'></i>关灯
                 </a>
@@ -662,8 +721,8 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
   </div>
 </header>
 
-  <div id="l_body">
-    <div id="l_cover">
+    <div id="l_body">
+      <div id="l_cover">
   
     
         <div id="half" class='cover-wrapper  dock' style="display: ;">
@@ -739,9 +798,9 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
   
   </div>
 
-    <div id='safearea'>
-      <div class='body-wrapper' id="pjax-container">
-        
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
 
 
 <div class='l_main'>
@@ -1108,7 +1167,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
       <p>🔔请去友链页，查看详细教程~</p>
 
     
-      <p><a target="_blank" rel="noopener" href="https://github.com/kelecn/"><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/GitHub.png"></a></p>
+      <p><a target="_blank" rel="noopener" href="https://github.com/kelecn/"><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/GitHub.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/GitHub.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></p>
 
     
   </div>
@@ -1125,7 +1184,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <a href='categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
@@ -1174,7 +1233,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     
   <header>
     
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <a href='tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
     
   </header>
 
@@ -1231,6 +1290,10 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
       
     
       
+    
+      
+    
+      
         <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
           <section class="article typo">
             <div class="article-entry" itemprop="articleBody">
@@ -1240,8 +1303,6 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
             </div>
           </section>
         </article>
-      
-    
       
     
     
@@ -1355,6 +1416,8 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
             </div>
           </section>
         </article>
+      
+    
       
     
     
@@ -1481,8 +1544,8 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sun Jan 31 2021 16:15:14 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-01-31 日</div>
+            <div id="last-update" style="display: none;">Tue Feb 09 2021 23:31:55 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-02-09 日</div>
           
         </div>
         
@@ -1532,7 +1595,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-01-31 日';
+            document.getElementById('last-update-show').innerHTML = '2021-02-09 日';
           }
         </script>
         
@@ -1571,9 +1634,8 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 </aside>
 
 
-        
-        
-          <!--此文件用来存放一些不方便取值的变量-->
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <script>
@@ -1582,16 +1644,23 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
   pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
-
+  // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
   l_header.classList.remove("show");
   
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="half";
+    cover_wrapper.style.display="";
+    
+  
 </script>
 
+        </div>
         
-      </div>
-      
   
   <footer class="footer clearfix">
     <br><br>
@@ -1669,6 +1738,10 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
               </a>
             
           
+            
+          
+            
+          
         </div>
       
     
@@ -1679,7 +1752,7 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     
       
         
-          <div><p><span id="lc-sv">总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人<br></span> <span><a target="_blank" rel="noopener" href="https://hexo.io/"><img src="https://img.shields.io/badge/Powered-Hexo-blue.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://img.shields.io/badge/Theme-Volantis-brightgreen.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://coding.net/"><img src="https://img.shields.io/badge/HostBy-Github&Coding-purple.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/"><img src="https://img.shields.io/badge/DNS-%E8%85%BE%E8%AE%AF%E4%BA%91-ff69b4.svg?style=plastic"></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange.svg?style=plastic"></a></span></p>
+          <div><p><span id="lc-sv">总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人<br></span> <span><a target="_blank" rel="noopener" href="https://hexo.io/"><img src="https://img.shields.io/badge/Powered-Hexo-blue.svg?style=plastic" class="lazyload" data-srcset="https://img.shields.io/badge/Powered-Hexo-blue.svg?style=plastic" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://img.shields.io/badge/Theme-Volantis-brightgreen.svg?style=plastic" class="lazyload" data-srcset="https://img.shields.io/badge/Theme-Volantis-brightgreen.svg?style=plastic" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://coding.net/"><img src="https://img.shields.io/badge/HostBy-Github&Coding-purple.svg?style=plastic" class="lazyload" data-srcset="https://img.shields.io/badge/HostBy-Github&Coding-purple.svg?style=plastic" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/"><img src="https://img.shields.io/badge/DNS-%E8%85%BE%E8%AE%AF%E4%BA%91-ff69b4.svg?style=plastic" class="lazyload" data-srcset="https://img.shields.io/badge/DNS-%E8%85%BE%E8%AE%AF%E4%BA%91-ff69b4.svg?style=plastic" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></span><span>  </span><span><a target="_blank" rel="noopener" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange.svg?style=plastic" class="lazyload" data-srcset="https://img.shields.io/badge/CDN-jsDelivr-orange.svg?style=plastic" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></span></p>
 </div>
         
       
@@ -1702,7 +1775,6 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
     } 
 setInterval("createtime()",250);
 </script> 
-
       
     
       
@@ -1712,25 +1784,62 @@ setInterval("createtime()",250);
         </div>
       
     
-
   </footer>
 
 
-      <a id="s-top" class="fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
     </div>
-  </div>
-  <div>
-    <script>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
 window.volantis={};
 window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
 /********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
 function loadScript(src, cb) {
-var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-var script = document.createElement('script');
-script.setAttribute('type','text/javascript');
-if (cb) script.onload = cb;
-script.setAttribute('src', src);
-HEAD.appendChild(script);
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
 }
 //https://github.com/filamentgroup/loadCSS
 var loadCSS = function( href, before, media, attributes ){
@@ -1852,13 +1961,24 @@ var loadCSS = function( href, before, media, attributes ){
   function SCload_fancybox() {
     if ($(".md .gallery").find("img").length == 0) return;
     loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
-    setTimeout(function() {
-      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
-    }, 1);
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
   };
   $(function () {
     SCload_fancybox();
   });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
 </script>
 
 
@@ -1926,11 +2046,9 @@ var loadCSS = function( href, before, media, attributes ){
       <hr>
       
         
-      
-        
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=/image/
+      <a class='vlts-menu fix-cursor-default ' href=/image/
         
         
         
@@ -1946,7 +2064,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=/games/
+      <a class='vlts-menu fix-cursor-default ' href=/games/
         
         
         
@@ -1962,7 +2080,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=/tool/
+      <a class='vlts-menu fix-cursor-default ' href=/tool/
         
         
         
@@ -1976,41 +2094,11 @@ var loadCSS = function( href, before, media, attributes ){
         
       
         
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=/friends/
-        
-        
-        
-        
-          id="friends"
-        >
-        <i class='fas fa-link fa-fw'></i> 友链组
-      </a>
-    </li>
-  
-        
       
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/kelecn/
-        
-        
-        
-        
-          id="https:githubcomkelecn"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 开源库
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=/about/
+      <a class='vlts-menu fix-cursor-default ' href=/about/
         
         
         
@@ -2030,7 +2118,37 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' 
+      <a class='vlts-menu fix-cursor-default ' href=/bb/
+        
+        
+        
+        
+          id="bb"
+        >
+        <i class='fas fa-bell fa-fw'></i> 哔哔空间
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> 模式切换
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
         
         
         
@@ -2170,18 +2288,13 @@ var loadCSS = function( href, before, media, attributes ){
           copyHref.style.display = 'none';
         }
       }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,image,games,tool,friends,source,about,hr,print,hr,music'||[]).includes('music')) {
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
         // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
+        checkAPlayer();
       }
-
+      
       return false; // 该行代码确保系统自带的右键菜单不会被调出
     }
     function hideMenu() {
@@ -2202,23 +2315,66 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
 
   
-  
-    <script>
-      window.FPConfig = {
-        delay: 0,
-        ignoreKeywords: [],
-        maxRPS: 5,
-        hoverDelay: 25
-      };
-    </script>
-    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
-  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
 
 
 
@@ -2275,13 +2431,14 @@ var loadCSS = function( href, before, media, attributes ){
     $(function () {
         pjax_initCopyCode()
     });
+	volantis.pjax.push(pjax_initCopyCode)
 </script>
 
 
 
 
-   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
-<script type="text/javascript">
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
   function pjax_scrollrebeal() {
     ScrollReveal().reveal('.l_main .reveal', {
       distance: '32px',
@@ -2292,8 +2449,14 @@ var loadCSS = function( href, before, media, attributes ){
     });
   }
   $(function () {
-    pjax_scrollrebeal();
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
   });
+  volantis.pjax.push(pjax_scrollrebeal)
 </script>
 
 
@@ -2306,15 +2469,17 @@ var loadCSS = function( href, before, media, attributes ){
   loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
   // APlayer 需要在  MetingJS 之前加载
   loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
-  window.volantis.LoadMetingJS=0
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
   var checkAPlayer = setInterval(function () {
-    if (!window.APlayer) return
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
     clearInterval(checkAPlayer)
-	if (!window.volantis.LoadMetingJS&&!window.MetingJSElement){
-	  window.LoadMetingJS=1
-      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
 	  }
-  }, 2500)
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
 
   
     loadScript("/js/aplayer.js")
@@ -2327,23 +2492,13 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/gh/kelecn/images@master/Valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
 
 
 <script>
-  var GUEST_INFO = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link'.split(',').filter(function (item) {
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
-  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
-    return REQUIRED_FIELDS.indexOf(item) > -1
-  });
-
   function emoji(path, idx, ext) {
     return path + "/" + path + "-" + idx + "." + ext;
   }
-
   var emojiMaps = {};
   for (var i = 1; i <= 54; i++) {
     emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
@@ -2360,49 +2515,34 @@ var loadCSS = function( href, before, media, attributes ){
   for (var i = 1; i <= 4; i++) {
     emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
   }
-
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
-
     let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
-
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
       path = defaultPath || decodeURI(window.location.pathname);
     }
-
     var valine = new Valine();
-    valine.init({
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"j90ltihFmxeNazggNrnfhKbM-MdYXbMMI","appKey":"MlsxFVlwn8yxREL6UKIY9oV6","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js","visitor":true}, {
       el: '#valine_container',
-      meta: meta,
-      placeholder: pagePlaceholder,
       path: path,
-      appId: "j90ltihFmxeNazggNrnfhKbM-MdYXbMMI",
-      appKey: "MlsxFVlwn8yxREL6UKIY9oV6",
-      pageSize: '10',
-      avatar: 'robohash',
-      lang: 'zh-cn',
-      visitor: 'true',
-      highlight: 'true',
-      mathJax: 'false',
-      enableQQ: 'true',
-      recordIP: 'true',
-      requiredFields: requiredFields,
+      placeholder: pagePlaceholder,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
-      emojiMaps: emojiMaps
-    })
+      emojiMaps: emojiMaps,
+    }))
   }
-
   $(function () {
     pjax_valine();
   });
+  volantis.pjax.push(pjax_valine);
 </script>
 
 
 
 
   <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
 
 
   
@@ -2442,17 +2582,17 @@ function setSearchService() {
   
 <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
 
-  <script type="text/javascript">
-    $(function () {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
+<script type="text/javascript">
+$(function () {
+  Waves.attach('.flat-btn', ['waves-button']);
+  Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+  Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+  Waves.attach('.flat-box', ['waves-block']);
+  Waves.attach('.float-box', ['waves-block', 'waves-float']);
+  Waves.attach('.waves-image');
+  Waves.init();
+});
+</script>
 
 
 
@@ -2463,11 +2603,18 @@ function setSearchService() {
 
 
   
-    
+
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
-  
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 
@@ -2688,28 +2835,15 @@ const darkModeStorageKey = "user-color-scheme";
 const rootElementDarkModeAttributeName = "data-user-color-scheme";
 
 const setLS = (k, v) => {
-  try {
     localStorage.setItem(k, v);
-  } catch (e) {
-    console.log(e.message);
-  }
 };
 
 const removeLS = (k) => {
-  try {
     localStorage.removeItem(k);
-  } catch (e) {
-    console.log(e.message);
-  }
 };
 
 const getLS = (k) => {
-  try {
     return localStorage.getItem(k);
-  } catch (e) {
-    console.log(e.message);
-    return null;
-  }
 };
 
 const getModeFromCSSMediaQuery = () => {
@@ -2765,8 +2899,8 @@ const toggleCustomDarkMode = () => {
 /**
  * bind click event for toggle button
  */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
 function bindToggleButton() {
-	var btn=$("#wrapper .toggle-mode-btn");
     btn.on('click',(e) => {
       const mode = toggleCustomDarkMode();
       applyCustomDarkModeSettings(mode);
@@ -2775,13 +2909,19 @@ function bindToggleButton() {
 
 applyCustomDarkModeSettings();
 document.addEventListener("DOMContentLoaded", bindToggleButton);
-document.addEventListener("pjax:success", bindToggleButton);
-
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
 </script>
 
 
 
 
+
+
+
+<script src="//code.tidio.co/3qwqwvxit2hmofkivmho0dexdbguukt3.js" async></script>
 
 
 <script>
@@ -2867,11 +3007,9 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- more -->
 
-
-
-
-    
-      
+ 
+	   
+	    
 
 
 <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
@@ -2891,6 +3029,11 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       }
     </script>
   
+	<script>
+		volantis.pjax.push(window.HideLoading,'HideLoading');
+		volantis.pjax.send(window.ShowLoading,'ShowLoading');
+		volantis.pjax.error(window.HideLoading,'HideLoading');
+	</script>
 </div>
 
 
@@ -2901,7 +3044,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
         selectors: [
           "title",
-          "#l_cover",
+          
           "#pjax-container",
           "#pjax-header-nav-list"
         ],
@@ -2927,9 +3070,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       } catch (error) {}
 
       window.subData = null; // 移除标题（用于一二级导航栏切换处）
-      if (typeof $.fancybox != "undefined") {
-        $.fancybox.close();    // 关闭弹窗
-      }
+
       volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
       volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
       volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
@@ -2942,73 +3083,32 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       $(document).unbind('scroll');
       $(document).unbind('click');
       $('body').unbind('click');
-	  
-      window.ShowLoading();
-	  
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
     });
 
     document.addEventListener('pjax:complete', function () {
-      // 关于百度统计对 SPA 页面的处理：
-      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
-      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
-       
-
-      // 关于谷歌统计对 SPA 页面的处理：
-      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
-      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
-      
-	 
-
       $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
       $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
       $('script[data-pjax], .pjax-reload script').each(function () {
         $(this).parent().append($(this).remove());
       });
       try{
-          if (typeof $.fancybox == "undefined") {
-            SCload_fancybox();
-          } else {
-            pjax_fancybox();
-          }
-        
-		  Pjax_backstretch()
-        
-        
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
-        });
-        
-        
-          pjax_scrollrebeal();
-        
-        
-        
-          pjax_initCopyCode();
-        
-        
-          pjax_valine();
-        
-        
-        
-        
-        
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
       } catch (e) {
         console.log(e);
       }
-	  
-      window.HideLoading();
-	  
     });
 
     document.addEventListener('pjax:error', function (e) {
-	  
-      window.HideLoading();
-	  
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
       window.location.href = e.triggerElement.href;
     });
 </script>
-
-    
-  </div>
-</body>
+ 
+	  
+    </div>
+  </body>
 </html>

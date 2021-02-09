@@ -2276,6 +2276,9 @@ div.fancybox .image-caption:empty {
     border-radius: 8px;
   }
 }
+.l_header .aplayer-volume-wrap {
+  display: none !important;
+}
 .highlight {
   position: relative;
 }
@@ -2571,9 +2574,14 @@ article#comments #valine_container .vwrap .cancel-reply {
   margin-top: 0;
   margin-bottom: 0;
 }
+article#comments #valine_container .vwrap .vheader {
+  margin: -10px;
+  padding: 5px 10px 0;
+  background: var(--color-block);
+}
 article#comments #valine_container .vwrap .vheader .vinput {
   border-radius: 0;
-  border-bottom: 1px dashed rgba(68,68,68,0.3);
+  border-bottom: 1px dashed transparent;
 }
 article#comments #valine_container .vwrap .vheader .vinput:hover {
   border-bottom: 1px dashed #2196f3;
@@ -2659,6 +2667,7 @@ article#comments #valine_container button {
   color: var(--color-text);
   line-height: 2;
   font-size: 14px;
+  font-weight: 600;
   transition: all 0.28s ease;
   -moz-transition: all 0.28s ease;
   -webkit-transition: all 0.28s ease;
@@ -2714,17 +2723,22 @@ article#comments #valine_container .vcards .vhead .vsys {
   margin: 2px;
   padding: 1px 8px;
   background-color: var(--color-block);
+  display: none;
 }
 article#comments #valine_container .vcards .vmeta .vat {
   font-weight: bold;
-  color: #2196f3;
+  color: var(--color-p);
+  float: none;
   transition: all 0.28s ease;
   -moz-transition: all 0.28s ease;
   -webkit-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
+  padding: 4px 8px;
+  border-radius: 2px;
 }
 article#comments #valine_container .vcards .vmeta .vat:hover {
   color: #ff5722;
+  background-color: var(--color-block);
 }
 article#comments #valine_container .vcards .vcontent {
   padding-top: 0;
@@ -4076,6 +4090,7 @@ article#comments p[ct] {
   margin-bottom: 1em;
   font-size: 1.125rem;
   color: var(--color-text);
+  font-weight: 600;
 }
 article#comments p[cst] {
   margin-top: 1em;
@@ -4954,9 +4969,10 @@ img.lazyload:not(.placeholder).loaded {
 }
 .snackbar-content .action a {
   margin: 4px;
+  cursor: pointer;
   color: #fff;
   display: inline-block;
-  padding: 0.8em 2em;
+  padding: 0.4em 2em;
   font-weight: 600;
   border-radius: 2px;
   border: 1px solid #fff;
