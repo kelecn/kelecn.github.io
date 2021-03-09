@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>jQuery(document).ready(function () {
 
 var thisPage = $('body');
 var drink_box = $('#donate-box');
