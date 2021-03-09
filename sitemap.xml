@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kelecn.top/friends/index.html</loc>
+    
+    <lastmod>2021-03-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kelecn.top/bb/index.html</loc>
     
     <lastmod>2021-02-09</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://kelecn.top/tool/index.html</loc>
     
     <lastmod>2021-01-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kelecn.top/friends/index.html</loc>
-    
-    <lastmod>2021-01-23</lastmod>
     
   </url>
   
