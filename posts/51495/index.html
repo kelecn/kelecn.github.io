@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：算法 - kelecn</title>
+  <title>基于OpenMV的无人驾驶智能小车模拟系统 - kelecn</title>
+  
+    <meta name="keywords" content="OpenMV,ESP8266,STM32,嵌入式,机器视觉">
   
 
+  
+    <meta name="description" content="kelecn's Blog，一个记录个人成长的地方。">
   
 
   <!-- feed -->
@@ -726,7 +728,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
       
         
-          <div class="cover-wrapper  dock" id='half'>
+          <div class="cover-wrapper post dock" id='half'>
             
               <div id='cover-backstretch'></div>
             
@@ -803,83 +805,419 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable">
-  
-  
+
+
   
     <div class='headimg-div'>
-      <a class='headimg-a' href="/posts/16358/">
-        <img class='headimg' src='https://cdn.jsdelivr.net/gh/kelecn/images@master/cover22.png'/>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://cdn.jsdelivr.net/gh/kelecn/images@master/post290.png'/>
       </a>
     </div>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" >
-      <a href="/posts/16358/">
-        PID控制算法
-      </a>
-    </h2>
-  
-  <div class='md'>
     
-      <p>简介：PID控制算法是结合比例、积分和微分三种环节于一体的控制算法，它是连续系统中技术最为成熟、应用最为广泛的一种控制算法。</p>
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title">
+        基于OpenMV的无人驾驶智能小车模拟系统
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg'></a>
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg">
+    <p>kelecn</p>
+  </a>
+</div>
+
+          
         
-        <time>2020-09-09</time>
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    </a>
+  </div>
+
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年7月29日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：8分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="基于OpenMV的无人驾驶智能小车模拟系统" data-path="/posts/51495/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>简介：基于机器视觉模块OpenMV采集车道、红绿灯、交通标志等模拟路况信息，实现一辆能车道保持、红绿灯识别、交通标志识别、安全避障以及远程WiFi控制的多功能无人驾驶小车。</p>
+<a id="more"></a>
+
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post291.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post291.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>项目地址：</strong><div class="tag link"><a class="link-card" title="OpenMV-autodrive" target="_blank" rel="noopener" href="https://github.com/kelecn/OpenMV-autodrive"><div class="left"><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post291.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post291.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">OpenMV-autodrive</p><p class="url">https://github.com/kelecn/OpenMV-autodrive</p></div></a></div></p>
+<p><strong>编程软件：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">硬件模块</th>
+<th align="left">编程软件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">OpenMV</td>
+<td align="left">使用OpenMV官方的<a target="_blank" rel="noopener" href="https://singtown.com/openmv-download/">OpenMV IDE</a></td>
+</tr>
+<tr>
+<td align="center">ESP8266</td>
+<td align="left">使用Arduino官方的<a target="_blank" rel="noopener" href="https://www.arduino.cc/en/software">Arduino IDE</a></td>
+</tr>
+<tr>
+<td align="center">STM32</td>
+<td align="left">使用ARM官方的<a target="_blank" rel="noopener" href="https://www2.keil.com/mdk5">Keil uVision5</a>（ARM版）</td>
+</tr>
+</tbody></table>
+ <div class="note quote"><p>欢迎各位去点点小星星哦~</p></div>
+
+<h3 id="一、硬件系统"><a href="#一、硬件系统" class="headerlink" title="一、硬件系统"></a>一、硬件系统</h3><p>本项目《基于OpenMV的无人驾驶智能小车模拟系统》，主要依靠机器视觉模块OpenMV通过图像处理的方式获取实时的路况信息，以及超声波传感器获取障碍物距离信息，得到的路况数据再通过串口传输到主控器STM32上面，STM32会将实时的路况信息处理成智能小车的运动控制指令，让智能小车实现红绿灯识别、交通标志识别以及车道实时保持的功能，还有STM32也会通过WiFi模块ESP8266与手机端进行路况数据和控制指令的远程交互。硬件系统框图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post292.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post292.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>下面简单介绍一下，整个系统用到的硬件模块。</p>
+<table>
+<thead>
+<tr>
+<th align="center">硬件模块</th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">主控器</td>
+<td>STM32F103ZET6(正点原子精英板F103)</td>
+</tr>
+<tr>
+<td align="center">视觉模块</td>
+<td>OpenMV4 H7 PLUS（STM32H750VBT6 +OV7725）</td>
+</tr>
+<tr>
+<td align="center">超声波传感器</td>
+<td>HC-SR04</td>
+</tr>
+<tr>
+<td align="center">WiFi模块</td>
+<td>ESP8266</td>
+</tr>
+<tr>
+<td align="center">执行器</td>
+<td>双路 H 桥电机驱动、直流电机、开发板自带的LED和蜂鸣器</td>
+</tr>
+<tr>
+<td align="center">控制平台</td>
+<td>安装Blinker APP的安卓/苹果手机</td>
+</tr>
+<tr>
+<td align="center">其他</td>
+<td>电源、模型车、导线若干等</td>
+</tr>
+</tbody></table>
+<p>具体的硬件电路连接框图如下:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post293.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post293.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="二、软件系统"><a href="#二、软件系统" class="headerlink" title="二、软件系统"></a>二、软件系统</h3><h5 id="1、OpenMV中的路况识别算法实现"><a href="#1、OpenMV中的路况识别算法实现" class="headerlink" title="1、OpenMV中的路况识别算法实现"></a>1、OpenMV中的路况识别算法实现</h5><p>本项目的主要路况数据信息都是基于OpenMV摄像头获取的图像进行图像处理得到的。要实现智能小车的自动驾驶行为，最起码要让小车识别到红绿灯、交通标志以及车道，后续主控器才能根据这些路况数据信息控制小车的运动。关于机器视觉模块OpenMV，之前我在《<a href="https://kelecn.top/posts/9237/">初探机器视觉模块OpenMV</a>》里面已经介绍过了，这里不再赘述。</p>
+<h6 id="①红绿灯识别"><a href="#①红绿灯识别" class="headerlink" title="①红绿灯识别"></a>①红绿灯识别</h6><p>主要是对摄像头每帧拍摄到的图像进行图像进行阈值处理，再进行判断出现的究竟是哪种红绿灯（红灯、绿灯、黄灯），然后再将这个判定结果和其他两个数据一起打包通过串口发送出去。</p>
+<p><strong>【程序流程图】</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post294.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post294.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>【主要代码】</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###################################开始####################################</span></span><br><span class="line">...</span><br><span class="line">sensor.set_pixformat(sensor.RGB565) <span class="comment"># 图片格式设为 RGB565彩色图</span></span><br><span class="line">light_threshold = [(<span class="number">59</span>, <span class="number">100</span>, <span class="number">26</span>, <span class="number">127</span>, <span class="number">-128</span>, <span class="number">127</span>),(<span class="number">59</span>, <span class="number">100</span>, <span class="number">-128</span>, <span class="number">-40</span>, <span class="number">-128</span>, <span class="number">127</span>)]; <span class="comment">#设置红绿灯阈值，默认为0无红绿灯 1红灯 2绿灯 4黄灯</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">#定义寻找色块面积最大的函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_max</span>(<span class="params">blobs</span>):</span>    </span><br><span class="line">    max_size=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> blob <span class="keyword">in</span> blobs:</span><br><span class="line">        <span class="keyword">if</span> blob.pixels() &gt; max_size:</span><br><span class="line">            max_blob=blob</span><br><span class="line">            max_size = blob.pixels()</span><br><span class="line"><span class="keyword">return</span> max_blob</span><br><span class="line"><span class="comment">#主循环</span></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    clock.tick() <span class="comment">#追踪两个snapshots()之间经过的毫秒数</span></span><br><span class="line">    img = sensor.snapshot() <span class="comment">#拍一张照片，返回图像</span></span><br><span class="line">    blobs = img.find_blobs(light_threshold,area_threshold=<span class="number">150</span>); <span class="comment">#找到红绿灯</span></span><br><span class="line">    cx=<span class="number">0</span>;cy=<span class="number">0</span>;LED_color=<span class="number">0</span>; <span class="comment">#变量定义</span></span><br><span class="line">    <span class="keyword">if</span> blobs:</span><br><span class="line">        max_b = find_max(blobs); <span class="comment">#如果找到了目标颜色</span></span><br><span class="line">        img.draw_rectangle(max_b[<span class="number">0</span>:<span class="number">4</span>]) <span class="comment">#在Blob周围绘制一个矩形</span></span><br><span class="line">        <span class="comment">#用矩形标记出目标颜色区域</span></span><br><span class="line">        img.draw_cross(max_b[<span class="number">5</span>], max_b[<span class="number">6</span>]) <span class="comment"># cx, cy</span></span><br><span class="line">        img.draw_cross(<span class="number">160</span>, <span class="number">120</span>) <span class="comment"># 在中心点画标记</span></span><br><span class="line">        <span class="comment">#在目标颜色区域的中心画十字形标记</span></span><br><span class="line">        cx=max_b[<span class="number">5</span>];</span><br><span class="line">        cy=max_b[<span class="number">8</span>];</span><br><span class="line">        img.draw_line((<span class="number">160</span>,<span class="number">120</span>,cx,cy), color=(<span class="number">127</span>));</span><br><span class="line">        img.draw_string(cx, cy, <span class="string">&quot;(%d, %d)&quot;</span>%(cx,cy), color=(<span class="number">127</span>));</span><br><span class="line">LED_color=cy; <span class="comment">#红绿灯的阈值是数组里的cy（二进制）个</span></span><br><span class="line">print(LED_color); <span class="comment">#串行终端打印出 红绿灯序号数据</span></span><br><span class="line"><span class="comment">###################################结束####################################</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="②交通标志识别"><a href="#②交通标志识别" class="headerlink" title="②交通标志识别"></a>②交通标志识别</h6><p>主要是利用<strong>NCC（Normalized Cross Correlation）归一化互相关算法</strong>来进行交通标志的图像识别与匹配。</p>
+<p><strong>【NCC算法】</strong></p>
+<p>NCC算法的基本实现原理：主要是通过求两幅大小相近的图像的相关系数矩阵来判别两幅图像是否相关。假设需要识别的初始图片g的大小为m×n，摄像头拍摄到的图片S的大小为M×N，其中的以(x，y)为左上角点与g大小相同的子图像为Sx,y。具体的利用NCC算法实现计算图像相似度的方法如下：</p>
+<p>（略，后面补）</p>
+<p><strong>【程序流程图】</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post295.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post295.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>【主要代码】</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###################################开始####################################</span></span><br><span class="line">...</span><br><span class="line">sensor.set_pixformat(sensor.GRAYSCALE) <span class="comment">#设置图片格式为灰度图</span></span><br><span class="line"><span class="comment">#导入图片模板</span></span><br><span class="line">template1 = image.Image(<span class="string">&quot;/1.pgm&quot;</span>) <span class="comment">#直行</span></span><br><span class="line">template2 = image.Image(<span class="string">&quot;/2.pgm&quot;</span>) <span class="comment">#向右转弯</span></span><br><span class="line">template3 = image.Image(<span class="string">&quot;/3.pgm&quot;</span>) <span class="comment">#向左转弯</span></span><br><span class="line">template4 = image.Image(<span class="string">&quot;/4.pgm&quot;</span>) <span class="comment">#停车让行</span></span><br><span class="line">template5 = image.Image(<span class="string">&quot;/5.pgm&quot;</span>) <span class="comment">#鸣喇叭</span></span><br><span class="line"><span class="comment">#主循环</span></span><br><span class="line"><span class="keyword">while</span> (<span class="literal">True</span>):</span><br><span class="line">    clock.tick()</span><br><span class="line">    img = sensor.snapshot()</span><br><span class="line">    flag=<span class="number">0</span></span><br><span class="line">ratio=<span class="number">0</span></span><br><span class="line"><span class="comment">#匹配1.pgm（直行）串行终端打印go，flag=1</span></span><br><span class="line">    r1 = img.find_template(template1, <span class="number">0.70</span>, step=<span class="number">4</span>, search=SEARCH_EX)</span><br><span class="line">    <span class="keyword">if</span> r1:</span><br><span class="line">        img.draw_rectangle(r1,color=(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">        print(<span class="string">&quot;go&quot;</span>)</span><br><span class="line">        flag=<span class="number">1</span></span><br><span class="line">        img.draw_string(<span class="number">10</span>, <span class="number">10</span>, <span class="string">&quot;%.d&quot;</span>%flag)</span><br><span class="line"><span class="comment">#匹配2.pgm（向右转弯）串行终端打印right，flag=2</span></span><br><span class="line">    r2 = img.find_template(template2, <span class="number">0.70</span>, step=<span class="number">4</span>, search=SEARCH_EX) </span><br><span class="line">    <span class="keyword">if</span> r2:</span><br><span class="line">        img.draw_rectangle(r2,color=(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>))</span><br><span class="line">        print(<span class="string">&quot;right&quot;</span>)</span><br><span class="line">        flag=<span class="number">2</span></span><br><span class="line">        img.draw_string(<span class="number">10</span>, <span class="number">10</span>, <span class="string">&quot;%.d&quot;</span>%flag)</span><br><span class="line"><span class="comment">#匹配3.pgm（向左转弯）串行终端打印left，flag=3</span></span><br><span class="line">    r3 = img.find_template(template3, <span class="number">0.70</span>, step=<span class="number">4</span>, search=SEARCH_EX)</span><br><span class="line">    <span class="keyword">if</span> r3:</span><br><span class="line">        img.draw_rectangle(r3,color=(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">        print(<span class="string">&quot;left&quot;</span>)</span><br><span class="line">        flag=<span class="number">3</span></span><br><span class="line">        img.draw_string(<span class="number">10</span>, <span class="number">10</span>, <span class="string">&quot;%.d&quot;</span>%flag)</span><br><span class="line"><span class="comment">#匹配4.pgm（停车让行）串行终端打印stop，flag=4</span></span><br><span class="line">    r4 = img.find_template(template4, <span class="number">0.70</span>, step=<span class="number">4</span>, search=SEARCH_EX) </span><br><span class="line">    <span class="keyword">if</span> r4:</span><br><span class="line">        img.draw_rectangle(r4,color=(<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>))</span><br><span class="line">        print(<span class="string">&quot;stop&quot;</span>)</span><br><span class="line">        flag=<span class="number">4</span></span><br><span class="line">        img.draw_string(<span class="number">10</span>, <span class="number">10</span>, <span class="string">&quot;%.d&quot;</span>%flag)</span><br><span class="line"><span class="comment">#匹配5.pgm（鸣喇叭）串行终端打印beep，flag=5</span></span><br><span class="line">    r5 = img.find_template(template5, <span class="number">0.70</span>, step=<span class="number">4</span>, search=SEARCH_EX)</span><br><span class="line">    <span class="keyword">if</span> r5:</span><br><span class="line">        img.draw_rectangle(r5,color=(<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>))</span><br><span class="line">        print(<span class="string">&quot;beep&quot;</span>)</span><br><span class="line">        flag=<span class="number">5</span></span><br><span class="line">        img.draw_string(<span class="number">10</span>, <span class="number">10</span>, <span class="string">&quot;%.d&quot;</span>%flag)</span><br><span class="line"><span class="comment">###################################结束####################################</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="③车道识别"><a href="#③车道识别" class="headerlink" title="③车道识别"></a>③车道识别</h6><p> 主要通过OpenMV模块，识别并跟踪车道阈值，通过几何运算出小车与车道中线的角度（偏左为正、偏右为负），反馈出小车与车道的真实偏离情况（可量化），后续用于PID控制。</p>
+<p><strong>【程序流程图】</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/post296.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/post296.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><strong>【主要代码】</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###################################开始####################################</span></span><br><span class="line">...</span><br><span class="line">sensor.set_pixformat(sensor.RGB565) <span class="comment"># 图片格式设为 RGB565彩色图</span></span><br><span class="line">road_threshold = [(<span class="number">23</span>, <span class="number">0</span>, <span class="number">-45</span>, <span class="number">19</span>, <span class="number">-31</span>, <span class="number">28</span>)]; <span class="comment">#黑线道路</span></span><br><span class="line">ROI = (<span class="number">0</span>, <span class="number">100</span>, <span class="number">320</span>, <span class="number">40</span>)</span><br><span class="line">...</span><br><span class="line"><span class="comment">#省略了识别车道边框函数</span></span><br><span class="line"><span class="comment">#偏移角度计算算法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_direction</span>(<span class="params">left_blob, right_blob</span>):</span></span><br><span class="line">    <span class="comment"># 根据图像中的三块左中右的白色部分，计算出摄像头偏转角度</span></span><br><span class="line">    <span class="comment"># ratio &lt; 0 左拐，小车在车道偏右位置</span></span><br><span class="line">    <span class="comment"># ratio &gt; 0 右拐，小车在车道偏左位置</span></span><br><span class="line"></span><br><span class="line">    MAX_WIDTH = <span class="number">320</span></span><br><span class="line">    <span class="comment"># 调节theta来设置中间宽度的比重， theta越高ratio越靠近0</span></span><br><span class="line">    <span class="comment"># 需要根据赛道宽度与摄像头高度重新设定到合适大小</span></span><br><span class="line">    theta = <span class="number">0.01</span></span><br><span class="line">    <span class="comment"># 这里的b是为了防止除数是0的情况发生， 设定一个小一点的值</span></span><br><span class="line">    b = <span class="number">3</span></span><br><span class="line">    x1 = left_blob.x() - int(<span class="number">0.5</span> * left_blob.w()) <span class="comment">#左边黑线中心x值</span></span><br><span class="line">    x2 = right_blob.x() + int(<span class="number">0.5</span> * right_blob.w()) <span class="comment">#右边黑线中心x值</span></span><br><span class="line"><span class="comment">#车道信息计算</span></span><br><span class="line">    w_left = x1 <span class="comment">#左边车道外宽度</span></span><br><span class="line">    w_center = math.fabs(x2 - x1) <span class="comment">#车道中心x值</span></span><br><span class="line">    w_right = math.fabs(MAX_WIDTH - x2) <span class="comment">#右边车道外宽度</span></span><br><span class="line"><span class="comment">#计算摄像头偏移角度</span></span><br><span class="line">    direct_ratio = (w_left + b + theta * w_center) / (w_left + w_right + <span class="number">2</span> * b + <span class="number">2</span> * theta * w_center) - <span class="number">0.5</span></span><br><span class="line"><span class="comment">#返回摄像头偏移角度</span></span><br><span class="line"><span class="keyword">return</span> direct_ratio</span><br><span class="line"><span class="comment">#省略了可视化绘图函数</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>): <span class="comment">#主循环</span></span><br><span class="line">clock.tick() <span class="comment">#追踪两个snapshots()之间经过的毫秒数</span></span><br><span class="line">    img = sensor.snapshot() <span class="comment">#拍一张照片，返回图像</span></span><br><span class="line">    blobs = img.find_blobs(road_threshold, roi=ROI, merge=<span class="literal">True</span>);</span><br><span class="line">    a=<span class="number">0</span>;ratio=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> blobs:</span><br><span class="line">        left_blob, right_blob = get_top2_blobs(blobs)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(left_blob == <span class="literal">None</span> <span class="keyword">or</span> right_blob == <span class="literal">None</span>):</span><br><span class="line">            print(<span class="string">&quot;Out Of Range&quot;</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line"><span class="comment">#画出车道左边线</span></span><br><span class="line">            img.draw_rectangle(left_blob.rect())</span><br><span class="line">            img.draw_cross(left_blob.cx(), left_blob.cy())</span><br><span class="line"><span class="comment">#画出车道右边线</span></span><br><span class="line">            img.draw_rectangle(right_blob.rect())</span><br><span class="line">            img.draw_cross(right_blob.cx(), right_blob.cy())</span><br><span class="line"><span class="comment">#可视化显示偏转角度</span></span><br><span class="line">            direct_ratio = get_direction(left_blob, right_blob)</span><br><span class="line">            draw_direct(img,direct_ratio)</span><br><span class="line">            ratio=int(math.degrees(direct_ratio)) <span class="comment">#偏转角度转成弧度值</span></span><br><span class="line">            img.draw_string(<span class="number">10</span>, <span class="number">10</span>, <span class="string">&quot;%.d&quot;</span>%ratio) <span class="comment">#帧缓冲区实时画出偏转角度</span></span><br><span class="line">            print(ratio) <span class="comment">#串行终端打印偏转角度</span></span><br><span class="line">    img.draw_rectangle(ROI,color=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)) <span class="comment">#画出感兴趣区域</span></span><br><span class="line"><span class="comment">###################################结束####################################</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2、基于ESP8266的远程控制平台实现"><a href="#2、基于ESP8266的远程控制平台实现" class="headerlink" title="2、基于ESP8266的远程控制平台实现"></a>2、基于ESP8266的远程控制平台实现</h5><p>（2021/07/31写完）</p>
+<h5 id="3、智能小车的无人控制方案实现"><a href="#3、智能小车的无人控制方案实现" class="headerlink" title="3、智能小车的无人控制方案实现"></a>3、智能小车的无人控制方案实现</h5><p>（2021/07/31写完）</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/16358/'>
-            阅读全文
-          </a>
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\posts\9237\" title="初探机器视觉模块OpenMV" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover24.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover24.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">初探机器视觉模块OpenMV</span><span class="excerpt">kelecn's Blog，一个记录个人成长的地方。</span></a><a class="item" href="\posts\44882\" title="基于ESP8266的局域网图片刷新显示系统" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover28.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover28.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">基于ESP8266的局域网图片刷新显示系统</span><span class="excerpt">kelecn's Blog，一个记录个人成长的地方。</span></a><a class="item" href="\posts\4235\" title="ARM处理器7种工作模式" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover12.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover12.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">ARM处理器7种工作模式</span><span class="excerpt">简介：ARM处理器7种工作模式（特权模式，异常模式，用户模式）。</span></a><a class="item" href="\posts\38646\" title="精简代码：改换运算符" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover15.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover15.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">精简代码：改换运算符</span><span class="excerpt">简介： 精简代码：改换运算符</span></a><a class="item" href="\posts\10250\" title="基于PicGo的GitHub图床" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover14.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/cover14.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">基于PicGo的GitHub图床</span><span class="excerpt">简介：GitHub图床（基于PicGo）</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p><svg id="icon-touxiang" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M614.72 554.538c-49.086-6.399-100.27-2.1-149.256-2.1-119.465 0-209.04 95.972-206.84 215.437 0 17.095 8.498 31.99 23.493 40.488 14.896 10.697 34.09 14.896 53.285 17.095 61.882 6.398 123.664 6.398 198.342 6.398 40.488 0 93.872-2.1 142.858-4.298 27.692 0 53.284-4.3 78.877-14.896 19.194-8.498 29.89-19.194 31.99-40.488 8.498-104.57-72.478-204.84-172.75-217.636zM680.8 375.39c0-87.474-74.678-162.053-164.251-162.053-89.574 0-162.053 74.679-162.053 162.053-2.1 87.474 74.678 164.252 162.053 164.252 89.673 0 164.252-74.678 164.252-164.252z" fill="#FFFFFF"></path><path d="M512.35 0C228.733 0 0.5 228.233 0.5 511.85s228.233 511.85 511.85 511.85 511.85-228.233 511.85-511.85S795.967 0 512.35 0z m275.12 772.074c-2.1 21.294-12.797 31.99-31.991 40.488-25.593 10.697-51.185 14.896-78.877 14.896-49.086 2.099-102.37 4.298-142.858 4.298-74.678 0-136.46 0-198.342-6.398-19.195-2.1-38.389-6.398-53.285-17.095-14.895-8.497-23.493-23.493-23.493-40.488-2.1-119.465 87.475-215.437 206.84-215.437 49.085 0 100.27-4.299 149.256 2.1 100.27 12.896 181.247 113.166 172.75 217.636zM354.495 375.39c0-87.474 72.479-162.053 162.053-162.053S680.8 288.016 680.8 375.39c0 89.574-74.679 164.252-164.252 164.252-87.375 0-164.152-76.778-162.053-164.252z" fill="#249FF8"></path></svg>本文由 <a href="https://kelecn.top/" data-pjax-state="">kelecn</a> 创作，如果您觉得本文不错，请随意赞赏</p>
+
+              
+            
+              
+                <p><svg id="icon-fenxiang" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#F3B243"></path><path d="M630.784 323.584m-90.112 0a90.112 90.112 0 1 0 180.224 0 90.112 90.112 0 1 0-180.224 0Z" fill="#FFFFFF"></path><path d="M630.784 688.128m-90.112 0a90.112 90.112 0 1 0 180.224 0 90.112 90.112 0 1 0-180.224 0Z" fill="#FFFFFF"></path><path d="M319.488 512m-90.112 0a90.112 90.112 0 1 0 180.224 0 90.112 90.112 0 1 0-180.224 0Z" fill="#FFFFFF"></path><path d="M341.037056 480.370688l257.343488-175.7184 27.713536 40.59136-257.339392 175.7184z" fill="#FFFFFF"></path><path d="M349.052928 488.452096l252.854272 182.10816-28.725248 39.886848-252.874752-182.10816z" fill="#FFFFFF"></path></svg>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+
+              
+            
+              
+                <p><svg id="icon-ziyuan" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M511.854421 0a511.854421 511.854421 0 1 0 512.145579 511.854421A511.854421 511.854421 0 0 0 511.854421 0z" fill="#39B54A"></path><path d="M576.491328 630.355417l-116.462895 116.462894a129.56497 129.56497 0 0 1-182.555587 0l-2.0381-2.038101a128.982656 128.982656 0 0 1 0-182.26443l81.232868-81.232868a179.644015 179.644015 0 0 0 13.102076 70.460051l-52.69946 52.408302a69.877737 69.877737 0 0 0 0 98.702303l2.038101 2.038101a70.168894 70.168894 0 0 0 98.702303 0l116.462895-116.462894a69.877737 69.877737 0 0 0 0-98.702304l-2.038101-2.0381a69.586579 69.586579 0 0 0-13.975547-10.772818l42.508956-42.508956a128.109184 128.109184 0 0 1 13.102076 11.355132l2.0381 2.0381a129.273813 129.273813 0 0 1 0 182.26443z" fill="#FFFFFF"></path><path d="M746.235997 460.901905l-81.232869 81.232869a179.352858 179.352858 0 0 0-13.102076-70.460051l52.69946-52.408303a69.877737 69.877737 0 0 0 0-98.702303l-2.038101-2.038101a69.877737 69.877737 0 0 0-98.702303 0l-116.462894 116.462895a69.877737 69.877737 0 0 0 0 98.702303l2.0381 2.038101a68.421951 68.421951 0 0 0 13.975548 10.772817l-42.508957 42.508957a136.552744 136.552744 0 0 1-13.102076-11.355132l-2.0381-2.038101a128.982656 128.982656 0 0 1 0-182.26443l116.462894-116.462894a129.56497 129.56497 0 0 1 182.555587 0l2.038101 2.0381a128.982656 128.982656 0 0 1 0 182.26443z" fill="#FFFFFF"></path></svg>本文永久链接是：<a href=https://kelecn.top/posts/51495/>https://kelecn.top/posts/51495/</a></p>
+              
+            
+              
+                <p><svg id="icon-juanzeng" viewBox="0 0 1024 1024" width="17" height="17" style="vertical-align:-3.2px"><path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#F24827" p-id="19155"></path><path d="M713.953882 364.318118a133.647059 133.647059 0 0 0-189.003294 0l-13.327059 13.327058-13.342117-13.327058a133.647059 133.647059 0 0 0-189.003294 0 133.632 133.632 0 0 0 0 188.988235l13.327058 13.342118 189.018353 160.918588 188.988236-160.933647 13.342117-13.327059a133.662118 133.662118 0 0 0 0-188.988235z" fill="#FFFFFF" p-id="19156"></path></svg>您的喜欢是作者写作最大的动力！</p>
+
+              
+            
+          </blockquote>
         </div>
+<div class='donate'>
+<iframe src="https://kelecn.top/donate/drinks/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+</div>
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>嵌入式</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenMV/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenMV</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>机器视觉</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ESP8266/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ESP8266</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STM32/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>STM32</p></a></div>
+
+
         
       
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://kelecn.top/posts/51495/&title=基于OpenMV的无人驾驶智能小车模拟系统 - kelecn&pics=true&summary=简介：基于机器视觉模块OpenMV采集车道、红绿灯、交通标志等模拟路况信息，实现一辆能车道保持、红绿灯识别、交通标志识别、安全避障以及远程WiFi控制的多功能无人驾驶小车。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kelecn.top/posts/51495/&title=基于OpenMV的无人驾驶智能小车模拟系统 - kelecn&pics=true&summary=简介：基于机器视觉模块OpenMV采集车道、红绿灯、交通标志等模拟路况信息，实现一辆能车道保持、红绿灯识别、交通标志识别、安全避障以及远程WiFi控制的多功能无人驾驶小车。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://kelecn.top/posts/51495/&title=基于OpenMV的无人驾驶智能小车模拟系统 - kelecn&pics=true&summary=简介：基于机器视觉模块OpenMV采集车道、红绿灯、交通标志等模拟路况信息，实现一辆能车道保持、红绿灯识别、交通标志识别、安全避障以及远程WiFi控制的多功能无人驾驶小车。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/wechat.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSUlEQVR42u3cW27DMAwEwNz/0u0JAmtXMpLQo7/Cj3Dkn4VI9PX30PUCBwcHBwcfBH+V6+2L39x39Vz6nrZecHBwcHDwifC0oPR6uoHv3rdbLzg4ODg4+GT4ZQC4uD/diNXgcqxecHBwcHBw8DhQrB4spAEGHBwcHBwc/Bz87iADDg4ODg4Ofq6hcCrQnA5M4ODg4ODgT4LXA3Mf+vvjk43g4ODg4OBfAN9dqz/YDgCkgeWyXnBwcHBw8EHwNiC0jf/0vnSjLzccHBwcHBx8IPyqkDbA3HWwkNYHDg4ODg7+ZPhdAWS14d9+mO0AAw4ODg4O/kPwtqBTz901GAgODg4ODj4R3gaGq4CyWvDuBsYHJ+Dg4ODg4IPhaSNgt6DdAYC6oQAODg4ODj4InjYCUnh7ANEOFiwHGHBwcHBw8B+Gpy9uG/lpEDodXMDBwcHBwSfCTweQdLAvbTjc3kkBBwcHBwf/IXg7MJcGnXajjtcJDg4ODg4+EN4eMKw2Bu4KKvHz4ODg4ODgD4LvHiykB/4pOA5G4ODg4ODgg+FtI2EXuHqQsRpg3l4HBwcHBwcfBN9dpwb56kZ/ujHg4ODg4OCD4K9ytRuUHiSkAwnHBvzAwcHBwcF/CN4GlvSgIT3wON6YAAcHBwcHHwxPB+h2n/+aTgo4ODg4OPiD4W2wOTWIUDcUwMHBwcHBwY/9Y/j2+nKjAhwcHBwcfDC8bQy0waRtGNQfBBwcHBwcfCB8N3Ck0N3faT8MODg4ODj4JPjTFjg4ODg4+ID1D4jaAz2eqtMzAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://kelecn.top/posts/51495/&text=基于OpenMV的无人驾驶智能小车模拟系统 - kelecn"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/telegram.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+  </div>
+</div>
 
 
-    
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/44882/'>
+          <p class='title'>基于ESP8266的局域网图片刷新显示系统<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：简单的说就是通过网页将图片上传至NodeMCU（ESP8266）的flash闪存，再将图片数据通过SPI更新至TFT-LCD显示屏进行显示。
+
+
+项目地址：ESP8266-refresh-...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -1003,60 +1341,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   
 
-  <section class="widget category shadow floatable desktop">
-    
-  <header>
-    
-      <a href='categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%80%BB%E7%BB%93/" href="/categories/%E6%80%BB%E7%BB%93/"
-            id="categoriesE680BBE7BB93"
-            ><div class='name'>总结</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF/" href="/categories/%E6%8A%80%E6%9C%AF/"
-            id="categoriesE68A80E69CAF"
-            ><div class='name'>技术</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            id="categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%94%9F%E6%B4%BB/" href="/categories/%E7%94%9F%E6%B4%BB/"
-            id="categoriesE7949FE6B4BB"
-            ><div class='name'>生活</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%9F%A5%E8%AF%86/" href="/categories/%E7%9F%A5%E8%AF%86/"
-            id="categoriesE79FA5E8AF86"
-            ><div class='name'>知识</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BE%8E%E5%8C%96/" href="/categories/%E7%BE%8E%E5%8C%96/"
-            id="categoriesE7BE8EE58C96"
-            ><div class='name'>美化</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
   <section class="widget tagcloud shadow floatable desktop mobile">
     
   <header>
@@ -1071,8 +1355,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </div>
   </section>
 
-
-  
 
   
 
@@ -1399,159 +1681,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+
+  
     
     
 
-<section class="widget shadow floatable desktop">
-  
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
   <header>
     
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>29 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2019/09/09'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>25k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Fri Jul 30 2021 23:58:03 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-07-30 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-07-30 日';
-          }
-        </script>
-        
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%A1%AC%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">一、硬件系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">二、软件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81OpenMV%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%86%B5%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">1、OpenMV中的路况识别算法实现</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%9F%BA%E4%BA%8EESP8266%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%B9%B3%E5%8F%B0%E5%AE%9E%E7%8E%B0"><span class="toc-text">2、基于ESP8266的远程控制平台实现</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E6%99%BA%E8%83%BD%E5%B0%8F%E8%BD%A6%E7%9A%84%E6%97%A0%E4%BA%BA%E6%8E%A7%E5%88%B6%E6%96%B9%E6%A1%88%E5%AE%9E%E7%8E%B0"><span class="toc-text">3、智能小车的无人控制方案实现</span></a></li></ol></li></ol></li></ol>
     </div>
-  </div>
-</section>
+  </section>
 
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow floatable desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://cdn.jsdelivr.net/gh/kelecn/images@master/Wechat.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/kelecn/images@master/Alipay.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -1560,8 +1716,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="基于OpenMV的无人驾驶智能小车模拟系统";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
