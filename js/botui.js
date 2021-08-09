@@ -65,7 +65,7 @@ var other = function() {
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: "主修的电子信息科学与技术专业，是个即将毕业的大四狗🐧🐧🐧"
+            content: "目前在从事嵌入式方面的工作🐧🐧🐧"
         })
     }).then(function() {
         return botui.message.bot({
@@ -75,7 +75,7 @@ var other = function() {
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: "主要工作方向：嵌入式、物联网、硬件"
+            content: "主要兴趣方向：嵌入式、物联网、硬件"
         })
     }).then(function() {
         return botui.message.bot({
