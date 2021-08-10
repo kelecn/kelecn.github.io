@@ -136,7 +136,7 @@ var other = function() {
     }).then(function() {
         return botui.message.bot({
             delay: 1500,
-            content: " [![GitHub](https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg) "
+            content: " [![GitHub](https://cdn.jsdelivr.net/gh/kelecn/images@master/%E6%82%9F%E7%A9%BA.jpg)](https://github.com/kelecn) "
         })
     });
 }
