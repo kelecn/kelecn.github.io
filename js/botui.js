@@ -95,7 +95,13 @@ var other = function() {
             delay: 1500,
             content: "因为很喜欢《刺客伍六七》里可乐这个角色，于是我就沿用了kele下来，嗯！"
         })
-    }).then(function(res) {
+    }).then(function (res) {
+    return botui.message.add({
+      delay: 1500,
+      type: 'embed',
+      content: 'https://cdn.jsdelivr.net/gh/kelecn/images@master/kele.gif'
+    });
+  }).then(function(res) {
         return botui.message.bot({
             delay: 1500,
             content: "emmmmm，至于cn嘛，中国国家顶级域名2333"
