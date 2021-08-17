@@ -122,12 +122,12 @@ var other = function() {
     }).then(function(res) {
         return botui.message.bot({
             delay: 1500,
-            content: "欢迎联系我交流哦~🤗🤗🤗"
+            content: "欢迎联系我一起交流探讨哦~🤗🤗🤗"
         })
     }).then(function(res) {
         return botui.message.bot({
             delay: 1500,
-            content: "有需要交换友链的朋友，欢迎点击友链页提交哦~😋😋😋"
+            content: "还有需要交换友链的朋友，欢迎点击友链页提交哦~😋😋😋"
         })
     }).then(function(res) {
         return botui.message.bot({
@@ -137,7 +137,7 @@ var other = function() {
     }).then(function() {
         return botui.message.bot({
             delay: 3000,
-            content: "还有，欢迎关注我的 [GitHub](https://github.com/kelecn)哦 ！🤗🤗🤗"
+            content: "最后，也欢迎关注我的 [GitHub](https://github.com/kelecn)哦 ！🤗🤗🤗"
         })
     }).then(function() {
         return botui.message.bot({
