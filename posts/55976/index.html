@@ -954,7 +954,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>嵌入式设备中常常使用到的是TTL、TTL转RS232的这种方式。常用的就三根引线：发送线TX、接收线RX、电平参考地线GND。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/UART1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/UART1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p><strong>1.2  通信协议</strong></p>
-<p>将传输数据的每个字符一位接一位地传输。<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kelecn/images@master/UART2.png">https://cdn.jsdelivr.net/gh/kelecn/images@master/UART2.png</a>)</p>
+<p>将传输数据的每个字符一位接一位地传输。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kelecn/images@master/UART2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/kelecn/images@master/UART2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>起始位：先发出一个逻辑”0”的信号，表示传输字符的开始。</p>
 <p>数据位：紧接着起始位之后。数据位的个数可以是4、5、6、7、8等，构成一个字符。通常采用ASCII码。</p>
 <p>奇偶校验位：数据位加上这一位后，使得“1”的位数应为偶数(偶校验)或奇数(奇校验)，以此来校验资料传送的正确性。</p>
